@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ceatw-update-pipeline"
+version = "0.0.1"
+authors = [
+  { name="George Li", email="gl579@cam.ac.uk" },
+  { name="Laurie Gale", email="lpg28@cl.cam.ac.uk"}
+]
+description = "An AI pipeline for automatically finding sources for the CEATW project."
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+
+]
