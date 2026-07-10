@@ -21,3 +21,7 @@ SYSTEM_INSTRUCTION_EXA = """
     ### Output Format:
     Output ONLY valid JSON representing the Exa API payload. Do not include markdown formatting.
     """
+
+# Can be changed between 1 and 10 without negative effect. Going beyond this is more expensive token-wise.
+# As well as this, it acts as a MAXIMUM count. The API may return less if it cant find any more.
+MAX_URL_COUNT = 3
