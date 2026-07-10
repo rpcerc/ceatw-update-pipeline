@@ -10,7 +10,7 @@ COUNTRIES = [
     "Zimbabwe",
 ]
 
-def test_get_prompt():
+def test_get_prompt_return_structure():
     load_dotenv()
     for country in COUNTRIES[:1]:  # Test only the first country
         print(f"Testing {country} ---")
@@ -34,4 +34,10 @@ def test_get_prompt():
             assert isinstance(item["highlights"], (list, type(None))), "Invalid 'highlights' type"
             
             assert validators.url(item["url"]), f"Malformed URL: {item['url']}"
-            
+
+def check_result():
+    load_dotenv()
+    print(get_exa_sources("zimbabwe"))
+
+if __name__ == "__main__":
+    check_result()

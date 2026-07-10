@@ -42,7 +42,10 @@ def get_exa_sources(country: str) -> list[Source]:
             query=payload["query"],
             type="auto",
             num_results=MAX_URL_COUNT,
-            include_domains=payload.get("includeDomains")
+            include_domains=payload.get("includeDomains"),
+            contents={
+                "highlights": True,
+            },
         )
         sources = [create_source(x) for x in response.results]
         return sources
