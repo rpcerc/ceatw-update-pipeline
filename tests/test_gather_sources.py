@@ -2,7 +2,6 @@ import validators
 from dotenv import load_dotenv
 from ceatw_update_pipeline.gather_sources import get_exa_sources
 from ceatw_update_pipeline.configuration import MAX_URL_COUNT
-from ceatw_update_pipeline.custom_types import Source
 
 COUNTRIES = [
     "Japan",
@@ -19,7 +18,7 @@ def test_get_prompt_return_structure():
         assert isinstance(result, list), f"List expected, got {type(result)}."
         assert 0 < len(result) <= MAX_URL_COUNT, f"Expected 1-{MAX_URL_COUNT} URLs, got {len(result)}."
         
-        #Validate the TypedDict shape and URL formatting manually
+        # Validate the TypedDict shape and URL formatting manually
         for item in result:
             assert isinstance(item, dict), f"Expected dict, got {type(item)}"
             

@@ -3,6 +3,7 @@
 from ceatw_update_pipeline.configuration import MAX_URL_COUNT
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import Source
+from ceatw_update_pipeline.filter import is_valid_url
 from exa_py import Exa
 from exa_py.api import Result
 
@@ -47,7 +48,11 @@ def get_exa_sources(country: str) -> list[Source]:
                 "highlights": True,
             },
         )
-        sources = [create_source(x) for x in response.results]
+        
+        sources = []
+        for result in response.results:
+            if (is_valid_url(result.url)):
+                sources.append(create_source(result))
         return sources
     
     except Exception as e:
