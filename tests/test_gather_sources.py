@@ -36,7 +36,7 @@ def test_get_prompt_return_structure():
 
 def check_result():
     load_dotenv()
-    print(get_exa_sources("zimbabwe"))
+    print(get_exa_sources("france"))
 
 if __name__ == "__main__":
     check_result()

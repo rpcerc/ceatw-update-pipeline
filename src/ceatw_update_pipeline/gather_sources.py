@@ -1,6 +1,6 @@
 """Uses Exa.ai API to generate possible source URLs for computing curricula."""
 
-from ceatw_update_pipeline.configuration import MAX_URL_COUNT
+from ceatw_update_pipeline.configuration import MAX_URL_COUNT, SEARCH_TYPE
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import Source
 from ceatw_update_pipeline.filter import is_valid_url
@@ -41,7 +41,7 @@ def get_exa_sources(country: str) -> list[Source]:
     try:
         response = exa.search(
             query=payload["query"],
-            type="auto",
+            type=SEARCH_TYPE,
             num_results=MAX_URL_COUNT,
             include_domains=payload.get("includeDomains"),
             contents={
@@ -49,10 +49,7 @@ def get_exa_sources(country: str) -> list[Source]:
             },
         )
         
-        sources = []
-        for result in response.results:
-            if (is_valid_url(result.url)):
-                sources.append(create_source(result))
+        sources = [create_source(result) for result in response.results]
         return sources
     
     except Exception as e:
