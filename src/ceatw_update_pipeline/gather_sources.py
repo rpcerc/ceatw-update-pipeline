@@ -2,11 +2,11 @@
 
 from ceatw_update_pipeline.configuration import MAX_URL_COUNT, SEARCH_TYPE
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
-from ceatw_update_pipeline.custom_types import Source
+from ceatw_update_pipeline.custom_types import Source, SearchStrategy
 from exa_py import Exa
 from exa_py.api import Result
 
-def create_source(exa_result: Result) -> Source:
+def create_source(exa_result: Result, country: str, search_strategy: str) -> Source:
     """Takes a singular exa_result, and returns a Source object.
 
     Args:
@@ -18,6 +18,8 @@ def create_source(exa_result: Result) -> Source:
     highlights = getattr(exa_result, "highlights", None)
     
     return {
+        "country": country,
+        "search_strategy": search_strategy,
         "url": exa_result.url,
         "title": exa_result.title,
         "published_date": getattr(exa_result, "published_date", None),
@@ -57,8 +59,17 @@ def get_exa_sources(country: str) -> list[Source]:
             },
         )
         
-        sources = [create_source(result) for result in (gemini_response.results + english_response.results)]
-        return sources
+        gemini_sources = [
+            create_source(result, country, SearchStrategy.NATIVE) 
+            for result in gemini_response.results
+        ]
+    
+        english_sources = [
+            create_source(result, country, SearchStrategy.ENGLISH) 
+            for result in english_response.results
+        ]
+        
+        return gemini_sources + english_sources
     
     except Exception as e:
         raise RuntimeError(f"Failed to retrieve URLs from Exa: {e}")
