@@ -1,0 +1,13 @@
+Update pyproject.toml to include all metadata
+
+Check out all the options on exa.ais - i.e. get rid of payload type
+
+However, exa.ai so far seems rather accurate so I wouldn't worry too much.
+
+You are a researcher investigating how computing is integrated into the school curriculum around the world. Your task is to gather school computing curriculum sources for the following countries: Germany, Guatemala, Isle of Man, Mali, and Saudi Arabia. For each country, state the following in a JSON format:
+
+TODO
+Update pyproject.toml to include all metadata
+Check out all the options on exa.ais - i.e. get rid of payload type
+See how highlights work within exa.ai
+

@@ -3,7 +3,7 @@
 import requests
 
 def is_valid_url(url: str) -> bool:
-    """_summary_
+    """Checks whether a given URL is valid.
 
     Args:
         url (str): The given URL to check.

@@ -1,0 +1,25 @@
+Highlights are very very cheap ($1 per 1k urls, so essentially $1). 
+
+There is a $50 coupon code for Exa.ai - EXA50API... I now have $70 in free credit, 
+plus the fact you get $7 free credit each month.
+
+Sometimes, during filtering, it says its invalid but its actually not invalid.
+Here is an example link.
+https://www.education.gouv.fr/bo/19/Hebdo37/MENE1915146D.htm
+
+This return a 403 forbidden, it probably has anti scraping protections built onto it.
+
+Deep seems to work well, better over auto.
+
+
+
+It looks to me as if the natural prompt is better than the english prompt.
+An interesting result was that for european languages the english prompt works better,
+but for japanese the native prompt was much better.
+
+I think from all my testing, using english prompts gets you more results but less accuracy,
+whilst using the native lanugage gives you more accuracy but less results (sometimes zero.)
+
+It might be best to use a combination - i.e 3 results from english, 3 results from not english.
+
+If you remove includeDomains things get weird - for argentina in gemini it returned a spanish document.
