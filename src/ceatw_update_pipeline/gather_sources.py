@@ -3,7 +3,6 @@
 from ceatw_update_pipeline.configuration import MAX_URL_COUNT, SEARCH_TYPE
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import Source
-from ceatw_update_pipeline.filter import is_valid_url
 from exa_py import Exa
 from exa_py.api import Result
 
@@ -33,13 +32,12 @@ def get_exa_sources(country: str) -> list[Source]:
         raise RuntimeError(f"Failed to initialize Exa client: {e}")
         
     intent = ("Find official primary school, kindergarten, and high school "
-              f"computing or computer science curricula for {country}. "
-              "Restrict to official government/education domains if possible.")
+              f"computing or computer science curricula for {country}. ")
     
     payload = generate_exa_payload(intent)
-
+    english_query = "Official national curriculum, syllabus, or learning standards for Computer Science, ICT, and Computing in {country} schools"
     try:
-        response = exa.search(
+        gemini_response = exa.search(
             query=payload["query"],
             type=SEARCH_TYPE,
             num_results=MAX_URL_COUNT,
@@ -49,7 +47,17 @@ def get_exa_sources(country: str) -> list[Source]:
             },
         )
         
-        sources = [create_source(result) for result in response.results]
+        english_response = exa.search(
+            query=english_query,
+            type=SEARCH_TYPE,
+            num_results=MAX_URL_COUNT,
+            include_domains=payload.get("includeDomains"),
+            contents={
+                "highlights": True,
+            },
+        )
+        
+        sources = [create_source(result) for result in (gemini_response.results + english_response.results)]
         return sources
     
     except Exception as e:

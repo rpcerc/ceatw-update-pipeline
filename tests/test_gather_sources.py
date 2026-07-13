@@ -16,7 +16,7 @@ def test_get_prompt_return_structure():
         result = get_exa_sources(country)
         
         assert isinstance(result, list), f"List expected, got {type(result)}."
-        assert 0 < len(result) <= MAX_URL_COUNT, f"Expected 1-{MAX_URL_COUNT} URLs, got {len(result)}."
+        assert 0 < len(result) <= 2 * MAX_URL_COUNT, f"Expected 1-{2 * MAX_URL_COUNT} URLs, got {len(result)}."
         
         # Validate the TypedDict shape and URL formatting manually
         for item in result:

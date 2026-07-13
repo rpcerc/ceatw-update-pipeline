@@ -28,5 +28,6 @@ Output exactly one valid JSON object representing the Exa API payload. Start imm
 
 # Can be changed between 1 and 10 without negative effect. Going beyond this is more expensive token-wise.
 # As well as this, it acts as a MAXIMUM count. The API may return less if it cant find any more.
+# Finally, gather_sources may return up to 2 * MAX_URL_COUNT, since it runs both an English and native prompt.
 MAX_URL_COUNT = 5
 SEARCH_TYPE = "deep"
