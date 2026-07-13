@@ -1,5 +1,28 @@
 from ceatw_update_pipeline.keyword_filter import generate_filter_keywords
 from ceatw_update_pipeline.custom_types import Source
+from ceatw_update_pipeline.configuration import KEYWORDS_FILE
+import json
+import os
+
+def get_filter_keywords(source: Source) -> dict[str, list[str]]:
+    country = source["country"]
+    
+    if os.path.exists(KEYWORDS_FILE):
+        with open(KEYWORDS_FILE, "r", encoding="utf-8") as f:
+            try:
+                keyword_cache = json.load(f)
+            except json.JSONDecodeError:
+                print("Warning: existing JSON is corrupted. Starting fresh.")
+                keyword_cache = {}
+    else:
+        keyword_cache = {}
+        
+    if country in keyword_cache:
+        print("in cache!")
+        return keyword_cache[country]
+    else:
+        print("Not in cache, generating..")
+        return generate_filter_keywords(source)
 
 def contains_computing_curriculum(source: Source) -> bool:
     """Checks if Exa highlights contain relevant computing or curriculum terms.
@@ -11,7 +34,7 @@ def contains_computing_curriculum(source: Source) -> bool:
         bool: True if relevant terms are found, False otherwise.
     """
     # 1. Get the dynamic country keywords
-    keywords = generate_filter_keywords(source)
+    keywords = get_filter_keywords(source)
     tech_filters = keywords["tech_keywords"]
     edu_filters = keywords["edu_keywords"]
 
@@ -22,4 +45,8 @@ def contains_computing_curriculum(source: Source) -> bool:
     has_edu = any(ek in combined_highlights for ek in edu_filters)
 
     if has_tech and has_edu:
-        # This is a highly confident match!
+        return True
+    elif has_tech or has_edu:
+        return True
+    else:
+        return False

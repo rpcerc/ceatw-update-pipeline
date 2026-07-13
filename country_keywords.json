@@ -1,0 +1,4762 @@
+{
+    "Afghanistan": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "programming",
+            "informatics",
+            "کمپیوتر ساینس",
+            "معلومات تکنالوژی",
+            "تکنالوژی معلوماتی",
+            "سواد دیجیتالی",
+            "پروگرام نویسی"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "ministry of education",
+            "educational framework",
+            "نصاب تعلیمی",
+            "پلان درسی",
+            "معیارات تعلیمی",
+            "وزارت معارف",
+            "نصاب آموزشی"
+        ]
+    },
+    "Albania": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital skills",
+            "information technology",
+            "informatikë",
+            "teknologji informacioni",
+            "aftësi digjitale",
+            "tik"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "learning objectives",
+            "ministry of education",
+            "kurrikula",
+            "program mësimor",
+            "planprogram",
+            "standardet arsimore",
+            "masr"
+        ]
+    },
+    "Algeria": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "numérique",
+            "computing",
+            "algorithmique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "ministry of education",
+            "ministère éducation",
+            "educational standards",
+            "référentiel"
+        ]
+    },
+    "Andorra": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital competence",
+            "technology",
+            "informàtica",
+            "tecnologies",
+            "competència digital",
+            "tic"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational program",
+            "academic standards",
+            "pla d'estudis",
+            "currículum",
+            "programa educatiu",
+            "marc educatiu"
+        ]
+    },
+    "Angola": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "ict",
+            "tic",
+            "digital literacy",
+            "literacia digital",
+            "technology",
+            "tecnologia",
+            "computing",
+            "computação"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "syllabus",
+            "programa de ensino",
+            "education policy",
+            "política educativa",
+            "academic standards",
+            "normas curriculares",
+            "ministry of education",
+            "med angola"
+        ]
+    },
+    "Antigua and Barbuda": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "technology education",
+            "computer studies",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "ministry of education",
+            "educational policy",
+            "course outline",
+            "learning framework",
+            "national curriculum"
+        ]
+    },
+    "Argentina": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "coding",
+            "computational thinking",
+            "informática",
+            "tecnologías",
+            "pensamiento computacional",
+            "alfabetización digital",
+            "programación",
+            "nuevas tecnologías"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational policy",
+            "plan de estudios",
+            "diseño curricular",
+            "programa educativo",
+            "núcleos de aprendizaje",
+            "nap",
+            "orientación educativa"
+        ]
+    },
+    "Armenia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "ինֆորմատիկա",
+            "համակարգչային գիտություն",
+            "տհտ",
+            "թվային գրագիտություն",
+            "ծրագրավորում"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "academic program",
+            "ուսումնական պլան",
+            "կրթական չափորոշիչ",
+            "ծրագիր",
+            "դասընթաց"
+        ]
+    },
+    "Australia": {
+        "tech_keywords": [
+            "digital technologies",
+            "computer science",
+            "ict",
+            "informatics",
+            "computational thinking",
+            "coding",
+            "programming",
+            "information technology"
+        ],
+        "edu_keywords": [
+            "australian curriculum",
+            "syllabus",
+            "course of study",
+            "learning area",
+            "content descriptors",
+            "achievement standards",
+            "acara",
+            "educational framework"
+        ]
+    },
+    "Austria": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "digital skills",
+            "coding",
+            "informatik",
+            "digitale bildung",
+            "digitale grundbildung",
+            "informatikunterricht",
+            "medieninformatik",
+            "informationstechnik"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "lehrplan",
+            "bildungsstandards",
+            "schulunterricht",
+            "lehrziele",
+            "stundenplan",
+            "unterrichtsplanung"
+        ]
+    },
+    "Azerbaijan": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "ict",
+            "i̇kt",
+            "digital literacy",
+            "rəqəmsal savadlılıq",
+            "programming",
+            "proqramlaşdırma",
+            "computing",
+            "i̇nformasiya texnologiyaları"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "kurikulum",
+            "syllabus",
+            "təhsil proqramı",
+            "educational standards",
+            "təhsil standartları",
+            "study plan",
+            "dərslik",
+            "course program",
+            "fənn kurikulumu"
+        ]
+    },
+    "The Bahamas": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "technology studies",
+            "it",
+            "computer studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "course of study",
+            "academic standards",
+            "educational policy",
+            "ministry of education",
+            "bahamian curriculum"
+        ]
+    },
+    "Bahrain": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "programming",
+            "information technology",
+            "حاسب آلي",
+            "تكنولوجيا المعلومات",
+            "المهارات الرقمية",
+            "البرمجة",
+            "الثقافة التقنية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "ministry of education",
+            "study plan",
+            "المنهج الدراسي",
+            "خطة دراسية",
+            "وزارة التربية",
+            "المعايير التعليمية",
+            "مقررات دراسية"
+        ]
+    },
+    "Bangladesh": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "programming",
+            "computer studies",
+            "কম্পিউটার শিক্ষা",
+            "তথ্য ও যোগাযোগ প্রযুক্তি",
+            "তথ্যপ্রযুক্তি",
+            "প্রোগ্রামিং"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "learning outcomes",
+            "পাঠ্যক্রম",
+            "সিলেবাস",
+            "শিক্ষাক্রম",
+            "শিক্ষা নীতিমালা"
+        ]
+    },
+    "Barbados": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "technology studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "ministry of education",
+            "cxc syllabus",
+            "cape computing",
+            "csec it",
+            "educational standards"
+        ]
+    },
+    "Belarus": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "информатика",
+            "інфарматыка",
+            "ікт",
+            "праграмаванне",
+            "лічбавая пісьменнасць"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "учебная программа",
+            "навучальная праграма",
+            "образовательный стандарт",
+            "адукацыйны стандарт",
+            "учебный план",
+            "вучэбны план"
+        ]
+    },
+    "Belgium": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "digital literacy",
+            "ict",
+            "informatica",
+            "informatique",
+            "digitale competenties",
+            "compétences numériques",
+            "digitale vaardigheden",
+            "éducation numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "leerplan",
+            "programme d'études",
+            "eindtermen",
+            "socles de compétences",
+            "onderwijscurriculum",
+            "plan d'études"
+        ]
+    },
+    "Belize": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "informatics",
+            "technology education"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "education standards",
+            "course of study",
+            "educational framework",
+            "school curriculum"
+        ]
+    },
+    "Benin": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital skills",
+            "informatique",
+            "tic",
+            "compétences numériques",
+            "numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education program",
+            "programme scolaire",
+            "curriculum",
+            "plan d'études",
+            "socle commun",
+            "enseignements"
+        ]
+    },
+    "Bhutan": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "computing",
+            "computer studies",
+            "it",
+            "computer applications",
+            "computer science",
+            "ict",
+            "digita",
+            "kompyutar"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education framework",
+            "academic standards",
+            "learning outcomes",
+            "course guide",
+            "school curriculum",
+            "lobrig",
+            "shedra",
+            "thrimshung",
+            "slobdra"
+        ]
+    },
+    "Bolivia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "digital literacy",
+            "ict",
+            "computación",
+            "informática",
+            "tecnologías",
+            "alfabetización digital",
+            "tic"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "academic program",
+            "plan de estudios",
+            "programa de estudio",
+            "currículo base",
+            "diseño curricular",
+            "normas educativas"
+        ]
+    },
+    "Bosnia and Herzegovina": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "ict",
+            "informacione tehnologije",
+            "digital literacy",
+            "digitalna pismenost",
+            "computing",
+            "računarstvo"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "nastavni plan",
+            "syllabus",
+            "nastavni program",
+            "education standards",
+            "obrazovni standardi",
+            "learning outcomes",
+            "ishodi učenja"
+        ]
+    },
+    "Botswana": {
+        "tech_keywords": [
+            "computer studies",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "digital skills",
+            "computing studies",
+            "thuto ya dikhomputara",
+            "ditiragalo tsa it"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "learning standards",
+            "ministry of education",
+            "primary education",
+            "secondary education",
+            "thuto",
+            "leanelo la dithuto",
+            "lephata la thuto"
+        ]
+    },
+    "Brazil": {
+        "tech_keywords": [
+            "computer science",
+            "computação",
+            "informática",
+            "tecnologia",
+            "digital literacy",
+            "letramento digital",
+            "pensamento computacional",
+            "ict",
+            "tic",
+            "tecnologias digitais"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "bncc",
+            "base nacional",
+            "plano de ensino",
+            "syllabus",
+            "diretrizes curriculares",
+            "educational standards",
+            "programas de ensino"
+        ]
+    },
+    "Brunei": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "computing",
+            "information technology",
+            "sains komputer",
+            "teknologi maklumat",
+            "literasi digital",
+            "kemahiran ict"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "ministry of education",
+            "kurikulum",
+            "sukatan pelajaran",
+            "rancangan pengajaran",
+            "piawaian pendidikan",
+            "kementerian pendidikan"
+        ]
+    },
+    "Bulgaria": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informatics",
+            "информатика",
+            "информационни технологии",
+            "дигитална грамотност",
+            "програмиране",
+            "ит"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "academic program",
+            "учебна програма",
+            "учебен план",
+            "образователни стандарти",
+            "държавни образователни стандарти",
+            "учебна документация"
+        ]
+    },
+    "Burkina Faso": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital skills",
+            "informatique",
+            "technologies",
+            "numérique",
+            "tic",
+            "compétences numériques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "study program",
+            "programme scolaire",
+            "plan d'études",
+            "curriculum national",
+            "système éducatif"
+        ]
+    },
+    "Burundi": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital skills",
+            "compétences numériques",
+            "technology",
+            "technologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "education system",
+            "système éducatif"
+        ]
+    },
+    "Cambodia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "informatics",
+            "technology",
+            "computer studies",
+            "បច្ចេកវិទ្យា",
+            "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+            "អក្ខរកម្មឌីជីថល",
+            "ព័ត៌មានវិទ្យា"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "ministry of education",
+            "course outline",
+            "study program",
+            "កម្មវិធីសិក្សា",
+            "ស្ដង់ដារអប់រំ",
+            "ក្រសួងអប់រំ",
+            "ផែនការសិក្សា"
+        ]
+    },
+    "Cameroon": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "informatique",
+            "tic",
+            "technologies",
+            "numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "study programme",
+            "education standards",
+            "programme d'études",
+            "programme scolaire",
+            "plan d'études",
+            "cadre curriculaire"
+        ]
+    },
+    "Canada": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "digital literacy",
+            "ict",
+            "coding",
+            "informatique",
+            "technologies",
+            "littératie numérique",
+            "programmation"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "learning expectations",
+            "program of studies",
+            "programme d'études",
+            "plan d'études",
+            "attentes d'apprentissage",
+            "normes pédagogiques"
+        ]
+    },
+    "Cape Verde": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "ict",
+            "tic",
+            "digital literacy",
+            "literacia digital",
+            "technology",
+            "tecnologias",
+            "programming",
+            "programação",
+            "digital competencies",
+            "competências digitais"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "syllabus",
+            "programa de ensino",
+            "academic standards",
+            "normas curriculares",
+            "course of study",
+            "plano de estudos",
+            "education policy",
+            "política educativa",
+            "ministry of education",
+            "ministério da educação"
+        ]
+    },
+    "Central African Republic": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital skills",
+            "informatique",
+            "technologies",
+            "compétences numériques",
+            "tic"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "course of study",
+            "programme scolaire",
+            "plan d'études",
+            "système éducatif",
+            "curriculum national"
+        ]
+    },
+    "Chad": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital skills",
+            "informatique",
+            "technologies",
+            "numérique",
+            "compétences numériques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "programme scolaire",
+            "plan d'études",
+            "enseignement",
+            "cadre curriculaire"
+        ]
+    },
+    "Chile": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "computación",
+            "informática",
+            "tecnología",
+            "digital skills",
+            "competencias digitales",
+            "pensamiento computacional",
+            "programación",
+            "tic",
+            "ict"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "curriculum nacional",
+            "plan de estudios",
+            "programas de estudio",
+            "bases curriculares",
+            "estándares educativos",
+            "orientaciones pedagógicas",
+            "marco curricular"
+        ]
+    },
+    "China": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "programming",
+            "computational thinking",
+            "计算机",
+            "信息技术",
+            "人工智能",
+            "编程",
+            "数字素养"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education standards",
+            "learning objectives",
+            "课程标准",
+            "教学大纲",
+            "课程方案",
+            "培养方案",
+            "教育标准"
+        ]
+    },
+    "Colombia": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "ict",
+            "tecnologías",
+            "computación",
+            "pensamiento computacional",
+            "digital skills",
+            "competencias digitales",
+            "programación",
+            "coding",
+            "tecnología e informática"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "plan de estudios",
+            "syllabus",
+            "malla curricular",
+            "education standards",
+            "derechos básicos",
+            "learning objectives",
+            "orientaciones curriculares",
+            "academic standards",
+            "estándares básicos",
+            "educational policy"
+        ]
+    },
+    "Comoros": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "alphabétisation numérique",
+            "technologies",
+            "computer skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "ministère éducation",
+            "enseignement"
+        ]
+    },
+    "Republic of the Congo": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital skills",
+            "compétences numériques",
+            "technology",
+            "technologies",
+            "coding",
+            "programmation"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "national curriculum",
+            "programme national",
+            "academic framework",
+            "cadre pédagogique"
+        ]
+    },
+    "Democratic Republic of the Congo": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital skills",
+            "informatics",
+            "informatique",
+            "technologies",
+            "tic",
+            "compétences numériques",
+            "numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "program of study",
+            "programme scolaire",
+            "plan d'études",
+            "programme d'enseignement",
+            "cursus",
+            "socle commun"
+        ]
+    },
+    "Costa Rica": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "tecnologias",
+            "computing",
+            "digital literacy",
+            "alfabetizacion digital",
+            "programacion",
+            "pensamiento computacional",
+            "ict",
+            "tecnologia educativa"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "plan de estudios",
+            "programas de estudio",
+            "syllabus",
+            "educational standards",
+            "ministerio de educacion",
+            "mep costa rica",
+            "marco curricular",
+            "academic standards",
+            "diseno curricular"
+        ]
+    },
+    "Cote d'Ivoire": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "informatics",
+            "informatique",
+            "technologies",
+            "numérique",
+            "tic",
+            "culture numérique",
+            "sciences informatiques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "academic standards",
+            "programme scolaire",
+            "plan d'études",
+            "ministère éducation",
+            "cursus",
+            "enseignement",
+            "réforme éducative"
+        ]
+    },
+    "Croatia": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "ict",
+            "digital literacy",
+            "digitalna pismenost",
+            "computational thinking",
+            "raunalno razmijanje",
+            "coding",
+            "programiranje",
+            "technology",
+            "tehnologija"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "kurikulum",
+            "syllabus",
+            "nastavni plan",
+            "educational standards",
+            "obrazovni standardi",
+            "study program",
+            "studijski program",
+            "course of study",
+            "predmetni kurikulum"
+        ]
+    },
+    "Cuba": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "computación",
+            "informática",
+            "tecnologías",
+            "alfabetización digital",
+            "programación"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study programs",
+            "plan de estudios",
+            "programa de estudio",
+            "currículo",
+            "normativas escolares",
+            "diseño curricular"
+        ]
+    },
+    "Cyprus": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "πληροφορική",
+            "τεχνολογίες",
+            "ψηφιακός γραμματισμός",
+            "προγραμματισμός"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "study program",
+            "educational framework",
+            "αναλυτικό πρόγραμμα",
+            "πρόγραμμα σπουδών",
+            "εκπαιδευτικά πλαίσια",
+            "διδακτέα ύλη"
+        ]
+    },
+    "Czech Republic": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informatika",
+            "digitální gramotnost",
+            "programování",
+            "informační technologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational framework",
+            "academic standards",
+            "školní vzdělávací program",
+            "rámcový vzdělávací program",
+            "učební osnovy",
+            "vzdělávací cíle",
+            "rvp"
+        ]
+    },
+    "Denmark": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "digital literacy",
+            "ict",
+            "coding",
+            "datalogi",
+            "informatik",
+            "digital dannelse",
+            "teknologiforståelse",
+            "it-fag"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "undervisningsplan",
+            "læreplan",
+            "faghæfte",
+            "uddannelsesplan",
+            "folkeskolen",
+            "gymnasiale uddannelser"
+        ]
+    },
+    "Djibouti": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "culture numérique",
+            "technology",
+            "technologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "ministry of education",
+            "ministère de l'éducation"
+        ]
+    },
+    "Dominica": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "computer education"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "education standards",
+            "course outline",
+            "educational policy",
+            "national curriculum"
+        ]
+    },
+    "Dominican Republic": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "ict",
+            "tic",
+            "digital skills",
+            "competencias digitales",
+            "programming",
+            "programacion",
+            "technology",
+            "tecnologia",
+            "computational thinking",
+            "pensamiento computacional"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "curriculo",
+            "syllabus",
+            "plan de estudio",
+            "education reform",
+            "reforma educativa",
+            "academic standards",
+            "diseno curricular",
+            "educational guidelines",
+            "lineamientos curriculares"
+        ]
+    },
+    "East Timor": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "informatika",
+            "teknolojia",
+            "komputasaun",
+            "literasia dijital"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "kurikulum",
+            "planu estudu",
+            "programa ensinu",
+            "estandarte edukasaun"
+        ]
+    },
+    "Ecuador": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "computación",
+            "tecnologías",
+            "tic",
+            "digital skills",
+            "competencias digitales",
+            "pensamiento computacional",
+            "programación"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "plan de estudios",
+            "programas de estudio",
+            "estándares educativos",
+            "ministerio de educación",
+            "bachillerato",
+            "educación general",
+            "destrezas"
+        ]
+    },
+    "Egypt": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "programming",
+            "حاسب آلي",
+            "تكنولوجيا المعلومات",
+            "حوسبة",
+            "برمجة",
+            "ثقافة رقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "study plan",
+            "ministry of education",
+            "منهج تعليمي",
+            "خطة دراسية",
+            "وزارة التربية والتعليم",
+            "مقررات دراسية",
+            "المعايير الوطنية"
+        ]
+    },
+    "El Salvador": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "ict",
+            "tecnologías",
+            "digital literacy",
+            "alfabetización digital",
+            "coding",
+            "programación",
+            "digital skills",
+            "habilidades digitales"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "syllabus",
+            "programa de estudio",
+            "educational plan",
+            "plan de estudio",
+            "academic standards",
+            "estándares educativos",
+            "mined",
+            "marco curricular"
+        ]
+    },
+    "Equatorial Guinea": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "informática",
+            "tecnologías",
+            "computación",
+            "alfabetización digital"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "learning outcomes",
+            "plan de estudios",
+            "programa educativo",
+            "diseño curricular",
+            "normativa educativa"
+        ]
+    },
+    "Eritrea": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "ኮምፒውተር ሳይንስ",
+            "ቴክኖሎጂ",
+            "ኮምፒውተር ትምህርቲ",
+            "ዲጂታል ክእለት"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "course outline",
+            "ናይ ትምህርቲ መደብ",
+            "ትምህርታዊ መደብ",
+            "መደብ ትምህርቲ",
+            "ናይ ትምህርቲ መምርሒ"
+        ]
+    },
+    "Estonia": {
+        "tech_keywords": [
+            "computer science",
+            "informaatika",
+            "digital competencies",
+            "digipädevused",
+            "ict",
+            "infotehnoloogia",
+            "coding",
+            "programmeerimine",
+            "technology",
+            "tehnoloogia"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "õppekava",
+            "syllabus",
+            "ainekava",
+            "national curriculum",
+            "riiklik õppekava",
+            "education standards",
+            "haridusstandard",
+            "study program",
+            "õppeprogramm"
+        ]
+    },
+    "Ethiopia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "ኮምፒውተር ሳይንስ",
+            "ቴክኖሎጂ",
+            "ዲጂታል እውቀት",
+            "የመረጃ ቴክኖሎጂ"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "educational framework",
+            "የስርዓተ ትምህርት",
+            "የመማሪያ መጽሐፍ",
+            "የትምህርት መመሪያ",
+            "የክፍል ደረጃ"
+        ]
+    },
+    "Fiji": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "digital skills",
+            "it studies",
+            "vakailavo",
+            "kompiuta"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "course of study",
+            "education policy",
+            "learning outcomes",
+            "ministry of education",
+            "educational standards",
+            "tuvatuva ni vuli",
+            "fiji curriculum"
+        ]
+    },
+    "Finland": {
+        "tech_keywords": [
+            "computer science",
+            "informaatioteknologia",
+            "ict",
+            "ohjelmointi",
+            "programming",
+            "digital literacy",
+            "digitaaliset taidot",
+            "computational thinking",
+            "laskennallinen ajattelu"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "opetussuunnitelma",
+            "syllabus",
+            "oppiaine",
+            "course of study",
+            "perusopetus",
+            "education standards",
+            "opetushallitus",
+            "learning objectives",
+            "osaamistavoitteet"
+        ]
+    },
+    "France": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "numérique",
+            "sciences numériques",
+            "algorithmique",
+            "programmation",
+            "codage",
+            "ict",
+            "digital skills",
+            "compétences numériques",
+            "snt"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "plan d'études",
+            "ministère de l'éducation",
+            "education nationale",
+            "socle commun",
+            "syllabus",
+            "référentiel",
+            "enseignement"
+        ]
+    },
+    "Gabon": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "compétences numériques",
+            "technology",
+            "technologies",
+            "coding",
+            "programmation",
+            "digital education",
+            "éducation numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "national curriculum",
+            "programme national",
+            "pedagogy",
+            "pédagogie",
+            "course of study",
+            "offre de formation"
+        ]
+    },
+    "The Gambia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "computer studies",
+            "informatics"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "educational standards",
+            "basic education",
+            "secondary education",
+            "learning outcomes",
+            "mobse"
+        ]
+    },
+    "Georgia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "ინფორმატიკა",
+            "საინფორმაციო ტექნოლოგიები",
+            "ციფრული წიგნიერება",
+            "ტექნოლოგიები"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national standards",
+            "educational program",
+            "სასწავლო გეგმა",
+            "ეროვნული სასწავლო გეგმა",
+            "საგანმანათლებლო პროგრამა",
+            "სტანდარტი"
+        ]
+    },
+    "Germany": {
+        "tech_keywords": [
+            "computer science",
+            "informatik",
+            "ict",
+            "digital literacy",
+            "digitale bildung",
+            "information technology",
+            "informationstechnik",
+            "programming",
+            "programmieren",
+            "media literacy",
+            "medienkompetenz",
+            "coding"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "lehrplan",
+            "syllabus",
+            "bildungsplan",
+            "educational standards",
+            "bildungsstandards",
+            "course of study",
+            "studienplan",
+            "framework curriculum",
+            "rahmenlehrplan",
+            "academic standards"
+        ]
+    },
+    "Ghana": {
+        "tech_keywords": [
+            "computing",
+            "ict",
+            "information communication technology",
+            "digital literacy",
+            "computer science",
+            "information technology"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "educational standards",
+            "course outline",
+            "teaching syllabus",
+            "nacca"
+        ]
+    },
+    "Greece": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "coding",
+            "πληροφορική",
+            "ψηφιακός γραμματισμός",
+            "τεχνολογίες πληροφορικής",
+            "υπολογιστική σκέψη",
+            "προγραμματισμός"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "αναλυτικό πρόγραμμα",
+            "πρόγραμμα σπουδών",
+            "σχολικό πρόγραμμα",
+            "εκπαιδευτικό υλικό",
+            "διδακτέα ύλη"
+        ]
+    },
+    "Grenada": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "technology education",
+            "informatics"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "educational standards",
+            "course outline",
+            "national curriculum",
+            "teaching guide"
+        ]
+    },
+    "Guatemala": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "programming",
+            "informática",
+            "computación",
+            "tecnologías",
+            "educación digital",
+            "programación"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "plan de estudios",
+            "currículo nacional",
+            "cnb",
+            "programas de estudio",
+            "malla curricular",
+            "guía curricular"
+        ]
+    },
+    "Guinea": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "culture numérique",
+            "coding",
+            "programmation",
+            "digital competencies",
+            "compétences numériques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational policy",
+            "politique éducative",
+            "national standards",
+            "normes nationales",
+            "primary education",
+            "enseignement primaire",
+            "secondary education",
+            "enseignement secondaire"
+        ]
+    },
+    "Guinea-Bissau": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "informática",
+            "tecnologias",
+            "computação",
+            "tic",
+            "alfabetização digital"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "plano de estudos",
+            "currículo",
+            "programa escolar",
+            "normas pedagógicas"
+        ]
+    },
+    "Guyana": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "informatics",
+            "technology education"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "education standards",
+            "study guide",
+            "educational policy",
+            "school curriculum",
+            "teaching guide"
+        ]
+    },
+    "Haiti": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "informatics",
+            "informatique",
+            "technologies",
+            "numérique",
+            "compétences numériques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational program",
+            "academic standards",
+            "programme scolaire",
+            "plan d études",
+            "curriculum national",
+            "ministère éducation"
+        ]
+    },
+    "Honduras": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital skills",
+            "programming",
+            "computación",
+            "informática",
+            "tecnologías",
+            "tic",
+            "habilidades digitales",
+            "programación"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "plan de estudios",
+            "diseño curricular",
+            "programa educativo",
+            "estándares educativos",
+            "currículo nacional"
+        ]
+    },
+    "Hungary": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "digital literacy",
+            "digitális írástudás",
+            "ict",
+            "digitális kompetencia",
+            "programming",
+            "programozás",
+            "coding",
+            "algoritmusok",
+            "informatics"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "nemzeti alaptanterv",
+            "syllabus",
+            "tanterv",
+            "education framework",
+            "kerettanterv",
+            "course of study",
+            "oktatási program",
+            "academic standards",
+            "köznevelés"
+        ]
+    },
+    "Iceland": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "coding",
+            "tölvunarfræði",
+            "upplýsingatækni",
+            "stafræn læsi",
+            "forritun",
+            "tækni"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational framework",
+            "námskrá",
+            "aðalnámskrá",
+            "skólastarf",
+            "námsmarkmið",
+            "menntamálaráðuneyti"
+        ]
+    },
+    "India": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "coding",
+            "computational thinking",
+            "संगणक विज्ञान",
+            "सूचना प्रौद्योगिकी",
+            "डिजिटल साक्षरता"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "learning outcomes",
+            "पाठ्यचर्या",
+            "पाठ्यक्रम",
+            "अकादमिक मानक",
+            "शिक्षा नीति"
+        ]
+    },
+    "Indonesia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "informatika",
+            "ict",
+            "tik",
+            "digital literacy",
+            "literasi digital",
+            "computational thinking",
+            "berpikir komputasional",
+            "programming",
+            "pemrograman"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "kurikulum",
+            "syllabus",
+            "silabus",
+            "educational standards",
+            "standar pendidikan",
+            "learning outcomes",
+            "capaian pembelajaran",
+            "study program",
+            "program studi",
+            "merdeka belajar"
+        ]
+    },
+    "Iran": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "computational thinking",
+            "digital literacy",
+            "coding",
+            "omoomi computer",
+            "fanavari etelaat",
+            "amoozesh computer",
+            "barnamenevisi",
+            "savade digitall",
+            "tecknologie etelaat"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "national curriculum",
+            "barname darsi",
+            "amoozesh va parvaresh",
+            "sarfasle darsi",
+            "mohtavaye amoozeshi",
+            "standardhaye amoozeshi",
+            "ketabe darsi"
+        ]
+    },
+    "Iraq": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "information technology",
+            "digital skills",
+            "computing",
+            "حاسوب",
+            "تكنولوجيا المعلومات",
+            "معلوماتية",
+            "المهارات الرقمية",
+            "برمجة"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study plan",
+            "learning outcomes",
+            "منهج",
+            "مناهج",
+            "خطة دراسية",
+            "الخطة التعليمية",
+            "مفردات المنهج",
+            "المعايير التربوية"
+        ]
+    },
+    "Ireland": {
+        "tech_keywords": [
+            "computer science",
+            "coding",
+            "digital literacy",
+            "ict",
+            "computational thinking",
+            "ríomheolaíocht",
+            "códú",
+            "litearthacht dhigiteach",
+            "tfc"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "junior cycle",
+            "senior cycle",
+            "learning outcomes",
+            "curaclam",
+            "siollabas",
+            "an tsraith shóisearach",
+            "an tsraith shinsearach",
+            "torthaí foghlama"
+        ]
+    },
+    "Israel": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "computational thinking",
+            "cyber security",
+            "programming",
+            "digital literacy",
+            "מדעי המחשב",
+            "תכנות",
+            "סייבר",
+            "אוריינות דיגיטלית",
+            "חשיבה חישובית"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "learning outcomes",
+            "תכנית לימודים",
+            "סילבוס",
+            "מערכת החינוך",
+            "יעדי למידה",
+            "תוכנית הלימודים"
+        ]
+    },
+    "Italy": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "ict",
+            "tecnologie",
+            "digital literacy",
+            "competenze digitali",
+            "pensiero computazionale",
+            "coding",
+            "pensiero logico"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "curricolo",
+            "syllabus",
+            "programma scolastico",
+            "educational standards",
+            "indicazioni nazionali",
+            "piano studi",
+            "didattica",
+            "obiettivi apprendimento"
+        ]
+    },
+    "Jamaica": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "it",
+            "ict",
+            "digital literacy",
+            "coding",
+            "programming",
+            "computer studies",
+            "electronic data"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "course outline",
+            "ministry of education",
+            "academic standards",
+            "learning objectives",
+            "cxc syllabus"
+        ]
+    },
+    "Japan": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "programming",
+            "ict",
+            "digital literacy",
+            "情報教育",
+            "情報",
+            "プログラミング",
+            "情報活用能力",
+            "ict教育",
+            "技術家庭"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "course of study",
+            "academic standards",
+            "学習指導要領",
+            "教育課程",
+            "指導案",
+            "カリキュラム",
+            "学校教育"
+        ]
+    },
+    "Jordan": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informatics",
+            "حاسوب",
+            "تكنولوجيا المعلومات",
+            "التربية المعلوماتية",
+            "برمجة",
+            "مهارات رقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "study plan",
+            "educational standards",
+            "learning outcomes",
+            "منهج",
+            "خطة دراسية",
+            "مناهج تعليمية",
+            "معايير التعلم",
+            "مقررات دراسية"
+        ]
+    },
+    "Kazakhstan": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "coding",
+            "informatika",
+            "aqparattyq tehnologiyalar",
+            "tsifrlyq saulyq",
+            "bagdarlamalaý"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning objectives",
+            "oqu bagdarlamasy",
+            "oqu jospary",
+            "membekettik standart",
+            "bilim beru"
+        ]
+    },
+    "Kenya": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information communication",
+            "digital literacy",
+            "computing",
+            "technology studies",
+            "kompyuta",
+            "teknolojia",
+            "stadi za kompyuta"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "competency based",
+            "cbc",
+            "academic standards",
+            "education framework",
+            "mtaala",
+            "muhtasari",
+            "mfumo wa elimu"
+        ]
+    },
+    "Kiribati": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "computing",
+            "information technology",
+            "information technology",
+            "babaniki",
+            "computer"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "learning standards",
+            "ministry of education",
+            "educational framework",
+            "te aba n reirei",
+            "kabuaka n reirei"
+        ]
+    },
+    "North Korea": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "programming",
+            "information technology",
+            "컴퓨터과학",
+            "정보과학",
+            "정보통신기술",
+            "프로그래밍",
+            "정보기술"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education system",
+            "learning program",
+            "교육과정",
+            "교과과정",
+            "교수요목",
+            "학습프로그램",
+            "교육강령"
+        ]
+    },
+    "South Korea": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "coding",
+            "software education",
+            "컴퓨터과학",
+            "정보",
+            "소프트웨어 교육",
+            "sw 교육",
+            "코딩",
+            "디지털 소양",
+            "정보통신기술"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "educational standards",
+            "study guidelines",
+            "coursework",
+            "교육과정",
+            "국가 교육과정",
+            "학습지도안",
+            "교과과정",
+            "교육부",
+            "성취기준"
+        ]
+    },
+    "Kosovo": {
+        "tech_keywords": [
+            "computer science",
+            "informatikë",
+            "ict",
+            "tik",
+            "digital literacy",
+            "shkathtësi digjitale",
+            "programming",
+            "programim",
+            "technology",
+            "teknologji"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "kurrikula",
+            "syllabus",
+            "planprogram",
+            "core curriculum",
+            "kurrikula bërthamë",
+            "learning outcomes",
+            "rezultatet e të nxënit",
+            "educational standards",
+            "standardet arsimore"
+        ]
+    },
+    "Kuwait": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "coding",
+            "computer studies",
+            "حاسوب",
+            "تكنولوجيا المعلومات",
+            "معلوماتية",
+            "برمجة",
+            "الثقافة الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational plan",
+            "ministry of education",
+            "منهج",
+            "مناهج دراسية",
+            "خطة دراسية",
+            "وزارة التربية",
+            "معايير تعليمية"
+        ]
+    },
+    "Kyrgyzstan": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "coding",
+            "информатика",
+            "маалыматтык технологиялар",
+            "цифралык сабаттуулук",
+            "программалоо"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "study program",
+            "окуу программасы",
+            "билим берүү стандарты",
+            "окуу планы",
+            "предметтик стандарт"
+        ]
+    },
+    "Laos": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "ເຕັກໂນໂລຊີ",
+            "ຂໍ້ມູນຂ່າວສານ",
+            "ໄອຊີທີ",
+            "ດິຈິຕອນ",
+            "ຄອມພິວເຕີ"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "ministry of education",
+            "educational framework",
+            "ຫຼັກສູດ",
+            "ແຜນການສອນ",
+            "ມາດຕະຖານການສຶກສາ",
+            "ກະຊວງສຶກສາທິການ",
+            "ການສຶກສາ"
+        ]
+    },
+    "Latvia": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "digital literacy",
+            "digitālā pratība",
+            "ict",
+            "informācijas tehnoloģijas",
+            "programming",
+            "programmēšana",
+            "computational thinking",
+            "skaitļošanas domāšana"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "mācību programma",
+            "syllabus",
+            "studiju plāns",
+            "academic standards",
+            "izglītības standarts",
+            "course of study",
+            "mācību saturs",
+            "education ministry",
+            "izglītības ministrija"
+        ]
+    },
+    "Lebanon": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "programming",
+            "informatics",
+            "علم الحاسوب",
+            "معلوماتية",
+            "تكنولوجيا المعلومات",
+            "التربية التكنولوجية",
+            "برمجة"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational framework",
+            "study plan",
+            "academic standards",
+            "المنهج التعليمي",
+            "المناهج الدراسية",
+            "خطة دراسية",
+            "المناهج اللبنانية",
+            "المركز التربوي"
+        ]
+    },
+    "Lesotho": {
+        "tech_keywords": [
+            "computer studies",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "thuto ea likhomphutha",
+            "boitsebiso ba thekenoloji"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "educational standards",
+            "learning areas",
+            "lenaneo la thuto",
+            "melao ea thuto",
+            "litaba tsa thuto"
+        ]
+    },
+    "Liberia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "coding",
+            "technology education",
+            "computer studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "academic standards",
+            "education policy",
+            "learning outcomes",
+            "course outline",
+            "educational framework"
+        ]
+    },
+    "Libya": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "computing",
+            "حاسب آلي",
+            "معلوماتية",
+            "تكنولوجيا المعلومات",
+            "تقنية المعلومات",
+            "المهارات الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study plan",
+            "ministry of education",
+            "منهج تعليمي",
+            "خطة دراسية",
+            "مقررات دراسية",
+            "وزارة التعليم",
+            "المعايير التربوية"
+        ]
+    },
+    "Liechtenstein": {
+        "tech_keywords": [
+            "computer science",
+            "informatik",
+            "ict",
+            "informations- und kommunikationstechnologie",
+            "digital literacy",
+            "digitale kompetenzen",
+            "coding",
+            "programmieren",
+            "media literacy",
+            "medienbildung"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "lehrplan",
+            "syllabus",
+            "bildungsplan",
+            "educational standards",
+            "bildungsstandards",
+            "study plan",
+            "studienplan",
+            "academic framework",
+            "rahmenlehrplan"
+        ]
+    },
+    "Lithuania": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "it",
+            "digital literacy",
+            "skaitmeninis raštingumas",
+            "programming",
+            "programavimas",
+            "ict",
+            "informacinės technologijos",
+            "digital skills",
+            "skaitmeniniai gebėjimai"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "ugdymo turinys",
+            "syllabus",
+            "bendrosios programos",
+            "course of study",
+            "mokymo planas",
+            "educational standards",
+            "išsilavinimo standartai",
+            "education policy",
+            "švietimo politika"
+        ]
+    },
+    "Luxembourg": {
+        "tech_keywords": [
+            "computer science",
+            "informatik",
+            "informatique",
+            "digital skills",
+            "digitale kompetenzen",
+            "compétences numériques",
+            "ict",
+            "digital literacy",
+            "medienkompetenz",
+            "éducation numérique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "lehrplan",
+            "programme scolaire",
+            "syllabus",
+            "bildungsplan",
+            "plan d'études",
+            "academic standards",
+            "bildungsstandards",
+            "normes éducatives",
+            "study program"
+        ]
+    },
+    "Macedonia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "informatika",
+            "informaciski tehnologii",
+            "digitalna pismenost",
+            "programiranje"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national standards",
+            "educational program",
+            "nastavna programa",
+            "nastaven plan",
+            "obrazoven standard",
+            "uchebna programa"
+        ]
+    },
+    "Madagascar": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "littératie numérique",
+            "technology",
+            "technologie",
+            "télécommunications"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "national curriculum",
+            "programme national"
+        ]
+    },
+    "Malawi": {
+        "tech_keywords": [
+            "computer studies",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "computer science",
+            "computing studies",
+            "ict studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "learning outcomes",
+            "national curriculum",
+            "subject syllabus",
+            "primary education",
+            "secondary education"
+        ]
+    },
+    "Malaysia": {
+        "tech_keywords": [
+            "computer science",
+            "sains komputer",
+            "ict",
+            "teknologi maklumat",
+            "digital literacy",
+            "literasi digital",
+            "computational thinking",
+            "pemikiran komputasional",
+            "programming",
+            "pengaturcaraan",
+            "informatics",
+            "informatik"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "kurikulum",
+            "syllabus",
+            "sukatan pelajaran",
+            "education standards",
+            "standard kandungan",
+            "learning outcomes",
+            "objektif pembelajaran",
+            "ministry of education",
+            "kementerian pendidikan",
+            "educational blueprint",
+            "pelan pembangunan"
+        ]
+    },
+    "Maldives": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "technology",
+            "computer studies",
+            "computer science",
+            "މައުލޫމާތު ޓެކްނޮލޮޖީ",
+            "ކޮމްޕިއުޓަރ ސައިންސް"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "academic framework",
+            "national curriculum",
+            "course outline",
+            "education policy",
+            "ޤައުމީ މަންހަޖު",
+            "މަންހަޖު",
+            "ސިލަބަސް",
+            "ތައުލީމީ މިންގަނޑު"
+        ]
+    },
+    "Mali": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "technologies",
+            "numerique",
+            "digital literacy",
+            "culture numerique",
+            "programmation",
+            "coding"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d etudes",
+            "education system",
+            "systeme educatif",
+            "pedagogie",
+            "standards",
+            "normes educatives",
+            "apprentissage"
+        ]
+    },
+    "Malta": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "informatika",
+            "teknoloġija",
+            "diġitali"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "learning outcomes",
+            "education framework",
+            "kurrikulu",
+            "programm ta studju",
+            "qafas edukattiv"
+        ]
+    },
+    "Marshall Islands": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "technology",
+            "computing",
+            "information technology",
+            "kōmpūta",
+            "tekinōlōjī"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "course of study",
+            "education policy",
+            "learning outcomes",
+            "kōlō",
+            "jikuul"
+        ]
+    },
+    "Mauritania": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "compétences numériques",
+            "technology",
+            "technologie",
+            "computer education",
+            "enseignement informatique"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational policy",
+            "politique éducative",
+            "ministry of education",
+            "ministère de l'éducation",
+            "academic standards",
+            "normes pédagogiques"
+        ]
+    },
+    "Mauritius": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information communication technology",
+            "digital literacy",
+            "coding",
+            "computational thinking",
+            "informatique",
+            "technologie de l'information",
+            "compétences numériques"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum framework",
+            "study programme",
+            "educational standards",
+            "programme d'études",
+            "cadre curriculaire",
+            "plan d'études"
+        ]
+    },
+    "Mexico": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "tecnologías",
+            "tic",
+            "computación",
+            "digital skills",
+            "habilidades digitales",
+            "pensamiento computacional",
+            "ict",
+            "tecnologías información"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "plan de estudios",
+            "programas de estudio",
+            "educational standards",
+            "aprendizajes clave",
+            "marco curricular",
+            "syllabus",
+            "formación académica",
+            "diseño curricular",
+            "sep"
+        ]
+    },
+    "Federated States of Micronesia": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "educational technology",
+            "information systems"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "course of study",
+            "learning standards",
+            "educational framework",
+            "school program"
+        ]
+    },
+    "Moldova": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "ict",
+            "tic",
+            "digital literacy",
+            "competențe digitale",
+            "programming",
+            "programare",
+            "technology",
+            "tehnologii"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "curriculum",
+            "syllabus",
+            "programă școlară",
+            "education standards",
+            "standarde educaționale",
+            "course of study",
+            "plan de învățământ",
+            "ministry of education",
+            "ministerul educației"
+        ]
+    },
+    "Monaco": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "numérique",
+            "digital literacy",
+            "compétences numériques",
+            "technology",
+            "technologies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "objectifs pédagogiques",
+            "course of study",
+            "cursus"
+        ]
+    },
+    "Mongolia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informatics",
+            "мэдээллийн технологи",
+            "компьютер ухаан",
+            "дижитал бичиг үсэг",
+            "програмчлал"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "academic program",
+            "сургалтын хөтөлбөр",
+            "хичээлийн хөтөлбөр",
+            "боловсролын стандарт",
+            "сургалтын төлөвлөгөө"
+        ]
+    },
+    "Montenegro": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "informatika",
+            "računarstvo",
+            "digitalna pismenost",
+            "informacione tehnologije"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education program",
+            "academic standards",
+            "nastavni plan",
+            "program obrazovanja",
+            "školski program",
+            "obrazovni standardi"
+        ]
+    },
+    "Morocco": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "digital skills",
+            "compétences numériques",
+            "ict",
+            "tic",
+            "algorithmique",
+            "programmation",
+            "technologies de l'information"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "ministère de l'éducation",
+            "cadre référentiel",
+            "normes éducatives",
+            "éducation nationale"
+        ]
+    },
+    "Mozambique": {
+        "tech_keywords": [
+            "informatica",
+            "tic",
+            "tecnologias",
+            "tecnologias de informação",
+            "digital literacy",
+            "computer science",
+            "ict",
+            "competencias digitais"
+        ],
+        "edu_keywords": [
+            "curriculo",
+            "plano de estudos",
+            "programa de ensino",
+            "curriculum",
+            "syllabus",
+            "programa curricular",
+            "normas de ensino",
+            "education policy"
+        ]
+    },
+    "Myanmar": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "computing",
+            "digital literacy",
+            "information technology",
+            "ကွန်ပျူတာပညာ",
+            "သတင်းအချက်အလက်နည်းပညာ",
+            "နည်းပညာ",
+            "ကွန်ပျူတာ"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "course of study",
+            "learning outcomes",
+            "ပညာရေး",
+            "သင်ရိုးညွှန်းတမ်း",
+            "သင်ရိုး",
+            "အတန်းသင်ရိုး",
+            "ပညာရေးဝန်ကြီးဌာန"
+        ]
+    },
+    "Namibia": {
+        "tech_keywords": [
+            "computer studies",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "kombinasiya",
+            "inligtingskommunikasietegnologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "educational standards",
+            "learning programme",
+            "onderrigplan",
+            "leerplan"
+        ]
+    },
+    "Nauru": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "computing",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "study program",
+            "national curriculum",
+            "educational framework"
+        ]
+    },
+    "Nepal": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "computer education",
+            "컴퓨터 과학",
+            "कम्प्युटर शिक्षा",
+            "कम्प्युटर विज्ञान",
+            "सूचना प्रविधि",
+            "डिजिटल साक्षरता"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "academic standards",
+            "पाठ्यक्रम",
+            "शिक्षा योजना",
+            "विषयगत पाठ्यक्रम",
+            "शैक्षिक मानक",
+            "विद्यालय शिक्षा"
+        ]
+    },
+    "Netherlands": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "ict",
+            "digital literacy",
+            "digitale geletterdheid",
+            "computational thinking",
+            "informatiekunde",
+            "technologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "leerplan",
+            "syllabus",
+            "onderwijsplan",
+            "educational standards",
+            "kerndoelen",
+            "eindtermen",
+            "onderwijscurriculum"
+        ]
+    },
+    "New Zealand": {
+        "tech_keywords": [
+            "computer science",
+            "digital technologies",
+            "hangarau matihiko",
+            "ict",
+            "programming",
+            "computational thinking",
+            "digital literacy"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "new zealand curriculum",
+            "te marautanga o aotearoa",
+            "syllabus",
+            "learning outcomes",
+            "achievement objectives",
+            "education standards",
+            "marautanga"
+        ]
+    },
+    "Nicaragua": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "informática",
+            "tecnologías",
+            "computación",
+            "habilidades digitales",
+            "tic"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "study plan",
+            "academic standards",
+            "educational program",
+            "plan de estudios",
+            "programa de estudio",
+            "currículo",
+            "normativa educativa",
+            "diseño curricular"
+        ]
+    },
+    "Niger": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "littératie numérique",
+            "technologie",
+            "technologies éducatives"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "ministère éducation",
+            "cadre pédagogique"
+        ]
+    },
+    "Nigeria": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "technology education",
+            "komiuta"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational policy",
+            "basic education",
+            "nerdc",
+            "learning outcomes",
+            "scheme of work"
+        ]
+    },
+    "Norway": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "programming",
+            "digital literacy",
+            "technology",
+            "informatikk",
+            "ikt",
+            "algoritmer",
+            "programmering",
+            "digital kompetanse",
+            "teknologi"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "learning objectives",
+            "læreplan",
+            "fagplan",
+            "utdanning",
+            "kunnskapsløftet",
+            "kompetansemål"
+        ]
+    },
+    "Oman": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "programming",
+            "computer studies",
+            "علوم الحاسوب",
+            "تقنية المعلومات",
+            "الحاسب الآلي",
+            "التربية التقنية",
+            "المهارات الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "educational standards",
+            "learning outcomes",
+            "school program",
+            "المنهج الدراسي",
+            "الخطة الدراسية",
+            "وزارة التربية والتعليم",
+            "المقررات الدراسية",
+            "وثيقة المنهج"
+        ]
+    },
+    "Pakistan": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "programming",
+            "computer studies",
+            "computer taleem",
+            "computer science"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "national curriculum",
+            "course outline",
+            "education policy",
+            "learning standards",
+            "nisaab",
+            "taleemi syllabus",
+            "curriculum framework"
+        ]
+    },
+    "Palau": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "technology",
+            "computing",
+            "digital skills",
+            "information technology"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "course of study",
+            "educational framework",
+            "ministry of education",
+            "learning outcomes"
+        ]
+    },
+    "Panama": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital skills",
+            "technology",
+            "informática",
+            "tecnologías",
+            "pensamiento computacional",
+            "competencias digitales"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "plan de estudios",
+            "programas de estudio",
+            "diseño curricular",
+            "guía didáctica",
+            "meduca"
+        ]
+    },
+    "Papua New Guinea": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computer studies",
+            "tok pisin kompiuta",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "learning outcomes",
+            "study program",
+            "school curriculum",
+            "course outline"
+        ]
+    },
+    "Paraguay": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "tic",
+            "tecnologias",
+            "digital literacy",
+            "alfabetizacion digital",
+            "programacion",
+            "computing",
+            "educacion digital"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "plan de estudios",
+            "programas de estudio",
+            "syllabus",
+            "mec",
+            "diseño curricular",
+            "academic standards",
+            "marco curricular",
+            "educacion escolar"
+        ]
+    },
+    "Peru": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "computational thinking",
+            "informática",
+            "computación",
+            "tecnologías",
+            "pensamiento computacional",
+            "competencias digitales",
+            "tic"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational framework",
+            "diseño curricular",
+            "plan de estudios",
+            "programas de estudio",
+            "currículo nacional",
+            "estándares de aprendizaje",
+            "orientaciones pedagógicas"
+        ]
+    },
+    "Philippines": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information communication technology",
+            "programming",
+            "digital literacy",
+            "computing",
+            "technology education",
+            "informatics",
+            "tech"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "k to 12",
+            "deped",
+            "learning competencies",
+            "gabay pangkurikulum",
+            "kurikulum",
+            "deped order",
+            "academic standards"
+        ]
+    },
+    "Poland": {
+        "tech_keywords": [
+            "computer science",
+            "informatyka",
+            "ict",
+            "technologie informacyjne",
+            "digital skills",
+            "kompetencje cyfrowe",
+            "programming",
+            "programowanie",
+            "computational thinking",
+            "myślenie komputacyjne"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "podstawa programowa",
+            "syllabus",
+            "program nauczania",
+            "education standards",
+            "standardy edukacyjne",
+            "educational policy",
+            "polityka oświatowa",
+            "school curriculum",
+            "plan nauczania"
+        ]
+    },
+    "Portugal": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "coding",
+            "informática",
+            "tic",
+            "competências digitais",
+            "programação"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "currículo",
+            "programa de ensino",
+            "aprendizagens essenciais",
+            "planos de estudo"
+        ]
+    },
+    "Qatar": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "computing",
+            "information technology",
+            "حاسب آلي",
+            "تكنولوجيا المعلومات",
+            "المهارات الرقمية",
+            "علوم الحاسب",
+            "الذكاء الاصطناعي"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "educational standards",
+            "learning outcomes",
+            "المنهج الدراسي",
+            "خطة دراسية",
+            "وزارة التعليم",
+            "المعايير الوطنية",
+            "وثيقة المنهج"
+        ]
+    },
+    "Romania": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "digital literacy",
+            "competente digitale",
+            "ict",
+            "tehnologia informatiei",
+            "programming",
+            "programare",
+            "algorithmic thinking",
+            "gandire algoritmica"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programa scolara",
+            "syllabus",
+            "plan de invatamant",
+            "ministry of education",
+            "ministerul educatiei",
+            "academic standards",
+            "standarde educationale",
+            "educational framework",
+            "cadru curricular"
+        ]
+    },
+    "Russia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "информатика",
+            "информационные технологии",
+            "икт",
+            "цифровая грамотность",
+            "программирование"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standard",
+            "study program",
+            "учебная программа",
+            "федеральный стандарт",
+            "фгос",
+            "образовательная программа",
+            "план обучения"
+        ]
+    },
+    "Rwanda": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informatics",
+            "ikoranabuhanga",
+            "amakuru",
+            "ubuhanga bw'ikoranabuhanga"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "education policy",
+            "national curriculum",
+            "integanyanyigisho",
+            "gahunda y'amasomo",
+            "ibyiciro by'amasomo"
+        ]
+    },
+    "Saint Kitts and Nevis": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "information systems",
+            "computer studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "ministry of education",
+            "educational standards",
+            "course outline",
+            "programme of study"
+        ]
+    },
+    "Saint Lucia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "computer studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "ministry of education",
+            "academic framework",
+            "educational policy"
+        ]
+    },
+    "Saint Vincent and the Grenadines": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "information technology",
+            "it education",
+            "technology studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "ministry of education",
+            "national curriculum",
+            "educational standards",
+            "learning outcomes",
+            "teaching syllabus"
+        ]
+    },
+    "Samoa": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "computing",
+            "tekinolosi faakomipiuta",
+            "tomai faatekonolosi",
+            "faamatalaga tekonolosi"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "learning outcomes",
+            "education standards",
+            "academic framework",
+            "polokalame o aoaoga",
+            "taiala o aoaoga",
+            "mataupu faavae",
+            "fuafuaga o aoaoga"
+        ]
+    },
+    "San Marino": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "digital literacy",
+            "competenze digitali",
+            "ict",
+            "tecnologie",
+            "coding",
+            "pensiero computazionale"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programma scolastico",
+            "syllabus",
+            "piano di studi",
+            "educational standards",
+            "indicazioni nazionali",
+            "course of study",
+            "didattica"
+        ]
+    },
+    "Sao Tome and Principe": {
+        "tech_keywords": [
+            "computer science",
+            "informatica",
+            "tic",
+            "tecnologias",
+            "digital literacy",
+            "competencias digitais",
+            "ict",
+            "ciencia computacional"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "curriculo",
+            "syllabus",
+            "plano de estudos",
+            "educational standards",
+            "programas escolares",
+            "education policy",
+            "politica educativa"
+        ]
+    },
+    "Saudi Arabia": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "programming",
+            "coding",
+            "الحاسب",
+            "تقنية المعلومات",
+            "البرمجة",
+            "الذكاء الاصطناعي",
+            "المهارات الرقمية",
+            "علوم الحاسب"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "study plan",
+            "المناهج",
+            "الخطة الدراسية",
+            "المعايير التعليمية",
+            "مقررات دراسية",
+            "وثيقة المنهج"
+        ]
+    },
+    "Senegal": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "culture numérique",
+            "coding",
+            "programmation",
+            "technologies",
+            "technologies éducatives"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "curriculum",
+            "syllabus",
+            "programme scolaire",
+            "educational standards",
+            "normes pédagogiques",
+            "course of study",
+            "plan d'études",
+            "ministry of education",
+            "ministère de l'éducation"
+        ]
+    },
+    "Serbia": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "računarstvo",
+            "ict",
+            "digital literacy",
+            "digitalna pismenost",
+            "programming",
+            "programiranje",
+            "information technology",
+            "informacione tehnologije"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "nastavni plan",
+            "syllabus",
+            "nastavni program",
+            "education standards",
+            "obrazovni standardi",
+            "study program",
+            "studijski program",
+            "coursework",
+            "školski program"
+        ]
+    },
+    "Seychelles": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "informatik",
+            "teknoloji",
+            "konmansman konpitè",
+            "teknoloji enformasyon"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning framework",
+            "program detid",
+            "plan detid",
+            "kadirikil",
+            "norm edikasyonel"
+        ]
+    },
+    "Sierra Leone": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "computer studies",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "basic education",
+            "secondary education",
+            "teaching syllabus",
+            "national curriculum",
+            "educational standards"
+        ]
+    },
+    "Singapore": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "ict",
+            "digital literacy",
+            "coding",
+            "computational thinking",
+            "information technology",
+            "informatics"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "moe",
+            "learning outcomes",
+            "academic standards",
+            "subject syllabus",
+            "education policy"
+        ]
+    },
+    "Slovakia": {
+        "tech_keywords": [
+            "informatika",
+            "computer science",
+            "digitálne zručnosti",
+            "digital skills",
+            "algoritmizácia",
+            "programovanie",
+            "programming",
+            "ikt",
+            "ict"
+        ],
+        "edu_keywords": [
+            "štátny vzdelávací program",
+            "national curriculum",
+            "učebné osnovy",
+            "syllabus",
+            "vzdelávací štandard",
+            "educational standard",
+            "ciele vzdelávania",
+            "learning objectives",
+            "školský vzdelávací program"
+        ]
+    },
+    "Slovenia": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "coding",
+            "informaatika",
+            "računalništvo",
+            "digitalna pismenost",
+            "programiranje",
+            "informacijske tehnologije"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "učni načrt",
+            "kurikulum",
+            "izobraževalni program",
+            "vzgojno izobraževalni",
+            "standardi znanja"
+        ]
+    },
+    "Solomon Islands": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "kompiuta",
+            "teknoloji"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "school program",
+            "stadi",
+            "edukesen",
+            "lokol stadi"
+        ]
+    },
+    "Somalia": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "kombiyuutar",
+            "tiknoolajiyada",
+            "xogta",
+            "horumarinta teknoolajiyada"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "national curriculum",
+            "study program",
+            "manhaj",
+            "qorshaha waxbarashada",
+            "heerarka waxbarashada",
+            "nidaamka waxbarashada"
+        ]
+    },
+    "South Africa": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "coding",
+            "robotics",
+            "information systems",
+            "computer applications",
+            "rekenaartoepassingstegnologie",
+            "inligtingstegnologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "caps",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "national curriculum",
+            "assessment policy",
+            "leerplan",
+            "onderwysstandaarde",
+            "nasionale kurrikulum"
+        ]
+    },
+    "South Sudan": {
+        "tech_keywords": [
+            "computer studies",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computer literacy",
+            "computing",
+            "ict education"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "learning outcomes",
+            "educational framework",
+            "national curriculum",
+            "academic programme"
+        ]
+    },
+    "Spain": {
+        "tech_keywords": [
+            "computer science",
+            "informática",
+            "computational thinking",
+            "pensamiento computacional",
+            "digital competence",
+            "competencia digital",
+            "ict",
+            "tic",
+            "programming",
+            "programación",
+            "technology",
+            "tecnología"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "currículo",
+            "syllabus",
+            "programación didáctica",
+            "educational standards",
+            "estándares aprendizaje",
+            "learning objectives",
+            "objetivos educativos",
+            "course of study",
+            "plan de estudios",
+            "ministerio educación"
+        ]
+    },
+    "Sri Lanka": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computational thinking",
+            "programming",
+            "පරිගණක විද්‍යාව",
+            "තොරතුරු තාක්ෂණය",
+            "ඩිජිටල් සාක්ෂරතාවය",
+            "පරිගණක අධ්‍යයනය"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational framework",
+            "national curriculum",
+            "பாடத்திட்டம்",
+            "අධ්‍යාපන සැලැස්ම",
+            "විෂය නිර්දේශය",
+            "ජාතික විෂය මාලාව"
+        ]
+    },
+    "Sudan": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "حاسوب",
+            "تكنولوجيا المعلومات",
+            "تقنية المعلومات",
+            "محو الأمية الرقمية",
+            "علوم الحاسب"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational framework",
+            "academic standards",
+            "ministry of education",
+            "منهج",
+            "مناهج دراسية",
+            "خطة دراسية",
+            "وزارة التربية والتعليم",
+            "معايير تعليمية"
+        ]
+    },
+    "Suriname": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "informatica",
+            "informatiekunde",
+            "digitale vaardigheden",
+            "informatie en communicatietechnologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning objectives",
+            "onderwijscurriculum",
+            "leerplan",
+            "onderwijsprogramma",
+            "eindtermen",
+            "onderwijsbeleid"
+        ]
+    },
+    "Swaziland": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "computer studies",
+            "information systems",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "learning outcomes",
+            "educational standards",
+            "study programme",
+            "teaching guidelines",
+            "academic framework"
+        ]
+    },
+    "Sweden": {
+        "tech_keywords": [
+            "computer science",
+            "programming",
+            "digital competence",
+            "ict",
+            "informatik",
+            "programmering",
+            "digital kompetens",
+            "datateknik"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning outcomes",
+            "läroplan",
+            "kursplan",
+            "kunskapskrav",
+            "utbildningsplan"
+        ]
+    },
+    "Switzerland": {
+        "tech_keywords": [
+            "computer science",
+            "informatik",
+            "informatique",
+            "informatica",
+            "ict",
+            "digital literacy",
+            "digitale kompetenzen",
+            "compétences numériques",
+            "competenze digitali",
+            "medienbildung",
+            "médias",
+            "media"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "lehrplan",
+            "plan d'études",
+            "piano di studio",
+            "syllabus",
+            "bildungsplan",
+            "rahmenlehrplan",
+            "plan d'études cadre",
+            "piano di studio quadro",
+            "educational standards",
+            "bildungsstandards"
+        ]
+    },
+    "Syria": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "technology",
+            "digital literacy",
+            "coding",
+            "معلوماتية",
+            "حاسوب",
+            "تكنولوجيا",
+            "تقانة المعلومات",
+            "البرمجة",
+            "محو الأمية الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "course of study",
+            "educational standards",
+            "ministry of education",
+            "منهاج",
+            "مناهج دراسية",
+            "خطة دراسية",
+            "وزارة التربية",
+            "المعايير الوطنية"
+        ]
+    },
+    "Taiwan": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "computational thinking",
+            "coding",
+            "programming",
+            "digital literacy",
+            "資訊科技",
+            "資訊教育",
+            "程式設計",
+            "運算思維",
+            "資訊素養"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "k-12 education",
+            "learning standards",
+            "course guidelines",
+            "課程綱要",
+            "課綱",
+            "學習重點",
+            "教學大綱",
+            "教育標準"
+        ]
+    },
+    "Tajikistan": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "информатика",
+            "технологияи иттилоотӣ",
+            "технологияҳои рақамӣ",
+            "саводнокии рақамӣ",
+            "барномасозӣ"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "learning outcomes",
+            "барномаи таълимӣ",
+            "нақшаи таълимӣ",
+            "стандартҳои давлатӣ",
+            "стандарти маориф",
+            "мундариҷаи таълим"
+        ]
+    },
+    "Tanzania": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "teknolojia",
+            "kompyuta",
+            "habari na mawasiliano",
+            "ujuzi wa kidijitali"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education standards",
+            "study guide",
+            "mtaala",
+            "muhtasari wa masomo",
+            "elimu ya msingi",
+            "elimu ya sekondari"
+        ]
+    },
+    "Thailand": {
+        "tech_keywords": [
+            "computer science",
+            "computing science",
+            "ict",
+            "digital literacy",
+            "coding",
+            "วิทยาการคำนวณ",
+            "เทคโนโลยีดิจิทัล",
+            "สารสนเทศ",
+            "การเขียนโปรแกรม",
+            "ทักษะดิจิทัล"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "core curriculum",
+            "learning framework",
+            "หลักสูตร",
+            "ตัวชี้วัด",
+            "มาตรฐานการเรียนรู้",
+            "แผนการจัดการเรียนรู้",
+            "หลักสูตรแกนกลาง"
+        ]
+    },
+    "Togo": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "compétences numériques",
+            "technology",
+            "technologies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "educational standards",
+            "normes éducatives",
+            "ministry of education",
+            "ministère éducation"
+        ]
+    },
+    "Tonga": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "computing",
+            "faka'ilekitulōnika",
+            "tekinolosia",
+            "poto faka'ilekitulōnika",
+            "faka'ilonga 'o e tekinolosia"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "course of study",
+            "education standards",
+            "national curriculum",
+            "polokalama ako",
+            "tohi lēsoni",
+            "tu'unga 'o e ako",
+            "palani 'o e ako"
+        ]
+    },
+    "Trinidad and Tobago": {
+        "tech_keywords": [
+            "computer science",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computing",
+            "informatics",
+            "digital skills",
+            "technology studies"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of education",
+            "academic standards",
+            "educational policy",
+            "primary curriculum",
+            "secondary curriculum",
+            "national curriculum",
+            "learning outcomes",
+            "subject outline"
+        ]
+    },
+    "Tunisia": {
+        "tech_keywords": [
+            "computer science",
+            "informatique",
+            "ict",
+            "tic",
+            "digital literacy",
+            "compétences numériques",
+            "programming",
+            "programmation",
+            "algorithms",
+            "algorithmique",
+            "technologie"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "programme scolaire",
+            "syllabus",
+            "plan d'études",
+            "education reform",
+            "réforme éducative",
+            "ministry of education",
+            "ministère de l'éducation",
+            "academic standards",
+            "normes éducatives"
+        ]
+    },
+    "Turkey": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "coding",
+            "digital literacy",
+            "bilisim",
+            "bilisim teknolojileri",
+            "kodlama",
+            "yazilim",
+            "dijital okuryazarlik"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "program",
+            "mufredat",
+            "ogretim programi",
+            "ders programi",
+            "egitim standartlari"
+        ]
+    },
+    "Turkmenistan": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "information technology",
+            "digital literacy",
+            "programming",
+            "informatika",
+            "sanly tehnologiýalar",
+            "maglumat tehnologiýalary",
+            "programmirleme"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "teaching program",
+            "oquw maksatnamasy",
+            "okuw meýilnamasy",
+            "bilim standartlary",
+            "okuw kitaplary"
+        ]
+    },
+    "Tuvalu": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "tekinolosi",
+            "fakamaumau fakamatala"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "academic standards",
+            "learning outcomes",
+            "polokalame akoga",
+            "tusi lesona",
+            "taiala fakaakoakoga"
+        ]
+    },
+    "Uganda": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "ict studies",
+            "digital skills"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ncdc",
+            "education policy",
+            "learning outcomes",
+            "o level syllabus",
+            "a level syllabus",
+            "lower secondary curriculum"
+        ]
+    },
+    "Ukraine": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programming",
+            "computational thinking",
+            "інформатика",
+            "цифрова грамотність",
+            "програмування",
+            "ікт",
+            "комп'ютерні науки"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study program",
+            "national curriculum",
+            "навчальна програма",
+            "освітня програма",
+            "навчальний план",
+            "стандарт освіти",
+            "державний стандарт"
+        ]
+    },
+    "United Arab Emirates": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "programming",
+            "coding",
+            "artificial intelligence",
+            "حاسب آلي",
+            "تكنولوجيا المعلومات",
+            "علوم الحاسب",
+            "البرمجة",
+            "الذكاء الاصطناعي",
+            "المهارات الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "ministry of education",
+            "uae moe",
+            "منهج",
+            "خطة دراسية",
+            "وزارة التربية والتعليم",
+            "المعايير الوطنية",
+            "مناهج دراسية"
+        ]
+    },
+    "United Kingdom": {
+        "tech_keywords": [
+            "computing",
+            "computer science",
+            "ict",
+            "informatics",
+            "digital literacy",
+            "coding",
+            "programming",
+            "information technology"
+        ],
+        "edu_keywords": [
+            "national curriculum",
+            "curriculum",
+            "syllabus",
+            "key stage",
+            "program of study",
+            "academic standards",
+            "education policy",
+            "subject specifications"
+        ]
+    },
+    "United States of America": {
+        "tech_keywords": [
+            "computer science",
+            "cs",
+            "information technology",
+            "ict",
+            "digital literacy",
+            "computational thinking",
+            "informatics",
+            "coding",
+            "programming",
+            "computer education"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "k12 standards",
+            "academic standards",
+            "syllabus",
+            "learning standards",
+            "course framework",
+            "educational framework",
+            "state standards",
+            "program of study",
+            "curriculum guides"
+        ]
+    },
+    "Uruguay": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "computación",
+            "informática",
+            "pensamiento computacional",
+            "ciencias de la computación",
+            "tecnologías",
+            "alfabetización digital",
+            "digital skills",
+            "ict"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "plan de estudios",
+            "programa de estudio",
+            "diseño curricular",
+            "marcos curriculares",
+            "normativa educativa",
+            "educación pública",
+            "aprendizaje",
+            "marco curricular nacional"
+        ]
+    },
+    "Uzbekistan": {
+        "tech_keywords": [
+            "computer science",
+            "informatika",
+            "ict",
+            "axborot texnologiyalari",
+            "digital literacy",
+            "raqamli savodxonlik",
+            "programming",
+            "dasturlash",
+            "information technology"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "o'quv dasturi",
+            "syllabus",
+            "ta'lim standarti",
+            "educational standards",
+            "o'quv rejasi",
+            "course of study"
+        ]
+    },
+    "Vanuatu": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "digital literacy",
+            "information technology",
+            "computing",
+            "technology studies",
+            "stadi blong teknoloji"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "education policy",
+            "learning outcomes",
+            "national curriculum",
+            "education standards",
+            "school program",
+            "plan blong stadi"
+        ]
+    },
+    "Vatican City": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital skills",
+            "informatica",
+            "tecnologie digitali",
+            "competenze digitali",
+            "tecnologia"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "study plan",
+            "piano di studi",
+            "programma scolastico",
+            "ordinamento didattico",
+            "curricolo"
+        ]
+    },
+    "Venezuela": {
+        "tech_keywords": [
+            "computer science",
+            "computing",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "programación",
+            "informática",
+            "computación",
+            "tecnologías",
+            "tic",
+            "alfabetización digital"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "learning objectives",
+            "plan de estudios",
+            "diseño curricular",
+            "programas de estudio",
+            "currículo nacional",
+            "estándares educativos",
+            "contenidos programáticos"
+        ]
+    },
+    "Vietnam": {
+        "tech_keywords": [
+            "computer science",
+            "informatics",
+            "ict",
+            "digital literacy",
+            "tin học",
+            "công nghệ thông tin",
+            "kỹ năng số"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "educational standards",
+            "national curriculum",
+            "chương trình giáo dục",
+            "giáo trình",
+            "phát triển chương trình",
+            "chuẩn kiến thức"
+        ]
+    },
+    "Yemen": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information technology",
+            "computing",
+            "digital literacy",
+            "حاسوب",
+            "تكنولوجيا المعلومات",
+            "تقنية المعلومات",
+            "الحاسب الآلي",
+            "المهارات الرقمية"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "study plan",
+            "educational standards",
+            "ministry of education",
+            "منهج تعليمي",
+            "خطة دراسية",
+            "مقررات دراسية",
+            "الخطة الدراسية",
+            "وزارة التربية والتعليم"
+        ]
+    },
+    "Zambia": {
+        "tech_keywords": [
+            "computer studies",
+            "ict",
+            "information technology",
+            "digital literacy",
+            "computing",
+            "informatics",
+            "tekinoloji"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "academic standards",
+            "educational framework",
+            "teaching guide",
+            "learning outcomes",
+            "national curriculum"
+        ]
+    },
+    "Zimbabwe": {
+        "tech_keywords": [
+            "computer science",
+            "ict",
+            "information communication technology",
+            "digital literacy",
+            "computing",
+            "software engineering",
+            "programming",
+            "ruzivo rwemakombiyuta",
+            "tekinoroji yeruzivo"
+        ],
+        "edu_keywords": [
+            "curriculum",
+            "syllabus",
+            "ministry of primary and secondary education",
+            "educational framework",
+            "zimsec",
+            "learning areas",
+            "course outline",
+            "zvirongwa zvedzidzo",
+            "kosi yechikoro",
+            "dzidzo"
+        ]
+    }
+}
