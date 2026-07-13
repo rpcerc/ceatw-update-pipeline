@@ -6,7 +6,7 @@ from ceatw_update_pipeline.custom_types import Source
 from exa_py import Exa
 from exa_py.api import Result
 
-def create_source(exa_result: Result) -> Source:
+def create_source(country:str, exa_result: Result) -> Source:
     """Takes a singular exa_result, and returns a Source object.
 
     Args:
@@ -18,6 +18,7 @@ def create_source(exa_result: Result) -> Source:
     highlights = getattr(exa_result, "highlights", None)
     
     return {
+        "country": country,
         "url": exa_result.url,
         "title": exa_result.title,
         "published_date": getattr(exa_result, "published_date", None),
@@ -57,7 +58,7 @@ def get_exa_sources(country: str) -> list[Source]:
             },
         )
         
-        sources = [create_source(result) for result in (gemini_response.results + english_response.results)]
+        sources = [create_source(country, result) for result in (gemini_response.results + english_response.results)]
         return sources
     
     except Exception as e:

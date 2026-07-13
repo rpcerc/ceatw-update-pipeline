@@ -6,6 +6,7 @@ class ExaPayload(TypedDict):
     
     
 class Source(TypedDict):
+    country: str
     url: str
     title: str | None
     published_date: str | None

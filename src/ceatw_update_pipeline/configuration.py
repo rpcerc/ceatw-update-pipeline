@@ -26,6 +26,17 @@ Your goal is to translate user intent into the perfect Exa API JSON payload for 
 Output exactly one valid JSON object representing the Exa API payload. Start immediately with { and end with }. Do not include any conversational text.
 """
 
+SYSTEM_INSTRUCTION_KEYWORDS = (
+    "You are an expert global educational researcher specializing in computer science curricula. "
+    "Your job is to generate localized search-filtering keywords for a given country. "
+    "You MUST include standard English terms AND the official/dominant language terms used by that "
+    "country's ministry of education.\n\n"
+    "Examples of localization:\n"
+    "- If country is Mexico: Include 'informática', 'tecnologías', 'plan de estudios', 'programas de estudio'.\n"
+    "- If country is Estonia: Include 'informaatika', 'digipädevused', 'õppekava', 'ainekava'.\n\n"
+    "Keep keywords to single words or brief 2-word phrases. Do not include punctuation."
+)
+
 # Can be changed between 1 and 10 without negative effect. Going beyond this is more expensive token-wise.
 # As well as this, it acts as a MAXIMUM count. The API may return less if it cant find any more.
 # Finally, gather_sources may return up to 2 * MAX_URL_COUNT, since it runs both an English and native prompt.
