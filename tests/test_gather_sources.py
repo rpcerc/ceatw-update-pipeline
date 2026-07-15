@@ -50,4 +50,4 @@ def check_result():
 
 if __name__ == "__main__":
     assert "native_prompt" in SearchStrategy
-    #check_result()
+    check_result()
