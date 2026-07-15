@@ -31,3 +31,7 @@ Output exactly one valid JSON object representing the Exa API payload. Start imm
 # Finally, gather_sources may return up to 2 * MAX_URL_COUNT, since it runs both an English and native prompt.
 MAX_URL_COUNT = 5
 SEARCH_TYPE = "deep"
+EDUCATION_PROFILES_OUTPUT_FOLDER = "output"
+EDUCATION_PROFILES_TECH_URL_FILE = "technology_urls.json"
+EDUCATION_PROFILES_FAILED_TECH_URL_FILE = "failed_technology_urls.json"
+EDUCATION_PROFILES_CONTENT_URL_FILE = "technology_content_urls.json"
