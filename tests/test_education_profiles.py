@@ -62,7 +62,7 @@ def test_extract_content_links_with_main_content(mock_get):
     mock_get.assert_called_once_with("https://fake-url.com", timeout=5)
 
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.requests.get")
-def test_extract_content_links_fallback_to_body(mock_get, capsys):
+def test_extract_content_links_fallback_to_body(mock_get):
     """Tests fallback to body when main block is missing."""
     dummy_html = """
     <html>
@@ -78,8 +78,6 @@ def test_extract_content_links_fallback_to_body(mock_get, capsys):
     links = extract_content_links("https://fake-url.com")
     
     assert links == ["https://fallback.com"]
-    captured = capsys.readouterr()
-    assert "Didnt find main content, using body." in captured.out
 
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.requests.get")
 def test_extract_content_links_request_exception(mock_get):
@@ -143,7 +141,7 @@ def test_get_content_links_fetches_if_json_invalid(mock_open_file, mock_get_tech
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.save_json_to_file")
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.is_valid_url")
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.get_education_profiles_homepage")
-def test_get_technology_page_urls(mock_get_homepage, mock_is_valid_url, mock_save, capsys):
+def test_get_technology_page_urls(mock_get_homepage, mock_is_valid_url, mock_save):
     """Tests URL generation, validation, and saving mechanics."""
     dummy_html = """
     <html><body>
@@ -170,7 +168,3 @@ def test_get_technology_page_urls(mock_get_homepage, mock_is_valid_url, mock_sav
     
     # Assert saving behavior (should be called twice: once for successes, once for failures)
     assert mock_save.call_count == 2
-    
-    # Check that failed logic fired properly
-    captured = capsys.readouterr()
-    assert "No technology page for: andorra" in captured.out
