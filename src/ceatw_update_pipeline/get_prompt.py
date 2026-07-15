@@ -6,10 +6,12 @@ from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA
 from ceatw_update_pipeline.custom_types import ExaPayload
 
 def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
-    """Uses Gemini to generate a JSON payload for Exa AI.
+    """Uses Gemini to generate a JSON payload for Exa AI, containing a native language prompt.
 
     Args:
         user_intent (str): The user's intent/query for Gemini.
+        custom_system_instruction (str, optional): A system instruction for the payload.
+            Defaults to SYSTEM_INSTRUCTION_EXA.
 
     Raises:
         RuntimeError: Gemini API error, unexpected error during interaction with Gemini,
@@ -17,8 +19,8 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
         ValueError: No response received from the model, or the response is not valid JSON.
 
     Returns:
-        dict[str, str | list[str]]: JSON (a dictionary) representing the Exa API payload,
-                        with schema ResponseSchema. 
+        ExaPayload: JSON (a dictionary) representing the Exa API payload,
+                        with schema ExaPayload. 
     """
     
     # Note, this expects the environment variable GEMINI_API_KEY to be set.

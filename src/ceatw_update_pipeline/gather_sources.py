@@ -6,15 +6,18 @@ from ceatw_update_pipeline.custom_types import Source, SearchStrategy
 from exa_py import Exa
 from exa_py.api import Result
 
-def create_source(exa_result: Result, country: str, search_strategy: str) -> Source:
+def create_source(exa_result: Result, country: str, search_strategy: SearchStrategy) -> Source:
     """Takes a singular exa_result, and returns a Source object.
 
     Args:
         exa_result (Result): One result from an exa.ai call.
+        country (str): The country associated with the source.
+        search_strategy (SearchStrategy): The type of exa_api call executed to give the result.
 
     Returns:
         Source: The result in a Source object form.
     """
+    
     highlights = getattr(exa_result, "highlights", None)
     
     return {
@@ -27,6 +30,18 @@ def create_source(exa_result: Result, country: str, search_strategy: str) -> Sou
     }
 
 def get_exa_sources(country: str) -> list[Source]:
+    """Returns a list of Sources returned by Exa.ai for a given country.
+
+    Args:
+        country (str): A country to find sources for.
+
+    Raises:
+        RuntimeError: Exa API failure, or Gemini API failure.
+        ValueError: JSON error when generating native prompt, or Gemini didn't respond.
+
+    Returns:
+        list[Source]: A list of potential computing curricula sources.
+    """
     
     try:
         exa = Exa()
