@@ -3,12 +3,8 @@
 import requests
 
 def is_valid_url(url: str) -> bool:
-<<<<<<< HEAD
-    """Checks whether a given URL is valid.
-=======
     """Checks if a URL is a valid link. Note, this doesn't work sometimes. It might be because
        of anti-bot measures.
->>>>>>> george-development
 
     Args:
         url (str): The given URL to check.
