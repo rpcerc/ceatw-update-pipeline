@@ -1,3 +1,5 @@
+"""Non-standard tests that shouldn't be caught with pytest."""
+
 from ceatw_update_pipeline.filter import is_valid_url
 
 

@@ -32,6 +32,6 @@ Output exactly one valid JSON object representing the Exa API payload. Start imm
 MAX_URL_COUNT = 5
 SEARCH_TYPE = "deep"
 EDUCATION_PROFILES_OUTPUT_FOLDER = "output"
-EDUCATION_PROFILES_TECH_URL_FILE = "technology_urls.json"
-EDUCATION_PROFILES_FAILED_TECH_URL_FILE = "failed_technology_urls.json"
-EDUCATION_PROFILES_CONTENT_URL_FILE = "technology_content_urls.json"
+EDUCATION_PROFILES_TECH_URL_FILE = "education_profiles_technology_urls.json"
+EDUCATION_PROFILES_FAILED_TECH_URL_FILE = "failed_education_profiles_technology_urls.json"
+EDUCATION_PROFILES_CONTENT_URL_FILE = "education_profiles_technology_content_urls.json"
