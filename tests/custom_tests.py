@@ -1,5 +1,3 @@
-import pytest
-from unittest.mock import patch
 from ceatw_update_pipeline.filter import is_valid_url
 
 
