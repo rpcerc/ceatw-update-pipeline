@@ -27,7 +27,7 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
     try:
         client = genai.Client()
 
-        interaction: genai.interactions.Interaction = client.interactions.create(
+        interaction = client.interactions.create(
             system_instruction=custom_system_instruction,
             model="gemini-3.1-flash-lite",
             input=user_intent,

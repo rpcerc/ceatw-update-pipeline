@@ -94,9 +94,9 @@ def test_extract_content_links_request_exception(mock_get):
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.save_json_to_file")
 @patch("ceatw_update_pipeline.education_profiles.get_education_profiles.extract_content_links")
 @patch("builtins.open", new_callable=mock_open, read_data='{"france": "https://test.com/france"}')
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_OUTPUT_FOLDER", "mock_folder")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_TECH_URL_FILE", "mock_tech.json")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_CONTENT_URL_FILE", "mock_content.json")
+@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.settings.EDUCATION_PROFILES_OUTPUT_FOLDER", "mock_folder")
+@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.settings.EDUCATION_PROFILES_TECH_URL_FILE", "mock_tech.json")
+@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.settings.EDUCATION_PROFILES_CONTENT_URL_FILE", "mock_content.json")
 def test_get_content_links_loads_existing_file(mock_file, mock_extract, mock_save):
     """Tests the happy path where the URLs JSON file already exists."""
     mock_extract.return_value = ["https://extracted.com"]

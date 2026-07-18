@@ -39,9 +39,8 @@ async def get_session() -> AsyncGenerator[AsyncSession, None]:
         await session.close()
         
 async def init_db() -> None:
-    import ceatw_update_pipeline.database.models as models
     async with async_engine.begin() as async_connection:
-        await async_connection.run_sync(Base.metadata.create_all())
+        await async_connection.run_sync(Base.metadata.create_all)
         
 async def kill_engine() -> None:
     await async_engine.dispose()

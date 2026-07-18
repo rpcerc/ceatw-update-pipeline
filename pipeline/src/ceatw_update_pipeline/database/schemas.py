@@ -11,7 +11,7 @@ class SourceCreate(BaseModel):
     comments: str | None = None
     
 class SourceUpdate(BaseModel):
-    source_url: str = None
+    source_url: str | None = None
     country: str | None = Field(default=None, max_length=256)
     country_code: str | None = Field(default=None, max_length=256)
     content_hash: str | None = None

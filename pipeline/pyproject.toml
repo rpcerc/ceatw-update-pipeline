@@ -22,13 +22,24 @@ dependencies = [
 "pytest==9.1.1",
 "python-dotenv==1.2.2",
 "Requests==2.34.2",
-"validators==0.35.0"
+"validators==0.35.0",
+"pydantic==2.13.4",
+"pydantic_settings==2.14.2",
+"SQLAlchemy==2.0.51",
+"asyncpg==0.31.0",
+"uuid_utils==0.17.0"
 ]
 
+# Mypy refuses to work with this.
 [tool.mypy]
 strict = true
+plugins = [
+  "pydantic.mypy"
+]
 
 exclude = [
-    "^tests/",
-    "^venv/",
+    '^venv/',
+    '^.venv/',
+    '^env/',
+    '^tests/'
 ]

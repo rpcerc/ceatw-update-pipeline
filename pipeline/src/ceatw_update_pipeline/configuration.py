@@ -4,7 +4,12 @@ from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
 
-ENV_PATH = Path(__file__).resolve().parent.parent.joinpath(".env")
+ENV_PATH = (Path(__file__).resolve()
+            .parent # ceatw_update_pipeline
+            .parent # src
+            .parent # pipeline
+            .parent # ceatw-update-pipeline (outer)
+            .joinpath(".env"))
 
 class Settings(BaseSettings):
    model_config = SettingsConfigDict(
@@ -19,9 +24,9 @@ class Settings(BaseSettings):
    EDUCATION_PROFILES_TECH_URL_FILE: str = "education_profiles_technology_urls.json"
    EDUCATION_PROFILES_FAILED_TECH_URL_FILE: str = "failed_education_profiles_technology_urls.json"
    EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
-   DATABASE_URL: str
    DB_ECHO: bool = True
    
+   USE_SQLITE_FOR_TESTING: bool = False
    POSTGRES_USER: str
    POSTGRES_PASSWORD: str
    POSTGRES_DB: str
@@ -31,7 +36,9 @@ class Settings(BaseSettings):
    
    # A getter, essentially
    @property
-   def database_url(self) -> str:
+   def DATABASE_URL(self) -> str:
+      if self.USE_SQLITE_FOR_TESTING:
+         return "sqlite+aiosqlite:///test.sqlite"
       return (
          f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
          f"@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"

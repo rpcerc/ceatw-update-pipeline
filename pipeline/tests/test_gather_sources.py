@@ -1,7 +1,7 @@
 import validators
 from dotenv import load_dotenv
 from ceatw_update_pipeline.gather_sources import get_exa_sources
-from ceatw_update_pipeline.configuration import MAX_URL_COUNT
+from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.custom_types import SearchStrategy
 
 COUNTRIES = [
@@ -17,7 +17,7 @@ def test_get_prompt_return_structure():
         result = get_exa_sources(country)
         
         assert isinstance(result, list), f"List expected, got {type(result)}."
-        assert 0 < len(result) <= 2 * MAX_URL_COUNT, f"Expected 1-{2 * MAX_URL_COUNT} URLs, got {len(result)}."
+        assert 0 < len(result) <= 2 * settings.MAX_URL_COUNT, f"Expected 1-{2 * settings.MAX_URL_COUNT} URLs, got {len(result)}."
         
         # Validate the TypedDict shape and URL formatting manually
         for item in result:

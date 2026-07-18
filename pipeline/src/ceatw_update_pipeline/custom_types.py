@@ -9,7 +9,7 @@ class SearchStrategy(StrEnum):
     NATIVE = "native_prompt"
     ENGLISH = "english_prompt"
     
-class Source(TypedDict):
+class SourceData(TypedDict):
     country: str
     search_strategy: str
     url: str

@@ -2,11 +2,11 @@
 
 from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
-from ceatw_update_pipeline.custom_types import Source, SearchStrategy
+from ceatw_update_pipeline.custom_types import SourceData, SearchStrategy
 from exa_py import Exa
 from exa_py.api import Result
 
-def create_source(exa_result: Result, country: str, search_strategy: SearchStrategy) -> Source:
+def create_source(exa_result: Result, country: str, search_strategy: SearchStrategy) -> SourceData:
     """Takes a singular exa_result, and returns a Source object.
 
     Args:
@@ -29,7 +29,7 @@ def create_source(exa_result: Result, country: str, search_strategy: SearchStrat
         "highlights": highlights
     }
 
-def get_exa_sources(country: str) -> list[Source]:
+def get_exa_sources(country: str) -> list[SourceData]:
     """Returns a list of Sources returned by Exa.ai for a given country.
 
     Args:

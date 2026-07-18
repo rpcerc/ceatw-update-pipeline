@@ -2,7 +2,7 @@ import uuid
 from collections.abc import Sequence
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from ceatw_update_pipeline.database.schemas import SourceCreate, SourceUpdate
+from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.database.models import Source
 from ceatw_update_pipeline.custom_types import Decision
 

@@ -7,3 +7,5 @@ COPY README.md ./
 COPY src/ ./src/
 
 RUN pip install --no-cache-dir .
+
+CMD [ "python", "-m", "ceatw_update_pipeline.main" ]
