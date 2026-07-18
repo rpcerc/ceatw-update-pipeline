@@ -12,11 +12,34 @@ ENV_PATH = (Path(__file__).resolve()
             .joinpath(".env"))
 
 class Settings(BaseSettings):
+   """Manage configuration settings via environment variables.
+   
+   Environment variables are loaded either from the .env file
+   or the terminal environment. The terminal environment overrides
+   the .env file variables, hence the ENV_PATH can be undefined if already
+   passed in through some other method (e.g. the Docker compose.yaml file).
+   """
+      
    model_config = SettingsConfigDict(
       env_file=ENV_PATH,
       env_file_encoding="utf-8",
       extra="ignore"
    )
+   
+   # API keys
+   EXA_API_KEY: str
+   GEMINI_API_KEY: str
+   
+   # Secret database settings
+   POSTGRES_USER: str
+   POSTGRES_PASSWORD: str
+   POSTGRES_DB: str
+   
+   # Optional Database settings
+   USE_SQLITE_FOR_TESTING: bool = False
+   DB_ECHO: bool = True
+   POSTGRES_HOST: str = "localhost"
+   POSTGRES_PORT: int = 5432
    
    MAX_URL_COUNT: int = 5
    EXA_SEARCH_TYPE: str = "deep"
@@ -24,15 +47,6 @@ class Settings(BaseSettings):
    EDUCATION_PROFILES_TECH_URL_FILE: str = "education_profiles_technology_urls.json"
    EDUCATION_PROFILES_FAILED_TECH_URL_FILE: str = "failed_education_profiles_technology_urls.json"
    EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
-   DB_ECHO: bool = True
-   
-   USE_SQLITE_FOR_TESTING: bool = False
-   POSTGRES_USER: str
-   POSTGRES_PASSWORD: str
-   POSTGRES_DB: str
-   
-   POSTGRES_HOST: str = "localhost"
-   POSTGRES_PORT: int = 5432
    
    # A getter, essentially
    @property

@@ -1,5 +1,5 @@
 import validators
-from dotenv import load_dotenv
+import asyncio
 from ceatw_update_pipeline.gather_sources import get_exa_sources
 from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.custom_types import SearchStrategy
@@ -11,10 +11,9 @@ COUNTRIES = [
 ]
 
 def test_get_prompt_return_structure():
-    load_dotenv()
     for country in COUNTRIES[:1]:  # Test only the first country
         print(f"Testing {country} ---")
-        result = get_exa_sources(country)
+        result = [x.model_dump() for x in asyncio.run(get_exa_sources(country))]
         
         assert isinstance(result, list), f"List expected, got {type(result)}."
         assert 0 < len(result) <= 2 * settings.MAX_URL_COUNT, f"Expected 1-{2 * settings.MAX_URL_COUNT} URLs, got {len(result)}."
@@ -45,8 +44,7 @@ def test_get_prompt_return_structure():
             assert validators.url(item["url"]), f"Malformed URL: {item['url']}"
 
 def check_result():
-    load_dotenv()
-    print(get_exa_sources("france"))
+    print(asyncio.run(get_exa_sources("france")).model_dump())
 
 if __name__ == "__main__":
     assert "native_prompt" in SearchStrategy

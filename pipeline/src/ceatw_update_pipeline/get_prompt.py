@@ -2,10 +2,10 @@
 
 import json
 from google import genai
-from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA
+from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA, settings
 from ceatw_update_pipeline.custom_types import ExaPayload
 
-def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
+async def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
     """Uses Gemini to generate a JSON payload for Exa AI, containing a native language prompt.
 
     Args:
@@ -23,11 +23,10 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
                         with schema ExaPayload. 
     """
     
-    # Note, this expects the environment variable GEMINI_API_KEY to be set.
     try:
-        client = genai.Client()
+        client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
-        interaction = client.interactions.create(
+        interaction = await client.aio.interactions.create(
             system_instruction=custom_system_instruction,
             model="gemini-3.1-flash-lite",
             input=user_intent,
@@ -65,8 +64,7 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
         if response is None:
             raise ValueError("get_prompt - No response received from the model.")
         
-        payload: ExaPayload = json.loads(response)
-        return payload
+        return ExaPayload.model_validate_json(response)
     
     except json.JSONDecodeError as e:
         raise ValueError(f"get_prompt - Response is not valid JSON: {response}") from e

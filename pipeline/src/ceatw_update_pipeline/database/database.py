@@ -27,7 +27,18 @@ AsyncSessionFactory = async_sessionmaker(
 )
 
 @asynccontextmanager
-async def get_session() -> AsyncGenerator[AsyncSession, None]:
+async def get_session() -> AsyncGenerator[AsyncSession]:
+    """A context manager for creating async queries.
+
+    Returns:
+        AsyncGenerator[AsyncSession]:
+            A wrapper to be used for queries. Returns a session when using 'with'.
+            https://docs.sqlalchemy.org/en/21/orm/session_basics.html
+
+    Yields:
+        Iterator[AsyncGenerator[AsyncSession]]: 
+            https://www.geeksforgeeks.org/python/context-manager-using-contextmanager-decorator/
+    """
     session = AsyncSessionFactory()
     try:
         yield session
@@ -39,9 +50,11 @@ async def get_session() -> AsyncGenerator[AsyncSession, None]:
         await session.close()
         
 async def init_db() -> None:
+    """Set up the database and define mappings between models and tables."""
     async with async_engine.begin() as async_connection:
         await async_connection.run_sync(Base.metadata.create_all)
         
 async def kill_engine() -> None:
+    """Stops the database and all connections."""
     await async_engine.dispose()
         
