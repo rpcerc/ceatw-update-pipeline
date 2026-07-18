@@ -1,6 +1,6 @@
 """Uses Exa.ai API to generate possible source URLs for computing curricula."""
 
-from ceatw_update_pipeline.configuration import MAX_URL_COUNT, SEARCH_TYPE
+from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import Source, SearchStrategy
 from exa_py import Exa
@@ -56,8 +56,8 @@ def get_exa_sources(country: str) -> list[Source]:
     try:
         gemini_response = exa.search(
             query=payload["query"],
-            type=SEARCH_TYPE,
-            num_results=MAX_URL_COUNT,
+            type=settings.EXA_SEARCH_TYPE,
+            num_results=settings.MAX_URL_COUNT,
             include_domains=payload.get("includeDomains"),
             contents={
                 "highlights": True,
@@ -66,8 +66,8 @@ def get_exa_sources(country: str) -> list[Source]:
         
         english_response = exa.search(
             query=english_query,
-            type=SEARCH_TYPE,
-            num_results=MAX_URL_COUNT,
+            type=settings.EXA_SEARCH_TYPE,
+            num_results=settings.MAX_URL_COUNT,
             include_domains=payload.get("includeDomains"),
             contents={
                 "highlights": True,

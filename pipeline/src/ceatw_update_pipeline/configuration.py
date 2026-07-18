@@ -1,5 +1,48 @@
 """Constant configuration values for the CEATW update pipeline."""
 
+from functools import lru_cache
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from pathlib import Path
+
+ENV_PATH = Path(__file__).resolve().parent.parent.joinpath(".env")
+
+class Settings(BaseSettings):
+   model_config = SettingsConfigDict(
+      env_file=ENV_PATH,
+      env_file_encoding="utf-8",
+      extra="ignore"
+   )
+   
+   MAX_URL_COUNT: int = 5
+   EXA_SEARCH_TYPE: str = "deep"
+   EDUCATION_PROFILES_OUTPUT_FOLDER: str = "output"
+   EDUCATION_PROFILES_TECH_URL_FILE: str = "education_profiles_technology_urls.json"
+   EDUCATION_PROFILES_FAILED_TECH_URL_FILE: str = "failed_education_profiles_technology_urls.json"
+   EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
+   DATABASE_URL: str
+   DB_ECHO: bool = True
+   
+   POSTGRES_USER: str
+   POSTGRES_PASSWORD: str
+   POSTGRES_DB: str
+   
+   POSTGRES_HOST: str = "localhost"
+   POSTGRES_PORT: int = 5432
+   
+   # A getter, essentially
+   @property
+   def database_url(self) -> str:
+      return (
+         f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
+         f"@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
+      )
+   
+@lru_cache
+def get_settings() -> Settings:
+   return Settings()
+
+settings = get_settings()
+
 SYSTEM_INSTRUCTION_EXA = """
 You are an expert search engineer tasked with writing optimal queries for the Exa Search API.
 Your goal is to translate user intent into the perfect Exa API JSON payload for gathering official, primary-source educational curricula.
@@ -25,13 +68,3 @@ Your goal is to translate user intent into the perfect Exa API JSON payload for 
 ### Output Format:
 Output exactly one valid JSON object representing the Exa API payload. Start immediately with { and end with }. Do not include any conversational text.
 """
-
-# Can be changed between 1 and 10 without negative effect. Going beyond this is more expensive token-wise.
-# As well as this, it acts as a MAXIMUM count. The API may return less if it cant find any more.
-# Finally, gather_sources may return up to 2 * MAX_URL_COUNT, since it runs both an English and native prompt.
-MAX_URL_COUNT = 5
-SEARCH_TYPE = "deep"
-EDUCATION_PROFILES_OUTPUT_FOLDER = "output"
-EDUCATION_PROFILES_TECH_URL_FILE = "education_profiles_technology_urls.json"
-EDUCATION_PROFILES_FAILED_TECH_URL_FILE = "failed_education_profiles_technology_urls.json"
-EDUCATION_PROFILES_CONTENT_URL_FILE = "education_profiles_technology_content_urls.json"

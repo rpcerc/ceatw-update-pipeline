@@ -16,3 +16,8 @@ class Source(TypedDict):
     title: str | None
     published_date: str | None
     highlights: list[str] | None
+    
+class Decision(StrEnum):
+    ACCEPTED = "accepted"
+    REJECTED = "rejected"
+    PENDING = "pending"

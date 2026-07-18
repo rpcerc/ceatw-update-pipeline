@@ -87,3 +87,8 @@ venv/
 
 # VS Code
 .vscode/
+
+# Custom
+.pytest_cache
+tests/
+*.pyc
