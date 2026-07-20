@@ -7,18 +7,11 @@ from pathlib import Path
 ENV_PATH = (Path(__file__).resolve()
             .parent # ceatw_update_pipeline
             .parent # src
-            .parent # pipeline
             .parent # ceatw-update-pipeline (outer)
             .joinpath(".env"))
 
 class Settings(BaseSettings):
-   """Manage configuration settings via environment variables.
-   
-   Environment variables are loaded either from the .env file
-   or the terminal environment. The terminal environment overrides
-   the .env file variables, hence the ENV_PATH can be undefined if already
-   passed in through some other method (e.g. the Docker compose.yaml file).
-   """
+   """Manage configuration settings via environment variables."""
       
    model_config = SettingsConfigDict(
       env_file=ENV_PATH,
@@ -30,33 +23,12 @@ class Settings(BaseSettings):
    EXA_API_KEY: str
    GEMINI_API_KEY: str
    
-   # Secret database settings
-   POSTGRES_USER: str
-   POSTGRES_PASSWORD: str
-   POSTGRES_DB: str
-   
-   # Optional Database settings
-   USE_SQLITE_FOR_TESTING: bool = False
-   DB_ECHO: bool = True
-   POSTGRES_HOST: str = "localhost"
-   POSTGRES_PORT: int = 5432
-   
    MAX_URL_COUNT: int = 5
    EXA_SEARCH_TYPE: str = "deep"
    EDUCATION_PROFILES_OUTPUT_FOLDER: str = "output"
    EDUCATION_PROFILES_TECH_URL_FILE: str = "education_profiles_technology_urls.json"
    EDUCATION_PROFILES_FAILED_TECH_URL_FILE: str = "failed_education_profiles_technology_urls.json"
    EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
-   
-   # A getter, essentially
-   @property
-   def DATABASE_URL(self) -> str:
-      if self.USE_SQLITE_FOR_TESTING:
-         return "sqlite+aiosqlite:///test.sqlite"
-      return (
-         f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
-         f"@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
-      )
    
 @lru_cache
 def get_settings() -> Settings:
