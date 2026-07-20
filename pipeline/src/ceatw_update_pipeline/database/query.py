@@ -1,6 +1,6 @@
 import uuid
 from collections.abc import Sequence
-from sqlalchemy import select
+from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.database.models import Source
@@ -24,6 +24,8 @@ async def insert_source(session: AsyncSession, data: SourceCreate) -> Source:
         content_hash = data.content_hash,
         comments = data.comments,
     )
+    
+    session.execute(insert)
     
     session.add(source)
     await session.flush()
@@ -54,8 +56,9 @@ async def get_pending_sources(session: AsyncSession) -> Sequence[Source]:
         Sequence[Source]: _description_
     """
     
+    # is_. operator is only for None, True, False.
     query = (select(Source)
-             .where(Source.decision.is_(Decision.PENDING)))
+             .where(Source.decision == Decision.PENDING))
     result = await session.execute(query)
     
     return result.scalars().all()
