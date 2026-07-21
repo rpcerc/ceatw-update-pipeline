@@ -1,16 +1,16 @@
 import uuid
 from collections.abc import Sequence
 from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import Session
 from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.database.models import Source
 from ceatw_update_pipeline.custom_types import Decision
 
-async def insert_source(session: AsyncSession, data: SourceCreate) -> Source:
+def insert_source(session: Session, data: SourceCreate) -> Source:
     """Insert a record into the source table.
 
     Args:
-        session (AsyncSession): The session relating to the database.
+        session (Session): The session relating to the database.
         data (SourceCreate): The data to insert as a pydantic object.
 
     Returns:
@@ -26,11 +26,11 @@ async def insert_source(session: AsyncSession, data: SourceCreate) -> Source:
     )
     
     session.add(source)
-    await session.flush()
-    await session.refresh(source)
+    session.flush()
+    session.refresh(source)
     return source
 
-async def get_source(session: AsyncSession, source_id: uuid.UUID) -> Source | None:
+def get_source(session: Session, source_id: uuid.UUID) -> Source | None:
     """Read a record in the source table via its primary key (source_id).
 
     Args:
@@ -42,29 +42,29 @@ async def get_source(session: AsyncSession, source_id: uuid.UUID) -> Source | No
             The record with primary key source_id, or None if it does not exist.
     """
     
-    return await session.get(Source, source_id)
+    return session.get(Source, source_id)
 
-async def get_pending_sources(session: AsyncSession) -> Sequence[Source]:
+def get_pending_sources(session: Session) -> Sequence[Source]:
     """Get all records from the source table which are still pending reviewal.
 
     Args:
-        session (AsyncSession): The session relating to the database.
+        session (Session): The session relating to the database.
 
     Returns:
         Sequence[Source]: _description_
     """
     
     query = (select(Source)
-             .where(Source.decision.is_(Decision.PENDING)))
-    result = await session.execute(query)
+             .where(Source.decision == Decision.PENDING))
+    result = session.execute(query)
     
     return result.scalars().all()
 
-async def delete_source(session: AsyncSession, source_id: uuid.UUID) -> bool:
+def delete_source(session: Session, source_id: uuid.UUID) -> bool:
     """Remove a record from the source table with primary key source_id.
 
     Args:
-        session (AsyncSession): The session relating to the database.
+        session (Session): The session relating to the database.
         source_id (uuid.UUID): The primary key for the record to delete.
 
     Returns:
@@ -72,9 +72,9 @@ async def delete_source(session: AsyncSession, source_id: uuid.UUID) -> bool:
               False if no record was found with primary key source_id.
     """
     
-    source = await session.get(Source, source_id)
+    source = session.get(Source, source_id)
     if source is None:
         return False
-    await session.delete(source)
-    await session.flush()
+    session.delete(source)
+    session.flush()
     return True
