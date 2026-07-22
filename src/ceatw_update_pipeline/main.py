@@ -22,7 +22,7 @@ async def test_run(country: str) -> None:
                     query.insert_source(session, 
                         SourceCreate(
                             source_url=result.url,
-                            country="Test Country",
+                            country=country,
                             country_code="TEST",
                             content_hash="fake_hash"
                         ))
