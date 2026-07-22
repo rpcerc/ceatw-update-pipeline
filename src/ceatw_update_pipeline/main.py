@@ -39,4 +39,4 @@ async def test_run(country: str) -> None:
     input("Hi!")
     
 if __name__ == "__main__":
-    asyncio.run(test_run("france"))
+    asyncio.run(test_run("argentina"))
