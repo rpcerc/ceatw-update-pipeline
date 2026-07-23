@@ -5,15 +5,15 @@ from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.custom_types import SearchStrategy
 
 COUNTRIES = [
-    "Japan",
-    "Germany",
-    "Zimbabwe",
+    "JP",
+    "DE",
+    "ZW",
 ]
 
 def test_get_prompt_return_structure():
-    for country in COUNTRIES[:1]:  # Test only the first country
-        print(f"Testing {country} ---")
-        result = [x.model_dump() for x in asyncio.run(get_exa_sources(country))]
+    for cc in COUNTRIES[:1]:  # Test only the first country
+        print(f"Testing {cc} ---")
+        result = [x.model_dump() for x in asyncio.run(get_exa_sources(cc, {}))]
         
         assert isinstance(result, list), f"List expected, got {type(result)}."
         assert 0 < len(result) <= 2 * settings.MAX_URL_COUNT, f"Expected 1-{2 * settings.MAX_URL_COUNT} URLs, got {len(result)}."
@@ -34,8 +34,8 @@ def test_get_prompt_return_structure():
             assert isinstance(item["highlights"], (list, type(None))), "Invalid 'highlights' type"
             
             # Metadata checks (New additions)
-            assert "country" in item and isinstance(item["country"], str), "Missing or invalid 'country'"
-            assert item["country"] == country, f"Expected country '{country}', got '{item['country']}'"
+            assert "country" in item, "Missing or invalid 'country'"
+            assert item["country"]["country_code"] == cc, f"Wrong country code - expected: {cc}, got: {item['country']['country_code']}"
             
             assert "search_strategy" in item, "Missing 'search_strategy' key"
             assert item["search_strategy"] in SearchStrategy, f"Invalid search_strategy: {item.get('search_strategy')}"

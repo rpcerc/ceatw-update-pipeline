@@ -5,10 +5,12 @@ from ceatw_update_pipeline.gather_sources import get_exa_sources
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import Country, ExaPayload
 from ceatw_update_pipeline.configuration import settings
+from pydantic import ValidationError
 import pycountry
 import random
 import json
 import logging
+import math
 from sqlalchemy.exc import IntegrityError
 import asyncio
 
@@ -25,7 +27,6 @@ async def insert_urls_for_one_country(country_code: str, native_prompt_cache: di
         native_prompt_cache (dict[str, ExaPayload]): 
     """
     country = Country(country_code=country_code)
-    init_db()
     results = await get_exa_sources(country.country_code, native_prompt_cache)
     with get_session() as session:
         for result in results:
@@ -41,7 +42,6 @@ async def insert_urls_for_one_country(country_code: str, native_prompt_cache: di
             except IntegrityError:
                 logger.info("Record skipped, duplicate URL: %s", result.url[:50])
         
-    kill_engine()
     logger.info("All URLs inserted for %s", country.name)
     
 
@@ -54,8 +54,10 @@ async def get_n_random_countries(n: int, native_prompt_cache: dict[str, ExaPaylo
     """
     country_codes = random.sample(COUNTRY_CODES, n)
     
-    for country_code in country_codes:
-        await insert_urls_for_one_country(country_code, native_prompt_cache)
+    for i in range(math.ceil(n/5)):
+        # Rate limit of 10 calls per second, hence do it in batches of 5.
+        tasks = [insert_urls_for_one_country(code, native_prompt_cache) for code in country_codes[i*5:i*5+5]]
+        await asyncio.gather(*tasks)
     
     logger.info("%d random countries inserted successfully", n)    
     
@@ -73,7 +75,7 @@ def load_native_prompts_cache() -> dict[str, ExaPayload]:
             for country_code, payload_dict in raw_json.items():
                 prompts_cache[country_code] = ExaPayload.model_validate(payload_dict)
                 
-    except (json.JSONDecodeError, FileNotFoundError):
+    except (json.JSONDecodeError, FileNotFoundError, ValidationError):
         logger.exception("Cache failed to load:")
     
     return prompts_cache
@@ -95,9 +97,9 @@ async def get_gemini_prompts() -> dict[str, ExaPayload]:
         prompts[country.alpha_2] = await generate_exa_payload(country.name)
     
         with open(settings.NATIVE_LANGUAGE_PROMPTS_FILE, "w") as f:
-            # This is a lot of overhead, but it is negligible compared to generate_exa_payload.
             # This is to ensure type safety across mypy.
-            
+            # It is a lot of overhead, but it is negligible compared to generate_exa_payload.
+            # Also, while I could write everything at once, this has the possibility of breaking mid-execution.
             data_to_write = {}
             for code, payload in prompts.items():
                 data_to_write[code] = payload.model_dump(mode='json')
@@ -114,6 +116,7 @@ async def run_pipeline() -> None:
     
     
 if __name__ == "__main__":
+    init_db()
     native_prompts_cache = load_native_prompts_cache()
-    asyncio.run(get_gemini_prompts())
-    #asyncio.run(get_n_random_countries(10, native_prompts_cache))
+    asyncio.run(get_n_random_countries(10, native_prompts_cache))
+    kill_engine()
