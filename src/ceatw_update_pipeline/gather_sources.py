@@ -3,11 +3,15 @@
 import asyncio
 from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
-from ceatw_update_pipeline.custom_types import SourceData, SearchStrategy
+from ceatw_update_pipeline.custom_types import (
+        SourceData, ExaPayload, SearchStrategy, Country)
 from exa_py import AsyncExa
 from exa_py.api import Result
+import logging
 
-def create_source(exa_result: Result, country: str, search_strategy: SearchStrategy) -> SourceData:
+logger = logging.Logger(__name__)
+
+def create_source(exa_result: Result, country: Country, search_strategy: SearchStrategy) -> SourceData:
     """Takes a singular exa_result, and returns a Source object.
 
     Args:
@@ -28,7 +32,7 @@ def create_source(exa_result: Result, country: str, search_strategy: SearchStrat
         highlights=getattr(exa_result, "highlights", None)
     )
 
-async def get_exa_sources(country: str) -> list[SourceData]:
+async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[str, ExaPayload]) -> list[SourceData]:
     """Returns a list of Sources returned by Exa.ai for a given country.
 
     Args:
@@ -47,11 +51,19 @@ async def get_exa_sources(country: str) -> list[SourceData]:
     except Exception as e:
         raise RuntimeError(f"Failed to initialize Exa client: {e}")
         
-    intent = ("Find official primary school, kindergarten, and high school "
-              f"computing or computer science curricula for {country}. ")
+    country = Country(country_code=country_code_alpha_2)
     
-    payload = await generate_exa_payload(intent)
-    english_query = "Official national curriculum, syllabus, or learning standards for Computer Science, ICT, and Computing in {country} schools"
+    try:
+        payload = native_prompt_cache[country_code_alpha_2]
+    except KeyError:
+        logger.warning("Not in country code cache: %s", country_code_alpha_2)
+        payload = await generate_exa_payload(country.name)
+        
+    english_query = (
+        f"Official national curriculum, syllabus, or learning standards "
+        f"for Computer Science, ICT, and Computing in {country.name} schools"
+    )
+    
     try:
         # Note both queires use the TLD domain restrictions found by the Gemini call.
         gemini_response, english_response = await asyncio.gather(

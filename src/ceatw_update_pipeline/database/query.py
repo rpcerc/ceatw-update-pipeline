@@ -4,7 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.database.models import Source
-from ceatw_update_pipeline.custom_types import Decision
+from ceatw_update_pipeline.custom_types import Decision, Country
 
 def insert_source(session: Session, data: SourceCreate) -> Source:
     """Insert a record into the source table.
@@ -16,11 +16,12 @@ def insert_source(session: Session, data: SourceCreate) -> Source:
     Returns:
         Source: The newly inserted row.
     """
+    country = Country(country_code=data.country_code)
     
     source = Source(
         source_url = data.source_url,
-        country = data.country,
-        country_code = data.country_code,
+        country = country.name,
+        country_code = country.country_code,
         content_hash = data.content_hash,
         comments = data.comments,
     )

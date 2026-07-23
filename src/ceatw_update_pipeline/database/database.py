@@ -50,8 +50,8 @@ def get_session() -> Generator[Session, None, None]:
 
 def init_db() -> None:
     """Set up the database and define mappings between models and tables."""
-    # So that Base.metadata knows about the models, this import is needed.
-    import ceatw_update_pipeline.database.models as models
+    # This import is needed to let SQLAlchemy know these models exist, even if it is unused.
+    import ceatw_update_pipeline.database.models as models # noqa: F401
     Base.metadata.create_all(bind=engine)
 
 

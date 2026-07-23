@@ -1,0 +1,1615 @@
+{
+    "AW": {
+        "query": "Het officiële leerplan en curriculum voor Informatica in het kleuter-, primair en voortgezet onderwijs in Aruba",
+        "includeDomains": [
+            "gob.aw",
+            "ea.aw"
+        ]
+    },
+    "AF": {
+        "query": "د افغانستان د پوهنې وزارت د ښوونځیو لپاره د کمپیوټر ساینس او معلوماتي ټکنالوژۍ رسمي نصاب",
+        "includeDomains": [
+            "gov.af"
+        ]
+    },
+    "AO": {
+        "query": "Programa de ensino oficial de Informática e Tecnologias de Informação e Comunicação para o ensino pré-escolar, primário e secundário em Angola",
+        "includeDomains": [
+            "gov.ao"
+        ]
+    },
+    "AI": {
+        "query": "Official primary and secondary school curriculum guidelines for Information Technology and Computing in Anguilla",
+        "includeDomains": [
+            "gov.ai"
+        ]
+    },
+    "AX": {
+        "query": "Officiell läroplan för förskola, grundskola och gymnasium inom informations- och kommunikationsteknik och programmering",
+        "includeDomains": [
+            "aland.fi",
+            "oph.fi"
+        ]
+    },
+    "AL": {
+        "query": "Kurrikula zyrtare e lëndës së Informatikës për arsimin parashkollor, fillor dhe të mesëm",
+        "includeDomains": [
+            "gov.al"
+        ]
+    },
+    "AD": {
+        "query": "Currículum oficial i pla d'estudis d'informàtica i competència digital per a l'educació infantil, primària i secundària",
+        "includeDomains": [
+            "educacio.ad",
+            "govern.ad"
+        ]
+    },
+    "AE": {
+        "query": "المنهج الدراسي الرسمي لعلوم الحاسوب وتكنولوجيا المعلومات لمراحل رياض الأطفال والابتدائي والثانوي في دولة الإمارات",
+        "includeDomains": [
+            "gov.ae"
+        ]
+    },
+    "AR": {
+        "query": "Diseño curricular oficial de Educación Digital, Programación y Ciencias de la Computación para nivel inicial, primario y secundario",
+        "includeDomains": [
+            "gob.ar",
+            "educ.ar"
+        ]
+    },
+    "AM": {
+        "query": "Ինֆորմատիկա առարկայի հանրակրթության պետական չափորոշիչներ և ուսումնական ծրագրեր",
+        "includeDomains": [
+            "gov.am"
+        ]
+    },
+    "AS": {
+        "query": "The official K-12 computer science and information technology curriculum standards for the American Samoa Department of Education",
+        "includeDomains": [
+            "as.gov"
+        ]
+    },
+    "AQ": {
+        "query": "official educational curriculum guidelines and syllabi for computer science and informatics at Antarctica research station schools",
+        "includeDomains": null
+    },
+    "TF": {
+        "query": "Programme officiel de l'enseignement du numérique et des sciences informatiques : école maternelle, école élémentaire, collège et lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "AG": {
+        "query": "official national curriculum guidelines for Information Technology and Computing in Antigua and Barbuda primary and secondary schools",
+        "includeDomains": [
+            "gov.ag"
+        ]
+    },
+    "AU": {
+        "query": "The official Australian Curriculum: Digital Technologies for Foundation to Year 12",
+        "includeDomains": [
+            "edu.au",
+            "gov.au"
+        ]
+    },
+    "AT": {
+        "query": "Offizieller Lehrplan für Informatik und Digitale Grundbildung an österreichischen Volksschulen und weiterführenden Schulen",
+        "includeDomains": [
+            "gv.at",
+            "ac.at"
+        ]
+    },
+    "AZ": {
+        "query": "İnformatika fənni üzrə məktəbəqədər və ümumi təhsil səviyyələri üçün dövlət təhsil proqramı və kurikulum",
+        "includeDomains": [
+            "edu.az",
+            "gov.az"
+        ]
+    },
+    "BI": {
+        "query": "Programme national officiel d'enseignement des technologies de l'information et de la communication au Burundi pour l'école fondamentale et post-fondamentale",
+        "includeDomains": [
+            "gov.bi",
+            "bi"
+        ]
+    },
+    "BE": {
+        "query": "Officiële leerplannen en eindtermen voor informatica en digitale competenties in het basisonderwijs en secundair onderwijs. Programmes scolaires officiels et référentiels pour l'informatique et le numérique dans l'enseignement primaire et secondaire.",
+        "includeDomains": [
+            "vlaanderen.be",
+            "enseignement.be",
+            "federation-wallonie-bruxelles.be"
+        ]
+    },
+    "BJ": {
+        "query": "Le programme officiel d'enseignement de l'informatique et des sciences numériques pour les écoles maternelles, primaires et secondaires au Bénin",
+        "includeDomains": [
+            "gouv.bj"
+        ]
+    },
+    "BQ": {
+        "query": "Het officiële leerplan voor digitale geletterdheid en informatica in het funderend en voortgezet onderwijs voor Caribisch Nederland",
+        "includeDomains": [
+            "rijksoverheid.nl",
+            "slo.nl",
+            "rijksdienstcn.com",
+            "onderwijsinspectie.nl"
+        ]
+    },
+    "BF": {
+        "query": "Programme officiel des enseignements d'informatique et d'éducation numérique pour le préscolaire, le primaire et le secondaire au Burkina Faso",
+        "includeDomains": [
+            "gov.bf"
+        ]
+    },
+    "BD": {
+        "query": "জাতীয় শিক্ষাক্রম এবং পাঠ্যপুস্তক বোর্ড কর্তৃক অনুমোদিত তথ্য ও যোগাযোগ প্রযুক্তি শিক্ষাক্রম",
+        "includeDomains": [
+            "gov.bd"
+        ]
+    },
+    "BG": {
+        "query": "Официална учебна програма по Информатика и Информационни технологии за детска градина, начално и средно образование",
+        "includeDomains": [
+            "mon.bg"
+        ]
+    },
+    "BH": {
+        "query": "المناهج الدراسية المعتمدة لمادة تكنولوجيا المعلومات وعلوم الحاسب في مدارس مملكة البحرين",
+        "includeDomains": [
+            "gov.bh"
+        ]
+    },
+    "BS": {
+        "query": "The Bahamas Ministry of Education official curriculum syllabus for Information Technology and Computer Studies in primary and secondary schools",
+        "includeDomains": [
+            "gov.bs"
+        ]
+    },
+    "BA": {
+        "query": "Nastavni plan i program za predmet informatika za osnovne i srednje škole",
+        "includeDomains": [
+            "gov.ba"
+        ]
+    },
+    "BL": {
+        "query": "Programmes officiels du ministère de l'éducation nationale pour l'enseignement de l'informatique et du numérique à l'école maternelle, élémentaire, au collège et au lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "BY": {
+        "query": "Учебная программа по учебному предмету Информатика для учреждений общего среднего и дошкольного образования",
+        "includeDomains": [
+            "gov.by",
+            "adu.by"
+        ]
+    },
+    "BZ": {
+        "query": "The official primary and secondary school curriculum framework for computing and information technology in Belize",
+        "includeDomains": [
+            "gov.bz"
+        ]
+    },
+    "BM": {
+        "query": "The official Ministry of Education curriculum guidelines for computing and information technology in Bermuda schools",
+        "includeDomains": [
+            "gov.bm"
+        ]
+    },
+    "BO": {
+        "query": "Currículo base del sistema educativo plurinacional para las materias de informática y tecnología en educación inicial, primaria y secundaria",
+        "includeDomains": [
+            "gob.bo"
+        ]
+    },
+    "BR": {
+        "query": "Documento curricular oficial com as habilidades e competências de computação e tecnologia para educação infantil, ensino fundamental e ensino médio",
+        "includeDomains": [
+            "gov.br",
+            "edu.br"
+        ]
+    },
+    "BB": {
+        "query": "Official curriculum guidelines and syllabi for Early Childhood, Primary, and Secondary school Information Technology and Computer Science education in Barbados",
+        "includeDomains": [
+            "gov.bb"
+        ]
+    },
+    "BN": {
+        "query": "Kurikulum rasmi dan sukatan pelajaran ICT bagi tadika, sekolah rendah dan menengah di Brunei",
+        "includeDomains": [
+            "gov.bn"
+        ]
+    },
+    "BT": {
+        "query": "Official curriculum framework and syllabus guidelines for Information and Communication Technology (ICT) in Bhutanese primary and high schools",
+        "includeDomains": [
+            "gov.bt",
+            "edu.bt"
+        ]
+    },
+    "BV": {
+        "query": "Her er den offisielle læreplanen og rammeverket for informatikk, programmering og koding i norsk skole og barnehage:",
+        "includeDomains": [
+            "regjeringen.no",
+            "udir.no"
+        ]
+    },
+    "BW": {
+        "query": "Official computer studies and ICT curriculum syllabus for primary and secondary education in Botswana",
+        "includeDomains": [
+            "gov.bw"
+        ]
+    },
+    "CF": {
+        "query": "Programme officiel d'enseignement de l'informatique et des technologies pour les écoles maternelles, primaires et secondaires",
+        "includeDomains": [
+            "gouv.cf"
+        ]
+    },
+    "CA": {
+        "query": "Official curriculum and learning standards for Computer Studies, Information and Communication Technology (ICT), and Applied Design, Skills, and Technologies in K-12 education",
+        "includeDomains": [
+            "gov.on.ca",
+            "gov.bc.ca",
+            "gov.ab.ca",
+            "gov.qc.ca",
+            "gov.ca"
+        ]
+    },
+    "CC": {
+        "query": "The official Western Australian Curriculum scope and sequence for Digital Technologies in primary and secondary schools",
+        "includeDomains": [
+            "gov.au",
+            "edu.au"
+        ]
+    },
+    "CH": {
+        "query": "Der offizielle Lehrplan für Medien und Informatik an Schweizer Schulen",
+        "includeDomains": [
+            "lehrplan.ch",
+            "edk.ch",
+            "admin.ch"
+        ]
+    },
+    "CL": {
+        "query": "Bases curriculares y programas de estudio oficiales para la asignatura de Tecnología en educación parvularia, básica y media",
+        "includeDomains": [
+            "mineduc.cl",
+            "gob.cl"
+        ]
+    },
+    "CN": {
+        "query": "中华人民共和国教育部义务教育信息科技课程标准和普通高中信息技术课程标准",
+        "includeDomains": [
+            "gov.cn",
+            "edu.cn"
+        ]
+    },
+    "CI": {
+        "query": "Programme officiel d'enseignement de l'informatique et des technologies de l'information et de la communication pour l'école primaire, le collège et le lycée en Côte d'Ivoire",
+        "includeDomains": [
+            "education.gouv.ci",
+            "gouv.ci"
+        ]
+    },
+    "CM": {
+        "query": "Official national curriculum and syllabus for Information and Communication Technology and Computer Science in kindergarten, primary, and secondary schools",
+        "includeDomains": [
+            "gov.cm"
+        ]
+    },
+    "CD": {
+        "query": "Programme national officiel des cours d'informatique pour l'enseignement maternel, primaire et secondaire en République Démocratique du Congo",
+        "includeDomains": [
+            "gouv.cd"
+        ]
+    },
+    "CG": {
+        "query": "Programme officiel et curriculum d'informatique pour l'enseignement maternel, primaire et secondaire en République du Congo",
+        "includeDomains": [
+            "gouv.cg"
+        ]
+    },
+    "CK": {
+        "query": "Cook Islands national curriculum framework for digital technology and computing in primary and secondary schools",
+        "includeDomains": [
+            "gov.ck"
+        ]
+    },
+    "CO": {
+        "query": "Estándares básicos de competencias en Tecnología e Informática para educación preescolar, básica primaria y media",
+        "includeDomains": [
+            "gov.co",
+            "edu.co"
+        ]
+    },
+    "KM": {
+        "query": "Programme officiel de l'enseignement de l'informatique à l'école primaire, à la maternelle et au lycée aux Comores",
+        "includeDomains": [
+            "gov.km"
+        ]
+    },
+    "CV": {
+        "query": "Programa curricular oficial de Informática e Tecnologias de Informação e Comunicação para o pré-escolar, ensino básico e ensino secundário em Cabo Verde",
+        "includeDomains": [
+            "gov.cv"
+        ]
+    },
+    "CR": {
+        "query": "Programa de estudios oficial de Informática Educativa para educación preescolar, primaria y secundaria",
+        "includeDomains": [
+            "go.cr",
+            "ac.cr"
+        ]
+    },
+    "CU": {
+        "query": "Programas de estudio y documentos curriculares oficiales de la asignatura Informática para educación primaria, preescolar y media",
+        "includeDomains": [
+            "mined.gob.cu",
+            "rimed.cu"
+        ]
+    },
+    "CW": {
+        "query": "Het officiële leerplan voor informatica en digitale geletterdheid in het funderend en voortgezet onderwijs op Curaçao",
+        "includeDomains": [
+            "gobierno.cw",
+            "eskd.cw"
+        ]
+    },
+    "CX": {
+        "query": "Official Western Australian curriculum standards for Digital Technologies from kindergarten to high school",
+        "includeDomains": [
+            "edu.au",
+            "gov.au"
+        ]
+    },
+    "KY": {
+        "query": "National Curriculum for Computing and Information and Communication Technology in Cayman Islands primary and secondary schools",
+        "includeDomains": [
+            "gov.ky"
+        ]
+    },
+    "CY": {
+        "query": "Αναλυτικό Πρόγραμμα Σπουδών για το μάθημα της Πληροφορικής στην Προσχολική, Δημοτική και Μέση Εκπαίδευση",
+        "includeDomains": [
+            "gov.cy"
+        ]
+    },
+    "CZ": {
+        "query": "Oficiální rámcový vzdělávací program a kurikulum pro výuku informatiky na mateřských, základních a středních školách",
+        "includeDomains": [
+            "msmt.cz",
+            "gov.cz"
+        ]
+    },
+    "DE": {
+        "query": "Offizieller Lehrplan und Bildungsstandards für das Fach Informatik und digitale Bildung in der Grundschule und Sekundarstufe",
+        "includeDomains": [
+            "de"
+        ]
+    },
+    "DJ": {
+        "query": "Programme officiel de l'enseignement de l'informatique et des technologies numériques pour le préscolaire, le primaire et le secondaire",
+        "includeDomains": [
+            "dj"
+        ]
+    },
+    "DM": {
+        "query": "Official curriculum and syllabus guidelines for Information Technology and Computing in kindergarten, primary, and secondary schools in Dominica",
+        "includeDomains": [
+            "gov.dm",
+            "cxc.org"
+        ]
+    },
+    "DK": {
+        "query": "Officielle læreplaner og fælles mål for teknologiforståelse i folkeskolen og informatik på de gymnasiale uddannelser",
+        "includeDomains": [
+            "uvm.dk",
+            "emu.dk"
+        ]
+    },
+    "DO": {
+        "query": "Diseño curricular oficial de informática y tecnologías de la información para los niveles inicial, primario y secundario",
+        "includeDomains": [
+            "gob.do",
+            "edu.do"
+        ]
+    },
+    "DZ": {
+        "query": "Programme officiel des programmes d'enseignement de l'informatique pour le préscolaire, le primaire et le secondaire",
+        "includeDomains": [
+            "gov.dz"
+        ]
+    },
+    "EC": {
+        "query": "Currículo nacional oficial de la asignatura de Informática para Educación General Básica y Bachillerato",
+        "includeDomains": [
+            "gob.ec",
+            "edu.ec"
+        ]
+    },
+    "EG": {
+        "query": "المناهج الدراسية الرسمية لمادة الحاسب الآلي لمراحل رياض الأطفال والمرحلة الابتدائية والثانوية",
+        "includeDomains": [
+            "gov.eg",
+            "edu.eg"
+        ]
+    },
+    "ER": {
+        "query": "Official syllabus and curriculum framework for Information and Communication Technology (ICT) in Eritrean kindergarten, primary, and secondary schools",
+        "includeDomains": [
+            "gov.er"
+        ]
+    },
+    "EH": {
+        "query": "Programme officiel de l'enseignement de l'informatique et du numérique pour le préscolaire, le primaire et le secondaire",
+        "includeDomains": [
+            "gov.ma"
+        ]
+    },
+    "ES": {
+        "query": "Currículo oficial de las enseñanzas de Educación Infantil, Primaria y Educación Secundaria sobre competencias digitales e informática",
+        "includeDomains": [
+            "gob.es"
+        ]
+    },
+    "EE": {
+        "query": "Riiklik õppekava informaatika ja digipädevuse õpetamiseks Eesti lasteaias, põhikoolis ja gümnaasiumis",
+        "includeDomains": [
+            "hm.ee",
+            "harno.ee"
+        ]
+    },
+    "ET": {
+        "query": "Official curriculum framework and syllabus for Information and Communication Technology (ICT) for kindergarten, primary, and secondary schools in Ethiopia",
+        "includeDomains": [
+            "gov.et",
+            "edu.et"
+        ]
+    },
+    "FI": {
+        "query": "Esi- ja perusopetuksen sekä lukion opetussuunnitelman perusteet tieto- ja viestintäteknologia ja ohjelmointi",
+        "includeDomains": [
+            "oph.fi"
+        ]
+    },
+    "FJ": {
+        "query": "Official curriculum documents and syllabus guidelines for early childhood, primary, and secondary school computing and ICT in Fiji",
+        "includeDomains": [
+            "gov.fj"
+        ]
+    },
+    "FK": {
+        "query": "The official national curriculum for computing and computer science in Falkland Islands primary and secondary schools",
+        "includeDomains": [
+            "gov.fk",
+            "gov.uk"
+        ]
+    },
+    "FR": {
+        "query": "Programme officiel d'enseignement du numérique et des sciences informatiques pour l'école maternelle, élémentaire et le lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "FO": {
+        "query": "Námsætlan fyri KT, tøkni og informatik í fólkaskúlanum og miðnámi",
+        "includeDomains": [
+            "fo"
+        ]
+    },
+    "FM": {
+        "query": "Information and Communication Technology (ICT) curriculum standards for primary and secondary education in the Federated States of Micronesia",
+        "includeDomains": [
+            "gov.fm"
+        ]
+    },
+    "GA": {
+        "query": "Programme officiel d'enseignement de l'informatique et des technologies de l'information pour la maternelle, le primaire et le secondaire au Gabon",
+        "includeDomains": [
+            "gouv.ga"
+        ]
+    },
+    "GB": {
+        "query": "The national curriculum for computing program of study for early years foundation stage, key stage 1, key stage 2, key stage 3 and key stage 4",
+        "includeDomains": [
+            "gov.uk"
+        ]
+    },
+    "GE": {
+        "query": "ინფორმატიკისა და ტექნოლოგიების ეროვნული სასწავლო გეგმა და სტანდარტები სკოლებისთვის",
+        "includeDomains": [
+            "gov.ge"
+        ]
+    },
+    "GG": {
+        "query": "Official computing curriculum and Early Years Foundation Stage framework for schools in Guernsey",
+        "includeDomains": [
+            "gov.gg"
+        ]
+    },
+    "GH": {
+        "query": "Official standard-based curriculum for computing for kindergarten, primary, and senior high schools in Ghana",
+        "includeDomains": [
+            "gov.gh"
+        ]
+    },
+    "GI": {
+        "query": "The official computing and ICT curriculum guidelines for nursery, primary, and secondary schools in Gibraltar",
+        "includeDomains": [
+            "gov.gi"
+        ]
+    },
+    "GN": {
+        "query": "Programme scolaire officiel d'enseignement de l'informatique et des TIC pour la maternelle, l'école primaire et le secondaire en Guinée",
+        "includeDomains": [
+            "gov.gn"
+        ]
+    },
+    "GP": {
+        "query": "Voici le programme officiel et les directives pédagogiques pour l'enseignement du numérique et de l'informatique de la maternelle au lycée :",
+        "includeDomains": [
+            "education.gouv.fr",
+            "ac-guadeloupe.fr"
+        ]
+    },
+    "GM": {
+        "query": "Official curriculum and syllabus documents for Information and Communication Technology (ICT) in early childhood development, primary, and secondary schools in The Gambia",
+        "includeDomains": [
+            "gov.gm"
+        ]
+    },
+    "GW": {
+        "query": "Programa oficial do currículo de tecnologias de informação e comunicação para a educação pré-escolar, ensino básico e secundário",
+        "includeDomains": [
+            "gov.gw"
+        ]
+    },
+    "GQ": {
+        "query": "Currículo oficial de la asignatura de informática para la educación preescolar, primaria y secundaria",
+        "includeDomains": [
+            "gob.gq"
+        ]
+    },
+    "GR": {
+        "query": "Αναλυτικά προγράμματα σπουδών για το μάθημα της Πληροφορικής στην πρωτοβάθμια και δευτεροβάθμια εκπαίδευση",
+        "includeDomains": [
+            "gov.gr",
+            "sch.gr"
+        ]
+    },
+    "GD": {
+        "query": "Official curriculum guidelines and syllabus for Information Technology and Computing in Grenada primary and secondary schools",
+        "includeDomains": [
+            "gov.gd"
+        ]
+    },
+    "GL": {
+        "query": "Læreplan og undervisningsvejledning for IT og digitale kompetencer i folkeskolen og gymnasiet",
+        "includeDomains": [
+            "naalakkersuisut.gl",
+            "gux.gl"
+        ]
+    },
+    "GT": {
+        "query": "Currículo Nacional Base oficial del Ministerio de Educación para el área de Tecnologías de la Información y Comunicación en los niveles de preprimaria, primaria y educación media",
+        "includeDomains": [
+            "gob.gt"
+        ]
+    },
+    "GF": {
+        "query": "Programmes d'enseignement officiels pour le numérique et l'informatique de l'école maternelle au lycée",
+        "includeDomains": [
+            "gouv.fr",
+            "education.fr"
+        ]
+    },
+    "GU": {
+        "query": "The official K-12 computer science, technology, and digital literacy curriculum standards and instructional guidelines for Guam schools are as follows:",
+        "includeDomains": [
+            "gdoe.net"
+        ]
+    },
+    "GY": {
+        "query": "The official Ministry of Education curriculum guidelines and syllabus for Information Technology and Computer Science in nursery, primary, and secondary schools in Guyana",
+        "includeDomains": [
+            "education.gov.gy",
+            "gov.gy"
+        ]
+    },
+    "HK": {
+        "query": "The official curriculum and learning guidelines for Pre-primary Education, Computer Literacy, and Information and Communication Technology (ICT) in Hong Kong schools",
+        "includeDomains": [
+            "gov.hk"
+        ]
+    },
+    "HM": {
+        "query": "The official Australian Curriculum version 9.0 Digital Technologies learning area for primary and secondary school",
+        "includeDomains": [
+            "gov.au",
+            "edu.au"
+        ]
+    },
+    "HN": {
+        "query": "Currículo Nacional Básico y programas de estudio de educación tecnológica e informática para prebásica, básica y media",
+        "includeDomains": [
+            "gob.hn"
+        ]
+    },
+    "HR": {
+        "query": "Službeni kurikulum nastavnog predmeta informatika za osnovne i srednje škole",
+        "includeDomains": [
+            "gov.hr",
+            "skole.hr"
+        ]
+    },
+    "HT": {
+        "query": "Programme officiel et curriculum pour l'enseignement de l'informatique à l'école maternelle, fondamentale et secondaire",
+        "includeDomains": [
+            "gouv.ht"
+        ]
+    },
+    "HU": {
+        "query": "A digitális kultúra és informatika hivatalos Nemzeti alaptanterve és kerettanterve az óvodai, általános iskolai és középiskolai oktatáshoz.",
+        "includeDomains": [
+            "gov.hu",
+            "oktatas.hu"
+        ]
+    },
+    "ID": {
+        "query": "Dokumen resmi Capaian Pembelajaran mata pelajaran Informatika Kurikulum Merdeka untuk jenjang PAUD, SD, dan SMA",
+        "includeDomains": [
+            "kemdikbud.go.id"
+        ]
+    },
+    "IM": {
+        "query": "Isle of Man Department of Education, Sport and Culture curriculum for computing and computer science for early years, primary, and secondary schools",
+        "includeDomains": [
+            "gov.im"
+        ]
+    },
+    "IN": {
+        "query": "Official national curriculum framework and syllabus for Information Technology and Computer Science education in schools",
+        "includeDomains": [
+            "gov.in",
+            "nic.in",
+            "ac.in"
+        ]
+    },
+    "IO": {
+        "query": "The official National Curriculum for England Computing programmes of study for key stages 1 to 4",
+        "includeDomains": [
+            "gov.uk"
+        ]
+    },
+    "IE": {
+        "query": "Here are the official curriculum specifications and guidelines for Leaving Certificate Computer Science, primary school digital learning, and the Aistear early childhood framework in Ireland:",
+        "includeDomains": [
+            "gov.ie"
+        ]
+    },
+    "IR": {
+        "query": "برنامه درسی رسمی فناوری اطلاعات و ارتباطات و علوم کامپیوتر برای مدارس ابتدایی و متوسطه",
+        "includeDomains": [
+            "medu.ir",
+            "roshd.ir"
+        ]
+    },
+    "IQ": {
+        "query": "المنهج الدراسي الرسمي لمادة الحاسوب لرياض الأطفال والمراحل الابتدائية والمتوسطة والإعدادية في العراق",
+        "includeDomains": [
+            "gov.iq"
+        ]
+    },
+    "IS": {
+        "query": "Aðalnámskrá fyrir upplýsingatækni í leikskóla, grunnskóla og framhaldsskóla",
+        "includeDomains": [
+            "is",
+            "mms.is"
+        ]
+    },
+    "IL": {
+        "query": "תכנית הלימודים הרשמית במדעי המחשב ותכנות לגני ילדים, בתי ספר יסודיים ותיכונים",
+        "includeDomains": [
+            "gov.il"
+        ]
+    },
+    "IT": {
+        "query": "Indicazioni nazionali per il curricolo della scuola dell'infanzia, primaria e secondaria: informatica e tecnologie",
+        "includeDomains": [
+            "istruzione.it",
+            "gov.it"
+        ]
+    },
+    "JM": {
+        "query": "National Standards Curriculum and syllabus guidelines for Information Technology and Computer Science in Jamaican primary, early childhood, and high schools",
+        "includeDomains": [
+            "gov.jm",
+            "edu.jm"
+        ]
+    },
+    "JE": {
+        "query": "The official curriculum guidelines for computing education in Jersey primary and secondary schools",
+        "includeDomains": [
+            "gov.je",
+            "sch.je"
+        ]
+    },
+    "JO": {
+        "query": "الخطة الدراسية ومنهاج الحاسوب وتكنولوجيا المعلومات والمهارات الرقمية لجميع المراحل الدراسية الصادر عن وزارة التربية والتعليم",
+        "includeDomains": [
+            "moe.gov.jo"
+        ]
+    },
+    "JP": {
+        "query": "幼稚園、小学校及び高等学校における情報教育・プログラミング教育に関する学習指導要領",
+        "includeDomains": [
+            "go.jp",
+            "ac.jp"
+        ]
+    },
+    "KZ": {
+        "query": "Типовая учебная программа по предмету Информатика для общеобразовательных школ Республики Казахстан",
+        "includeDomains": [
+            "gov.kz"
+        ]
+    },
+    "KE": {
+        "query": "Official Competency Based Curriculum designs for Digital Literacy and Computer Studies in Kenyan schools",
+        "includeDomains": [
+            "go.ke"
+        ]
+    },
+    "KG": {
+        "query": "Официальная учебная программа по предмету Информатика для дошкольного и школьного образования Кыргызстана",
+        "includeDomains": [
+            "gov.kg",
+            "edu.kg"
+        ]
+    },
+    "KH": {
+        "query": "កម្មវិធីសិក្សាជាតិផ្លូវការសម្រាប់មុខវិជ្ជាព័ត៌មានវិទ្យាសម្រាប់មតេយ្យសិក្សា បឋមសិក្សា និងមធ្យមសិក្សា",
+        "includeDomains": [
+            "moeys.gov.kh",
+            "edu.kh"
+        ]
+    },
+    "KI": {
+        "query": "Official ICT and computing curriculum syllabus for primary and secondary education in Kiribati",
+        "includeDomains": [
+            "gov.ki"
+        ]
+    },
+    "KN": {
+        "query": "Official Ministry of Education curriculum guidelines for Information Technology and ICT in primary and secondary schools",
+        "includeDomains": [
+            "gov.kn"
+        ]
+    },
+    "KR": {
+        "query": "대한민국 초등학교 중학교 고등학교 정보 교과 교육과정 해설서 및 운영 안내",
+        "includeDomains": [
+            "go.kr",
+            "re.kr"
+        ]
+    },
+    "KW": {
+        "query": "المنهج الدراسي الرسمي لمادة الحاسوب في رياض الأطفال والمرحلة الابتدائية والمتوسطة والثانوية",
+        "includeDomains": [
+            "edu.kw",
+            "gov.kw"
+        ]
+    },
+    "LA": {
+        "query": "ຫຼັກສູດການສຶກສາ ວິຊາໄອຊີທີ ແລະ ຄອມພິວເຕີ ສໍາລັບຊັ້ນອະນຸບານ, ປະຖົມ ແລະ ມັດທະຍົມ",
+        "includeDomains": [
+            "edu.la",
+            "gov.la"
+        ]
+    },
+    "LB": {
+        "query": "المناهج التعليمية الرسمية لمراحل الروضة والابتدائي والثانوي لمادة التكنولوجيا والمعلوماتية في لبنان",
+        "includeDomains": [
+            "gov.lb"
+        ]
+    },
+    "LR": {
+        "query": "Official curriculum guidelines and syllabus for Information and Communication Technology (ICT) and computer studies in Liberia",
+        "includeDomains": [
+            "gov.lr"
+        ]
+    },
+    "LY": {
+        "query": "وثيقة المناهج الدراسية لمادة الحاسب الآلي وتقنية المعلومات لجميع المراحل التعليمية في ليبيا",
+        "includeDomains": [
+            "gov.ly"
+        ]
+    },
+    "LC": {
+        "query": "Official curriculum and syllabus documents for Information Technology, ICT, and Computing education in kindergarten, primary, and secondary schools in Saint Lucia",
+        "includeDomains": [
+            "gov.lc"
+        ]
+    },
+    "LI": {
+        "query": "Offizieller Lehrplan für Medien und Informatik an Kindergärten, Primarschulen und weiterführenden Schulen in Liechtenstein",
+        "includeDomains": [
+            "llv.li",
+            "schulen.li"
+        ]
+    },
+    "LK": {
+        "query": "Official national curriculum and syllabus for Information and Communication Technology (ICT) for primary, secondary, and high school education in Sri Lanka",
+        "includeDomains": [
+            "gov.lk"
+        ]
+    },
+    "LS": {
+        "query": "Official curriculum guidelines and syllabus documents for computer studies and ICT in primary, secondary, and early childhood education in Lesotho",
+        "includeDomains": [
+            "gov.ls"
+        ]
+    },
+    "LT": {
+        "query": "Oficialios bendrosios informatikos ir informacinių technologijų ugdymo programos, skirtos pradiniam ir viduriniam ugdymui",
+        "includeDomains": [
+            "gov.lt"
+        ]
+    },
+    "LU": {
+        "query": "Programme d'études officiel pour l'éducation numérique et les sciences informatiques dans les écoles luxembourgeoises",
+        "includeDomains": [
+            "gouvernement.lu",
+            "public.lu"
+        ]
+    },
+    "LV": {
+        "query": "Datorikas un informātikas mācību programma pirmsskolas, sākumskolas un vidusskolas izglītībai",
+        "includeDomains": [
+            "gov.lv"
+        ]
+    },
+    "MO": {
+        "query": "澳門資訊科技課程基本學力要求",
+        "includeDomains": [
+            "gov.mo"
+        ]
+    },
+    "MF": {
+        "query": "Le programme officiel de l'Éducation nationale pour l'enseignement de l'algorithmique, du numérique et des sciences informatiques à l'école maternelle, élémentaire et au lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "MA": {
+        "query": "Le programme officiel de l'enseignement de l'informatique pour le préscolaire, le primaire et le secondaire au Maroc",
+        "includeDomains": [
+            "gov.ma"
+        ]
+    },
+    "MC": {
+        "query": "Programmes officiels d'enseignement du numérique et de l'informatique pour l'école maternelle, primaire et secondaire",
+        "includeDomains": [
+            "gouv.fr",
+            "education.fr",
+            "gouv.mc"
+        ]
+    },
+    "MD": {
+        "query": "Curriculum național pentru disciplina Informatică și Educație Digitală în școlile din Republica Moldova",
+        "includeDomains": [
+            "gov.md",
+            "edu.md"
+        ]
+    },
+    "MG": {
+        "query": "Voici le programme officiel d'enseignement de l'informatique, des TIC et des technologies numériques pour les écoles primaires et secondaires",
+        "includeDomains": [
+            "gov.mg"
+        ]
+    },
+    "MV": {
+        "query": "The official Maldives National Curriculum Framework for computing and computer science for kindergarten, primary, and secondary education",
+        "includeDomains": [
+            "gov.mv"
+        ]
+    },
+    "MX": {
+        "query": "Plan de estudios oficial y programas de la Secretaría de Educación Pública para la asignatura de tecnologías de la información, computación y pensamiento computacional en educación básica y media superior",
+        "includeDomains": [
+            "gob.mx",
+            "edu.mx"
+        ]
+    },
+    "MH": {
+        "query": "Official curriculum standards for information technology and computer science education in Marshall Islands schools",
+        "includeDomains": [
+            "gov.mh"
+        ]
+    },
+    "MK": {
+        "query": "Официјална наставна програма по информатика за предучилишно, основно и средно образование",
+        "includeDomains": [
+            "gov.mk"
+        ]
+    },
+    "ML": {
+        "query": "Programme scolaire officiel d'informatique et des technologies de l'information et de la communication pour le préscolaire, le primaire et le secondaire au Mali",
+        "includeDomains": [
+            "gouv.ml"
+        ]
+    },
+    "MT": {
+        "query": "Official curriculum guidelines and syllabus for Computing, ICT, and digital literacy for kindergarten, primary, and secondary schools",
+        "includeDomains": [
+            "gov.mt"
+        ]
+    },
+    "MM": {
+        "query": "မူလတန်းနှင့် အထက်တန်းကျောင်းများအတွက် ကွန်ပျူတာဘာသာရပ် သင်ရိုးညွှန်းတမ်း",
+        "includeDomains": [
+            "gov.mm"
+        ]
+    },
+    "ME": {
+        "query": "Zvanični nastavni plan i program predmeta Informatika i računarstvo za predškolsko, osnovno i srednje obrazovanje",
+        "includeDomains": [
+            "gov.me",
+            "edu.me"
+        ]
+    },
+    "MN": {
+        "query": "Цэцэрлэг, бага болон ахлах сургуулийн мэдээлэл зүйн сургалтын хөтөлбөр болон стандарт",
+        "includeDomains": [
+            "gov.mn",
+            "edu.mn"
+        ]
+    },
+    "MP": {
+        "query": "Official computer science and technology curriculum standards and guidelines for kindergarten, elementary, and high school in the Northern Mariana Islands",
+        "includeDomains": [
+            "gov.mp"
+        ]
+    },
+    "MZ": {
+        "query": "Programa de ensino e plano curricular da disciplina de Informática para o ensino primário e secundário em Moçambique",
+        "includeDomains": [
+            "gov.mz"
+        ]
+    },
+    "MR": {
+        "query": "Programme officiel des enseignements de l'informatique pour le cycle primaire, collège et lycée en Mauritanie",
+        "includeDomains": [
+            "gov.mr"
+        ]
+    },
+    "MS": {
+        "query": "Official curriculum standards for Information Technology, Computer Science, and Computing in Montserrat early childhood, primary, and secondary education",
+        "includeDomains": [
+            "gov.ms"
+        ]
+    },
+    "MQ": {
+        "query": "Programmes scolaires officiels de l'Éducation nationale pour l'enseignement de l'informatique, du numérique et de la technologie de la maternelle au lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "MU": {
+        "query": "Official National Curriculum Framework and syllabus for ICT and Computing for primary and secondary education in Mauritius",
+        "includeDomains": [
+            "govmu.org"
+        ]
+    },
+    "MW": {
+        "query": "Official syllabus and curriculum guidelines for ICT and Computer Studies in Malawi primary and secondary schools",
+        "includeDomains": [
+            "gov.mw",
+            "ac.mw"
+        ]
+    },
+    "MY": {
+        "query": "Dokumen standard kurikulum dan pentaksiran bagi subjek sains komputer reka bentuk dan teknologi dan teknologi maklumat prasekolah rendah dan menengah",
+        "includeDomains": [
+            "edu.my",
+            "gov.my"
+        ]
+    },
+    "YT": {
+        "query": "Le programme officiel d'enseignement du numérique et des sciences informatiques à l'école maternelle, primaire, au collège et au lycée",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "NA": {
+        "query": "Official Ministry of Education, Arts and Culture curriculum syllabus for Information and Communication Technology (ICT) and Computer Studies for Namibian primary and secondary schools",
+        "includeDomains": [
+            "gov.na"
+        ]
+    },
+    "NC": {
+        "query": "Programmes officiels d'enseignement du numérique et de l'informatique pour l'école maternelle, l'école élémentaire et le lycée en Nouvelle-Calédonie",
+        "includeDomains": [
+            "gouv.fr",
+            "education.gouv.fr",
+            "gouv.nc",
+            "ac-noumea.nc"
+        ]
+    },
+    "NE": {
+        "query": "Programme officiel de l'enseignement de l'informatique pour le préscolaire, le primaire et le secondaire au Niger",
+        "includeDomains": [
+            "gouv.ne"
+        ]
+    },
+    "NF": {
+        "query": "Official New South Wales Education Standards Authority curriculum for Digital Technologies in primary and secondary schools",
+        "includeDomains": [
+            "nsw.gov.au"
+        ]
+    },
+    "NG": {
+        "query": "Official national curriculum for Computer Studies and Information Technology for Basic and Senior Secondary Education in Nigeria",
+        "includeDomains": [
+            "gov.ng",
+            "edu.ng"
+        ]
+    },
+    "NI": {
+        "query": "Programa de estudio y currículo oficial de tecnología educativa y computación para educación inicial, primaria y secundaria",
+        "includeDomains": [
+            "gob.ni"
+        ]
+    },
+    "NU": {
+        "query": "Official curriculum and syllabus for digital technology, computing, and ICT in Niue schools",
+        "includeDomains": [
+            "gov.nu"
+        ]
+    },
+    "NL": {
+        "query": "De officiële kerndoelen en leerplannen voor digitale geletterdheid en informatica in het primair en voortgezet onderwijs",
+        "includeDomains": [
+            "slo.nl",
+            "rijksoverheid.nl",
+            "curriculum.nu",
+            "overheid.nl"
+        ]
+    },
+    "NO": {
+        "query": "Læreplaner for programmering, informatikk og digital kompetanse i barnehage, grunnskole og videregående opplæring",
+        "includeDomains": [
+            "udir.no"
+        ]
+    },
+    "NP": {
+        "query": "Official curriculum framework and syllabus for Computer Science and Information and Communication Technology (ICT) for primary and secondary school education in Nepal",
+        "includeDomains": [
+            "gov.np"
+        ]
+    },
+    "NR": {
+        "query": "Official syllabus and curriculum guidelines for computing and information technology in Nauru kindergarten, primary, and secondary schools",
+        "includeDomains": [
+            "gov.nr"
+        ]
+    },
+    "NZ": {
+        "query": "The New Zealand Curriculum Digital Technologies and Hangarau Matihiko learning outcomes for early childhood, primary, and secondary education",
+        "includeDomains": [
+            "govt.nz"
+        ]
+    },
+    "OM": {
+        "query": "المنهج الدراسي الرسمي لمادة تكنولوجيا المعلومات لجميع المراحل الدراسية في سلطنة عمان",
+        "includeDomains": [
+            "gov.om"
+        ]
+    },
+    "PK": {
+        "query": "Official National Curriculum of Pakistan for Computer Science and ICT for primary and high school levels",
+        "includeDomains": [
+            "gov.pk",
+            "edu.pk"
+        ]
+    },
+    "PA": {
+        "query": "Programa de estudio oficial de la asignatura de informática para los niveles de preescolar, primaria y media en Panamá",
+        "includeDomains": [
+            "gob.pa"
+        ]
+    },
+    "PN": {
+        "query": "The official New Zealand curriculum guidelines for digital technologies and computer science for primary and secondary schools used in Pitcairn Islands",
+        "includeDomains": [
+            "gov.pn",
+            "govt.nz"
+        ]
+    },
+    "PE": {
+        "query": "Currículo Nacional de la Educación Básica competencias digitales y ciencias de la computación",
+        "includeDomains": [
+            "gob.pe",
+            "edu.pe"
+        ]
+    },
+    "PH": {
+        "query": "K to 12 Basic Education Program curriculum guide for Information and Communications Technology and TLE",
+        "includeDomains": [
+            "gov.ph"
+        ]
+    },
+    "PW": {
+        "query": "Official curriculum guidelines and standards for computer science, information technology, and ICT education in Palau schools",
+        "includeDomains": [
+            "edu.pw",
+            "gov.pw"
+        ]
+    },
+    "PG": {
+        "query": "The official Information and Communication Technology (ICT) syllabus and curriculum framework for primary and secondary schools in Papua New Guinea",
+        "includeDomains": [
+            "gov.pg",
+            "edu.pg"
+        ]
+    },
+    "PL": {
+        "query": "Podstawa programowa kształcenia ogólnego dla przedszkoli, szkół podstawowych i ponadpodstawowych w zakresie informatyki",
+        "includeDomains": [
+            "gov.pl",
+            "edu.pl"
+        ]
+    },
+    "PR": {
+        "query": "Estándares de contenido y expectativas de grado del programa de Tecnología y Ciencias de la Computación para los niveles de kindergarten, elemental, intermedio y superior",
+        "includeDomains": [
+            "gov.pr"
+        ]
+    },
+    "KP": {
+        "query": "조선민주주의인민공화국 유치원, 소학교, 중학교 정보기술 교육과정 및 교수강령",
+        "includeDomains": [
+            "kp"
+        ]
+    },
+    "PT": {
+        "query": "Aprendizagens essenciais e programas de Tecnologias de Informação e Comunicação para educação pré-escolar, ensino básico e ensino secundário",
+        "includeDomains": [
+            "gov.pt"
+        ]
+    },
+    "PY": {
+        "query": "Diseño curricular oficial y programas de estudio de Tecnología e Informática para educación inicial, escolar básica y educación media",
+        "includeDomains": [
+            "gov.py"
+        ]
+    },
+    "PS": {
+        "query": "المنهج الدراسي الرسمي لمادة التكنولوجيا وتكنولوجيا المعلومات للمراحل الأساسية والثانوية في فلسطين",
+        "includeDomains": [
+            "edu.ps",
+            "gov.ps"
+        ]
+    },
+    "PF": {
+        "query": "Voici les programmes officiels d'enseignement du numérique, de l'informatique et des sciences numériques pour les niveaux maternelle, primaire, collège et lycée en Polynésie française",
+        "includeDomains": [
+            "education.fr",
+            "gouv.fr",
+            "ac-polynesie.fr"
+        ]
+    },
+    "QA": {
+        "query": "منهج ومحتوى مادة تكنولوجيا المعلومات والحوسبة لرياض الأطفال والمدارس الابتدائية والثانوية في دولة قطر",
+        "includeDomains": [
+            "edu.qa",
+            "gov.qa"
+        ]
+    },
+    "RE": {
+        "query": "Programmes officiels d'enseignement du numérique et de l'informatique du cycle 1 à la terminale",
+        "includeDomains": [
+            "gouv.fr",
+            "education.fr"
+        ]
+    },
+    "RO": {
+        "query": "Programa școlară oficială pentru disciplina Informatică și Tehnologia Informației și a Comunicațiilor pentru învățământul preuniversitar",
+        "includeDomains": [
+            "edu.ro"
+        ]
+    },
+    "RU": {
+        "query": "Федеральная рабочая программа по учебному предмету Информатика для начального, основного и среднего общего образования",
+        "includeDomains": [
+            "gov.ru",
+            "edu.ru"
+        ]
+    },
+    "RW": {
+        "query": "Official syllabus and curriculum guidelines for Information and Communication Technology (ICT) in Rwanda primary and secondary schools",
+        "includeDomains": [
+            "gov.rw"
+        ]
+    },
+    "SA": {
+        "query": "الوثيقة الرسمية لمنهج المهارات الرقمية وعلوم الحاسب لمراحل رياض الأطفال والابتدائي والثانوي",
+        "includeDomains": [
+            "gov.sa"
+        ]
+    },
+    "SD": {
+        "query": "المنهج الوطني لعلوم الحاسوب وتكنولوجيا المعلومات لمرحلة الأساس والمرحلة الثانوية في السودان",
+        "includeDomains": [
+            "gov.sd"
+        ]
+    },
+    "SN": {
+        "query": "Le programme officiel d'enseignement de l'informatique et des sciences numériques pour l'école maternelle, primaire et secondaire au Sénégal",
+        "includeDomains": [
+            "gouv.sn"
+        ]
+    },
+    "SG": {
+        "query": "Official syllabus and curriculum framework for Computing, ICT, and computational thinking in Singapore primary and secondary education",
+        "includeDomains": [
+            "gov.sg"
+        ]
+    },
+    "GS": {
+        "query": "The official national curriculum for computing in primary and secondary schools within British Overseas Territories",
+        "includeDomains": [
+            "gov.uk",
+            "gov.fk"
+        ]
+    },
+    "SH": {
+        "query": "Official national curriculum for computing and information technology education for primary and secondary schools in Saint Helena",
+        "includeDomains": [
+            "gov.sh",
+            "gov.uk"
+        ]
+    },
+    "SJ": {
+        "query": "Offisiell nasjonal læreplan for programmering og teknologi i grunnskolen og videregående opplæring (LK20)",
+        "includeDomains": [
+            "udir.no",
+            "regjeringen.no"
+        ]
+    },
+    "SB": {
+        "query": "Official curriculum and syllabus for ICT, computer studies, and technology education in primary and secondary schools in the Solomon Islands",
+        "includeDomains": [
+            "gov.sb"
+        ]
+    },
+    "SL": {
+        "query": "The official national school curriculum for Information and Communication Technology (ICT) for primary and secondary education in Sierra Leone",
+        "includeDomains": [
+            "gov.sl"
+        ]
+    },
+    "SV": {
+        "query": "Programas de estudio oficiales de informática, computación y tecnología educativa para educación inicial, básica y media",
+        "includeDomains": [
+            "gob.sv"
+        ]
+    },
+    "SM": {
+        "query": "Programmi didattici ufficiali e linee guida per l'insegnamento dell'informatica nella scuola dell'infanzia, primaria e secondaria della Repubblica di San Marino",
+        "includeDomains": [
+            "gov.sm"
+        ]
+    },
+    "SO": {
+        "query": "Manhajka qaranka ee Tiknoolajiyadda macluumaadka (ICT) ee dugsiyada barbaarinta, hoose, iyo sare ee Soomaaliya",
+        "includeDomains": [
+            "gov.so"
+        ]
+    },
+    "PM": {
+        "query": "Programmes officiels de l'Éducation nationale pour l'école maternelle, élémentaire, le collège et le lycée incluant les sciences informatiques et le numérique",
+        "includeDomains": [
+            "education.gouv.fr",
+            "gouv.fr"
+        ]
+    },
+    "RS": {
+        "query": "Zvanični nastavni plan i program predmeta informatika i računarstvo za osnovne i srednje škole",
+        "includeDomains": [
+            "gov.rs",
+            "edu.rs"
+        ]
+    },
+    "SS": {
+        "query": "Official national curriculum for computer studies and information technology in primary and secondary education in South Sudan",
+        "includeDomains": [
+            "gov.ss"
+        ]
+    },
+    "ST": {
+        "query": "Programa oficial do currículo de tecnologias de informação e comunicação para o ensino pré-escolar, básico e secundário em São Tomé e Príncipe",
+        "includeDomains": [
+            "gov.st"
+        ]
+    },
+    "SR": {
+        "query": "Het officieel leerplan en curriculum voor informatica en digitale geletterdheid op Surinaamse scholen",
+        "includeDomains": [
+            "gov.sr"
+        ]
+    },
+    "SK": {
+        "query": "Štátny vzdelávací program pre predmet informatika v materských, základných a stredných školách",
+        "includeDomains": [
+            "minedu.sk",
+            "gov.sk"
+        ]
+    },
+    "SI": {
+        "query": "Učni načrt za pouk računalništva in informatike v vrtcih, osnovnih in srednjih šolah",
+        "includeDomains": [
+            "gov.si",
+            "zrss.si"
+        ]
+    },
+    "SE": {
+        "query": "Officiell läroplan för digital kompetens och programmering i förskolan, grundskolan och gymnasieskolan",
+        "includeDomains": [
+            "skolverket.se"
+        ]
+    },
+    "SZ": {
+        "query": "Official curriculum and syllabus guidelines for Computer Studies and Information and Communication Technology in Eswatini primary and secondary schools",
+        "includeDomains": [
+            "gov.sz"
+        ]
+    },
+    "SX": {
+        "query": "Official curriculum guidelines for computer science, ICT, and digital literacy in kindergarten, primary, and secondary education in Sint Maarten",
+        "includeDomains": [
+            "gov.sx"
+        ]
+    },
+    "SC": {
+        "query": "Official curriculum document for Information and Communication Technology (ICT) in Seychelles primary and high schools",
+        "includeDomains": [
+            "gov.sc"
+        ]
+    },
+    "SY": {
+        "query": "هذا هو المنهاج الدراسي الرسمي لمادة المعلوماتية في رياض الأطفال والمرحلة الابتدائية والمرحلة الثانوية",
+        "includeDomains": [
+            "moed.gov.sy",
+            "gov.sy"
+        ]
+    },
+    "TC": {
+        "query": "The official national curriculum and syllabus for Computing and Information Technology in Turks and Caicos Islands schools",
+        "includeDomains": [
+            "gov.tc"
+        ]
+    },
+    "TD": {
+        "query": "Programme officiel et curriculum d'enseignement de l'informatique et des TIC pour l'école primaire, la maternelle et le lycée",
+        "includeDomains": [
+            "gouv.td"
+        ]
+    },
+    "TG": {
+        "query": "Programme officiel d'enseignement de l'informatique et des TIC pour le préscolaire, le primaire et le secondaire au Togo",
+        "includeDomains": [
+            "gouv.tg"
+        ]
+    },
+    "TH": {
+        "query": "เอกสารหลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี สาระเทคโนโลยี วิทยาการคำนวณ สำหรับระดับประถมศึกษาและมัธยมศึกษา",
+        "includeDomains": [
+            "go.th",
+            "ac.th"
+        ]
+    },
+    "TJ": {
+        "query": "Барномаи таълимии давлатии фанни информатика барои муассисаҳои таҳсилоти умумӣ",
+        "includeDomains": [
+            "tj",
+            "gov.tj"
+        ]
+    },
+    "TK": {
+        "query": "Official school curriculum guidelines for Digital Technologies in Tokelau and New Zealand primary and secondary education",
+        "includeDomains": [
+            "govt.nz",
+            "nz",
+            "tk"
+        ]
+    },
+    "TM": {
+        "query": "Mekdebe çenli we umumy orta bilim edaralary üçin informatika boýunça okuw maksatnamasy",
+        "includeDomains": [
+            "gov.tm",
+            "edu.tm"
+        ]
+    },
+    "TL": {
+        "query": "Currículo oficial de Tecnologias de Informação e Comunicação e Informática para o pré-escolar, ensino básico e secundário em Timor-Leste",
+        "includeDomains": [
+            "gov.tl"
+        ]
+    },
+    "TO": {
+        "query": "Official curriculum guidelines for computing and digital literacy in primary and secondary schools in Tonga",
+        "includeDomains": [
+            "gov.to"
+        ]
+    },
+    "TT": {
+        "query": "The official national primary and secondary school curriculum and syllabus for Information Technology and Computer Science",
+        "includeDomains": [
+            "gov.tt"
+        ]
+    },
+    "TN": {
+        "query": "Programme officiel d'enseignement de l'informatique pour les écoles primaires, les lycées et le préscolaire",
+        "includeDomains": [
+            "gov.tn",
+            "edu.tn"
+        ]
+    },
+    "TR": {
+        "query": "İlkokul, ortaokul ve lise düzeyinde Bilişim Teknolojileri ve Yazılım ile Bilgisayar Bilimi dersleri için resmi öğretim programı ve müfredat dokümanları",
+        "includeDomains": [
+            "gov.tr"
+        ]
+    },
+    "TV": {
+        "query": "Official curriculum framework and syllabus for ICT, computing, and digital literacy in Tuvalu kindergarten, primary, and secondary schools",
+        "includeDomains": [
+            "gov.tv"
+        ]
+    },
+    "TW": {
+        "query": "國民中小學暨高級中等學校資訊科技課程綱要與幼兒園資訊教育指引",
+        "includeDomains": [
+            "edu.tw",
+            "gov.tw"
+        ]
+    },
+    "TZ": {
+        "query": "Official curriculum guidelines and syllabus for Information and Communication Technology (ICT) in Tanzanian pre-primary, primary, and secondary schools",
+        "includeDomains": [
+            "go.tz",
+            "ac.tz"
+        ]
+    },
+    "UG": {
+        "query": "The official curriculum and syllabus guidelines for Information and Communication Technology (ICT) in Ugandan schools provided by the National Curriculum Development Centre",
+        "includeDomains": [
+            "go.ug"
+        ]
+    },
+    "UA": {
+        "query": "Навчальна програма з інформатики для дошкільної, початкової та середньої освіти",
+        "includeDomains": [
+            "gov.ua"
+        ]
+    },
+    "UM": {
+        "query": "K-12 computer science curriculum standards and academic frameworks for primary and secondary education",
+        "includeDomains": [
+            "gov",
+            "edu"
+        ]
+    },
+    "UY": {
+        "query": "Programa oficial de estudios de informática, tecnología y pensamiento computacional para educación inicial, primaria y bachillerato en Uruguay",
+        "includeDomains": [
+            "edu.uy",
+            "gub.uy"
+        ]
+    },
+    "US": {
+        "query": "Official K-12 computer science curriculum standards and learning frameworks for primary and secondary schools",
+        "includeDomains": [
+            "gov",
+            "edu"
+        ]
+    },
+    "UZ": {
+        "query": "Maktabgacha, boshlang'ich va o'rta maktablar uchun informatika va axborot texnologiyalari fani bo'yicha rasmiy o'quv dasturi va ta'lim standarti",
+        "includeDomains": [
+            "gov.uz"
+        ]
+    },
+    "VA": {
+        "query": "Le Indicazioni nazionali per il curricolo della scuola dell'infanzia, primaria e secondaria per l'insegnamento dell'informatica",
+        "includeDomains": [
+            "istruzione.it",
+            "gov.it"
+        ]
+    },
+    "VC": {
+        "query": "Official curriculum guidelines for Information and Communication Technology (ICT) for kindergarten, primary, and secondary schools in Saint Vincent and the Grenadines",
+        "includeDomains": [
+            "gov.vc"
+        ]
+    },
+    "VE": {
+        "query": "Currículo oficial y programas de estudio de informática y tecnologías de la información para educación inicial, primaria y media en Venezuela",
+        "includeDomains": [
+            "gob.ve",
+            "edu.ve"
+        ]
+    },
+    "VG": {
+        "query": "The official Ministry of Education curriculum guidelines and syllabus for Information Technology and Computing in British Virgin Islands primary and high schools",
+        "includeDomains": [
+            "gov.vg"
+        ]
+    },
+    "VI": {
+        "query": "Here is the official K-12 computer science and technology curriculum framework and academic standards for the Virgin Islands Department of Education:",
+        "includeDomains": [
+            "gov",
+            "vi"
+        ]
+    },
+    "VN": {
+        "query": "Chương trình giáo dục phổ thông môn Tin học cấp tiểu học, trung học cơ sở và trung học phổ thông",
+        "includeDomains": [
+            "gov.vn",
+            "edu.vn"
+        ]
+    },
+    "VU": {
+        "query": "Official national curriculum guidelines for ICT and computing subjects in Vanuatu primary and secondary schools",
+        "includeDomains": [
+            "gov.vu"
+        ]
+    },
+    "WF": {
+        "query": "Le programme officiel des enseignements du numérique, de l'informatique et des sciences numériques pour l'école maternelle, élémentaire, le collège et le lycée",
+        "includeDomains": [
+            "gouv.fr",
+            "ac-wf.fr"
+        ]
+    },
+    "WS": {
+        "query": "Official curriculum documents for Information and Communication Technology and Computer Science for early childhood, primary, and secondary education in Samoa",
+        "includeDomains": [
+            "gov.ws"
+        ]
+    },
+    "YE": {
+        "query": "المنهج الدراسي الرسمي لمادة الحاسوب لمدارس رياض الأطفال والمرحلة الأساسية والثانوية",
+        "includeDomains": [
+            "gov.ye"
+        ]
+    },
+    "ZA": {
+        "query": "Official Curriculum and Assessment Policy Statement (CAPS) document for Information Technology, Computer Applications Technology, and Digital Skills in South Africa",
+        "includeDomains": [
+            "gov.za"
+        ]
+    },
+    "ZM": {
+        "query": "The official syllabus and curriculum guidelines for Computer Studies and Information and Communication Technology for Early Childhood, primary, and secondary education in Zambia",
+        "includeDomains": [
+            "gov.zm"
+        ]
+    },
+    "ZW": {
+        "query": "Official Ministry of Primary and Secondary Education syllabus and curriculum framework for Information and Communication Technology and Computer Science in Zimbabwe",
+        "includeDomains": [
+            "gov.zw"
+        ]
+    }
+}
