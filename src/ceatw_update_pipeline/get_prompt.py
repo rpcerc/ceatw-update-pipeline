@@ -22,7 +22,6 @@ async def generate_exa_payload(country: str, custom_system_instruction: str = SY
         ExaPayload: JSON (a dictionary) representing the Exa API payload,
                         with schema ExaPayload. 
     """
-    
     try:
         client = genai.Client(api_key=settings.GEMINI_API_KEY)
 

@@ -58,6 +58,7 @@ async def get_n_random_countries(n: int, native_prompt_cache: dict[str, ExaPaylo
         # Rate limit of 10 calls per second, hence do it in batches of 5.
         tasks = [insert_urls_for_one_country(code, native_prompt_cache) for code in country_codes[i*5:i*5+5]]
         await asyncio.gather(*tasks)
+        await asyncio.sleep(1)
     
     logger.info("%d random countries inserted successfully", n)    
     
