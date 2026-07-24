@@ -1,3 +1,5 @@
+"""Get all technology links from the education profiles website."""
+
 from ceatw_update_pipeline.filter import is_valid_url
 from ceatw_update_pipeline.configuration import settings
 from bs4 import BeautifulSoup
@@ -166,7 +168,6 @@ def get_content_links() -> dict[str, list[str]]:
 
     return content_urls
         
-    
 
 if __name__ == "__main__":
     get_content_links()

@@ -33,6 +33,7 @@ class Settings(BaseSettings):
    EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
    
    NATIVE_LANGUAGE_PROMPTS_FILE: str = "gemini_prompts.json"
+   BATCH_SIZE: int = 5
    
 @lru_cache
 def get_settings() -> Settings:
@@ -59,9 +60,13 @@ Your goal is to translate user intent into the perfect Exa API JSON payload for 
    - You MUST translate the final `query` string into the primary native language of the target country.
    - Do NOT just literally translate "Computer Science". You must use the actual local educational terminology for the subject (e.g., "Informatik" in Germany).
 3. **Domain Strategy (BROAD TLDs ONLY)**:
-   - Use `includeDomains` to restrict results to official governmental or educational domains, but you MUST ONLY use broad, top-level base domains (e.g., `["gov.br", "edu.br"]` for Brazil, `["go.jp", "ac.jp"]` for Japan, `["gouv.fr", "education.fr"]` for France).
+   - Use `include_domains` to restrict results to official governmental or educational domains, but you MUST ONLY use broad, top-level base domains (e.g., `["gov.br", "edu.br"]` for Brazil, `["go.jp", "ac.jp"]` for Japan, `["gouv.fr", "education.fr"]` for France).
    - **CRITICAL RESTRICTION:** NEVER use deep, highly specific subdomains (e.g., do not use `basenacionalcomum.mec.gov.br` or `eduscol.education.gouv.fr`). Using deeply nested subdomains causes search failures if the site structure changes, a specific ministry portal is down, or crawlers are blocked. Keep the domains broad and let the neural query do the filtering.
 
 ### Output Format:
 Output exactly one valid JSON object representing the Exa API payload. Start immediately with { and end with }. Do not include any conversational text.
 """
+
+GENERIC_TLD_DOMAINS = (
+   ["ibe.unesco.org", "planipolis.iiep.unesco.org", "unesco.org",
+    "worldbank.org", "globalpartnership.org"])

@@ -1,7 +1,7 @@
 """Uses Exa.ai API to generate possible source URLs for computing curricula."""
 
 import asyncio
-from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.configuration import settings, GENERIC_TLD_DOMAINS
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import (
         SourceData, ExaPayload, SearchStrategy, Country)
@@ -9,7 +9,12 @@ from exa_py import AsyncExa
 from exa_py.api import Result
 import logging
 
-logger = logging.Logger(__name__)
+logger = logging.getLogger(__name__)
+
+def get_relevant_tlds(top_level_domains: list[str]) -> list[str]:
+    """Combines the specific country TLD domains with generic ones for higher recall."""
+    
+    return list(set(top_level_domains + GENERIC_TLD_DOMAINS))
 
 def create_source(exa_result: Result, country: Country, search_strategy: SearchStrategy) -> SourceData:
     """Takes a singular exa_result, and returns a Source object.
@@ -36,7 +41,7 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
     """Returns a list of Sources returned by Exa.ai for a given country.
 
     Args:
-        country (str): A country to find sources for.
+        country_code_alpha_2 (str): A country to find sources for.
 
     Raises:
         RuntimeError: Exa API failure, or Gemini API failure.
@@ -71,14 +76,14 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
                 query=payload.query,
                 type=settings.EXA_SEARCH_TYPE,
                 num_results=settings.MAX_URL_COUNT,
-                include_domains=payload.includeDomains,
+                include_domains=get_relevant_tlds(payload.include_domains),
                 contents={"highlights": True},
             ),
             exa.search(
                 query=english_query,
                 type=settings.EXA_SEARCH_TYPE,
                 num_results=settings.MAX_URL_COUNT,
-                include_domains=payload.includeDomains,
+                include_domains=get_relevant_tlds(payload.include_domains),
                 contents={"highlights": True},
             )
         )

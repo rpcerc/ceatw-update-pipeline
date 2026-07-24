@@ -1,7 +1,7 @@
 import validators
 import asyncio
-from ceatw_update_pipeline.gather_sources import get_exa_sources
-from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.gather_sources import get_exa_sources, get_relevant_tlds
+from ceatw_update_pipeline.configuration import settings, GENERIC_TLD_DOMAINS
 from ceatw_update_pipeline.custom_types import SearchStrategy
 
 COUNTRIES = [
@@ -9,6 +9,10 @@ COUNTRIES = [
     "DE",
     "ZW",
 ]
+
+def test_get_relevant_tlds():
+    assert (set(get_relevant_tlds([".fake", ".fake", ".testtld"])) 
+            == set(GENERIC_TLD_DOMAINS + [".fake", ".testtld"]))
 
 def test_get_prompt_return_structure():
     for cc in COUNTRIES[:1]:  # Test only the first country

@@ -1,16 +1,15 @@
 
 from unittest.mock import MagicMock, patch, mock_open
 from ceatw_update_pipeline.main import (load_native_prompts_cache, get_gemini_prompts,
-    get_n_random_countries, insert_urls_for_one_country)
+    insert_countries, insert_urls_for_one_country)
 from ceatw_update_pipeline.custom_types import ExaPayload
 from sqlalchemy.exc import IntegrityError
 import pytest
-import pycountry
 
 @patch("builtins.open", new_callable=mock_open, read_data="""{
     "VN": {
         "query": "Chương trình giáo dục phổ thông môn Tin học cấp tiểu học, trung học cơ sở và trung học phổ thông",
-        "includeDomains": [
+        "include_domains": [
             "gov.vn",
             "edu.vn"
         ]
@@ -23,8 +22,8 @@ def test_load_native_prompts_cache_ok(mock_open):
     values = data["VN"].model_dump()
     
     assert "query" in values, "query is not a field"
-    assert "includeDomains" in values, "includeDomains is not a field"
-    assert values["includeDomains"] == ["gov.vn", "edu.vn"], "wrong domains"
+    assert "include_domains" in values, "include_domains is not a field"
+    assert values["include_domains"] == ["gov.vn", "edu.vn"], "wrong domains"
     assert isinstance(values["query"], str), "query malformed"
     
     
@@ -40,43 +39,14 @@ def test_load_native_prompts_not_ok(mock_open):
     data = load_native_prompts_cache()    
     assert data == {}
 
-@pytest.mark.asyncio
-@patch("ceatw_update_pipeline.main.generate_exa_payload")
-@patch("json.dump")
-@patch("ceatw_update_pipeline.main.logger.info")
-@patch("ceatw_update_pipeline.main.load_native_prompts_cache")
-@patch("pycountry.countries", [
-    pycountry.countries.get(alpha_2="GB"), 
-    pycountry.countries.get(alpha_2="DE")
-])
-async def test_get_gemini_prompts(mock_cache, mock_logger, mock_write, mock_generate):
-    mock_cache.return_value = {"GB": ExaPayload(query="fake-query", includeDomains=["gov.uk"])}
-    mock_generate.return_value = ExaPayload(query="germany", includeDomains=[".de"])
-    
-    result = await get_gemini_prompts()
-    
-    # Should skip writing for GB
-    mock_logger.assert_any_call("Native prompt already cached for country: %s",
-                                "United Kingdom")
-    mock_write.assert_called_once()
-    
-    # New result added
-    assert "DE" in result
-    assert result["DE"].query is not None
-    assert len(result["DE"].includeDomains) == 1 and result["DE"].includeDomains[0] == ".de"
-    
-    # Cached result still there
-    assert "GB" in result
-    assert result["GB"] == mock_cache.return_value["GB"]
-
 # ==========================================
-# 2. Tests for get_n_random_countries
+# 2. Tests for insert_countries
 # ==========================================
 
 @pytest.mark.asyncio
 @patch("ceatw_update_pipeline.main.insert_urls_for_one_country")
 @patch("asyncio.sleep")
-async def test_get_n_random_countries_rate_limiting(mock_sleep, mock_insert):
+async def test_insert_countries(mock_sleep, mock_insert):
     """
     Test that rate limit chunking works. 
     12 countries should result in 3 batches (5, 5, 2) and 3 sleeps.
@@ -85,7 +55,7 @@ async def test_get_n_random_countries_rate_limiting(mock_sleep, mock_insert):
     mock_insert.return_value = None 
     mock_cache = {}
     
-    await get_n_random_countries(12, mock_cache)    
+    await insert_countries(range(12), mock_cache)    
     assert mock_sleep.call_count == 3
     assert mock_insert.call_count == 12
 

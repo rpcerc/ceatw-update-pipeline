@@ -4,6 +4,7 @@ import json
 from google import genai
 from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA, settings
 from ceatw_update_pipeline.custom_types import ExaPayload
+from pydantic import ValidationError
 
 async def generate_exa_payload(country: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
     """Uses Gemini to generate a JSON payload for Exa AI for a country, containing a native language prompt.
@@ -39,23 +40,7 @@ async def generate_exa_payload(country: str, custom_system_instruction: str = SY
                 "type": "text",
                 "mime_type": "application/json",
                 # https://json-schema.org/docs
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "query": {
-                            "type": "string"
-                        },
-                        "includeDomains": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "required": [
-                        "query"
-                    ]
-                },
+                "schema": ExaPayload.model_json_schema()
             },
         )
     except genai.errors.APIError as e:
@@ -71,7 +56,7 @@ async def generate_exa_payload(country: str, custom_system_instruction: str = SY
         
         return ExaPayload.model_validate_json(response)
     
-    except json.JSONDecodeError as e:
+    except (json.JSONDecodeError, ValidationError) as e:
         raise ValueError(f"get_prompt - Response is not valid JSON: {response}") from e
     except Exception as e:
         raise RuntimeError(f"get_prompt - An unexpected error occurred: {e}") from e

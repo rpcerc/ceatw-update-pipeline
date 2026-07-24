@@ -41,7 +41,6 @@ def get_session() -> Generator[Session, None, None]:
         yield session
         session.commit()
     except Exception:
-        print("HELLO")
         session.rollback()
         raise
     finally:

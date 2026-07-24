@@ -1,3 +1,5 @@
+"""Custom data types for the pipeline data. Note this does NOT include database types."""
+
 import pycountry
 from typing_extensions import Annotated
 from pydantic import BaseModel, AfterValidator, computed_field
@@ -5,7 +7,7 @@ from enum import StrEnum
 
 class ExaPayload(BaseModel):
     query: str
-    includeDomains: list[str] | None = None
+    include_domains: list[str]
 
 class SearchStrategy(StrEnum):
     NATIVE = "native_prompt"
@@ -29,8 +31,11 @@ def check_valid_country_code(country_code: str) -> str:
 
 def to_upper(x: str) -> str:
     return x.upper()
-       
-CountryCode = Annotated[str, AfterValidator(to_upper), AfterValidator(check_valid_country_code)]
+    
+# Note this is just a type hint, and the AfterValidators only run once 
+# the Country class is instantiated.
+CountryCode = Annotated[str, AfterValidator(to_upper),
+                             AfterValidator(check_valid_country_code)]
 
 class Country(BaseModel):
     country_code: CountryCode
@@ -46,7 +51,7 @@ class Country(BaseModel):
 
 class SourceData(BaseModel):
     country: Country
-    search_strategy: str
+    search_strategy: SearchStrategy
     url: str
     title: str | None = None
     published_date: str | None = None

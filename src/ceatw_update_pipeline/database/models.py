@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import DateTime, Text, func
+from sqlalchemy import DateTime, Text, String, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from ceatw_update_pipeline.database.database import Base
@@ -18,7 +18,7 @@ class Source(Base):
     )
     source_url: Mapped[str] = mapped_column(Text, unique=True)
     country: Mapped[str] 
-    country_code: Mapped[str]
+    country_code: Mapped[str] = mapped_column(String(2))
     decision: Mapped[Decision] = mapped_column(default=Decision.PENDING)
     content_hash: Mapped[str] = mapped_column(Text)
     comments: Mapped[str | None] = mapped_column(Text)
