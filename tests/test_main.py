@@ -1,8 +1,7 @@
 
 from unittest.mock import MagicMock, patch, mock_open
-from ceatw_update_pipeline.main import (load_native_prompts_cache, get_gemini_prompts,
+from ceatw_update_pipeline.main import (load_native_prompts_cache,
     insert_countries, insert_urls_for_one_country)
-from ceatw_update_pipeline.custom_types import ExaPayload
 from sqlalchemy.exc import IntegrityError
 import pytest
 

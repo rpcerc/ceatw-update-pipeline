@@ -1,6 +1,5 @@
 """Uses Exa.ai API to generate possible source URLs for computing curricula."""
 
-import asyncio
 from ceatw_update_pipeline.configuration import settings, GENERIC_TLD_DOMAINS
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
 from ceatw_update_pipeline.custom_types import (
@@ -8,6 +7,7 @@ from ceatw_update_pipeline.custom_types import (
 from exa_py import AsyncExa
 from exa_py.api import Result
 import logging
+import asyncio
 
 logger = logging.getLogger(__name__)
 
@@ -36,8 +36,16 @@ def create_source(exa_result: Result, country: Country, search_strategy: SearchS
         published_date=getattr(exa_result, "published_date", None),
         highlights=getattr(exa_result, "highlights", None)
     )
+    
+async def get_prompt_from_cache(country: Country, native_prompts_cache: dict[str, ExaPayload]) -> ExaPayload:
+    try:
+        payload = native_prompts_cache[country.country_code]
+    except KeyError:
+        logger.warning("Not in country code cache: %s", country.country_code)
+        payload = await generate_exa_payload(country.name)
+    return payload
 
-async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[str, ExaPayload]) -> list[SourceData]:
+async def get_exa_sources(country_code_alpha_2: str, native_prompts_cache: dict[str, ExaPayload]) -> list[SourceData]:
     """Returns a list of Sources returned by Exa.ai for a given country.
 
     Args:
@@ -58,11 +66,7 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
         
     country = Country(country_code=country_code_alpha_2)
     
-    try:
-        payload = native_prompt_cache[country_code_alpha_2]
-    except KeyError:
-        logger.warning("Not in country code cache: %s", country_code_alpha_2)
-        payload = await generate_exa_payload(country.name)
+    payload = await get_prompt_from_cache(country, native_prompts_cache)
         
     english_query = (
         f"Official national curriculum, syllabus, or learning standards "
@@ -71,22 +75,32 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
     
     try:
         # Note both queires use the TLD domain restrictions found by the Gemini call.
-        gemini_response = await exa.search(
-            query=payload.query,
-            type=settings.EXA_SEARCH_TYPE,
-            num_results=settings.MAX_URL_COUNT,
-            include_domains=get_relevant_tlds(payload.include_domains),
-            contents={"highlights": True},
-        )
-        
-        english_response = await exa.search(
-            query=english_query,
-            type=settings.EXA_SEARCH_TYPE,
-            num_results=settings.MAX_URL_COUNT,
-            include_domains=get_relevant_tlds(payload.include_domains),
-            contents={"highlights": True},
-        )
-        
+        for attempt in range(1, settings.MAX_RETRIES+1):
+            try:
+                gemini_response = await exa.search(
+                    query=payload.query,
+                    type=settings.EXA_SEARCH_TYPE,
+                    num_results=settings.MAX_URL_COUNT,
+                    include_domains=get_relevant_tlds(payload.include_domains),
+                    contents={"highlights": True},
+                )
+                
+                english_response = await exa.search(
+                    query=english_query,
+                    type=settings.EXA_SEARCH_TYPE,
+                    num_results=settings.MAX_URL_COUNT,
+                    include_domains=get_relevant_tlds(payload.include_domains),
+                    contents={"highlights": True},
+                )
+                break
+            except RuntimeError:
+                # This could possibly be due to rate limits. Hence, there is a retry here.
+                logger.exception("There was an error when searching Exa.ai. Attempt number: %d", attempt)
+                if attempt == settings.MAX_RETRIES:
+                    raise
+                else:
+                    await asyncio.sleep(0.5)
+            
         gemini_sources = [
             create_source(result, country, SearchStrategy.NATIVE) 
             for result in gemini_response.results
@@ -101,3 +115,4 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
     
     except Exception as e:
         raise RuntimeError(f"Failed to retrieve URLs from Exa: {e}")
+    

@@ -12,7 +12,6 @@ import json
 import logging
 from sqlalchemy.exc import IntegrityError
 import asyncio
-import time
 
 logging.basicConfig(filename="devlogs.log", level=logging.INFO)
 
@@ -52,14 +51,20 @@ async def insert_countries(country_codes: list[CountryCode], native_prompts_cach
     """
 
     batch_size = int((settings.EXA_API_LIMIT-1)/2)
+    logger.info("Inserting %d countries in batches of %d...", len(country_codes), batch_size)
+    
     for i in range(0, len(country_codes), batch_size):
+        current_batch = country_codes[i:i+batch_size]
         tasks = [insert_urls_for_one_country(cc, native_prompts_cache)
-                 for cc in country_codes[i:i+batch_size]]
+                 for cc in current_batch]
         
+        # This is quite prone to breaking, due to API rate limits seemingly being lower than written.
         await asyncio.gather(*tasks)
-        time.sleep(1)
+        logger.info("Batch finished, sleeping for 1s")
         
-        logger.info("%d countries inserted successfully", len(country_codes)) 
+        await asyncio.sleep(1)
+        
+    logger.info("%d countries inserted successfully", len(country_codes)) 
 
     
     

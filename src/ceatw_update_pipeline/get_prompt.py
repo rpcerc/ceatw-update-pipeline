@@ -10,7 +10,7 @@ async def generate_exa_payload(country: str, custom_system_instruction: str = SY
     """Uses Gemini to generate a JSON payload for Exa AI for a country, containing a native language prompt.
 
     Args:
-        country (str): The country for which to generate the payload for.
+        country (str): The country name for which to generate the payload for.
         custom_system_instruction (str, optional): A system instruction for the payload.
             Defaults to SYSTEM_INSTRUCTION_EXA.
 

@@ -34,6 +34,7 @@ class Settings(BaseSettings):
    
    NATIVE_LANGUAGE_PROMPTS_FILE: str = "gemini_prompts.json"
    EXA_API_LIMIT: int = 10
+   MAX_RETRIES: int = 3
    
 @lru_cache
 def get_settings() -> Settings:
