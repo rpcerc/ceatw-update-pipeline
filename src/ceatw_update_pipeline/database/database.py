@@ -1,16 +1,15 @@
-from collections.abc import Generator
-from contextlib import contextmanager
+from collections.abc import AsyncGenerator
+from contextlib import asynccontextmanager
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.orm import DeclarativeBase
 
 from ceatw_update_pipeline.configuration import settings
 
-
 class Base(DeclarativeBase):
     """Declarative Base"""
-
-engine = create_engine(
+    
+async_engine = create_async_engine(
     settings.DATABASE_URL,
     echo=settings.DATABASE_ECHO,
     pool_size=5,
@@ -20,40 +19,42 @@ engine = create_engine(
     pool_pre_ping=True
 )
 
-SessionFactory = sessionmaker(
-    bind=engine,
+AsyncSessionFactory = async_sessionmaker(
+    bind=async_engine,
+    class_=AsyncSession,
     autoflush=True,
     expire_on_commit=False
 )
 
-
-@contextmanager
-def get_session() -> Generator[Session, None, None]:
-    """A context manager for creating synchronous queries.
+@asynccontextmanager
+async def get_session() -> AsyncGenerator[AsyncSession]:
+    """A context manager for creating async queries.
 
     Returns:
-        Generator[Session, None, None]:
+        AsyncGenerator[AsyncSession]:
             A wrapper to be used for queries. Returns a session when using 'with'.
-            https://docs.sqlalchemy.org/en/20/orm/session_basics.html
+            https://docs.sqlalchemy.org/en/21/orm/session_basics.html
+
+    Yields:
+        Iterator[AsyncGenerator[AsyncSession]]: 
+            https://www.geeksforgeeks.org/python/context-manager-using-contextmanager-decorator/
     """
-    session = SessionFactory()
+    session = AsyncSessionFactory()
     try:
         yield session
-        session.commit()
+        await session.commit()
     except Exception:
-        session.rollback()
+        await session.rollback()
         raise
     finally:
-        session.close()
-
-
-def init_db() -> None:
+        await session.close()
+        
+async def init_db() -> None:
     """Set up the database and define mappings between models and tables."""
-    # This import is needed to let SQLAlchemy know these models exist, even if it is unused.
-    import ceatw_update_pipeline.database.models as models # noqa: F401
-    Base.metadata.create_all(bind=engine)
-
-
-def kill_engine() -> None:
+    async with async_engine.begin() as async_connection:
+        await async_connection.run_sync(Base.metadata.create_all)
+        
+async def kill_engine() -> None:
     """Stops the database and all connections."""
-    engine.dispose()
+    await async_engine.dispose()
+        

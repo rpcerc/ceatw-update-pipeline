@@ -26,11 +26,11 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
     """
     country = Country(country_code=country_code)
     results = await get_exa_sources(country.country_code, native_prompts_cache)
-    with get_session() as session:
+    async with get_session() as session:
         for result in results:
             try:
-                with session.begin_nested():
-                    query.insert_source(session, 
+                async with session.begin_nested():
+                    await query.insert_source(session, 
                         SourceCreate(
                             source_url=result.url,
                             country=country.name,
@@ -88,11 +88,11 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
 
 async def run_pipeline() -> None:
     # Get rid of antarctica
-    init_db()
+    await init_db()
     valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
     await insert_countries(valid_country_codes, native_prompts_cache)
-    kill_engine()
+    await kill_engine()
     
     
 if __name__ == "__main__":

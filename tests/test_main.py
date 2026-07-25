@@ -1,5 +1,4 @@
-
-from unittest.mock import MagicMock, patch, mock_open
+from unittest.mock import MagicMock, patch, mock_open, AsyncMock
 from ceatw_update_pipeline.main import (load_native_prompts_cache,
     insert_countries, insert_urls_for_one_country)
 from sqlalchemy.exc import IntegrityError
@@ -66,7 +65,7 @@ async def test_insert_countries(mock_sleep, mock_insert):
 @pytest.mark.asyncio
 @patch("ceatw_update_pipeline.main.query.insert_source")
 @patch("ceatw_update_pipeline.main.get_session")
-@patch("ceatw_update_pipeline.main.get_exa_sources")
+@patch("ceatw_update_pipeline.main.get_exa_sources", new_callable=AsyncMock)
 async def test_insert_urls_integrity_error_recovery(mock_get_sources,
                                                     mock_get_session, mock_insert_source):
     """
@@ -80,7 +79,8 @@ async def test_insert_urls_integrity_error_recovery(mock_get_sources,
 
     # 2. Setup the DB session mock to support the 'with' context manager
     mock_session = MagicMock()
-    mock_get_session.return_value.__enter__.return_value = mock_session
+    mock_session.begin_nested.return_value.__aenter__.return_value = AsyncMock()
+    mock_get_session.return_value.__aenter__.return_value = mock_session
 
     # 3. Simulate an IntegrityError on the FIRST insert, but success on the SECOND
     # The type returned should technically be Source, but it doesn't matter for this test.
