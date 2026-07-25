@@ -24,10 +24,12 @@ dependencies = [
 "validators==0.35.0",
 "pydantic==2.13.4",
 "pydantic_settings==2.14.2",
-"pycountry==26.2.16"
+"pycountry==26.2.16",
+"sqlalchemy==2.0.51",
+"psycopg==3.3.4",
+"uuid-utils==0.17.0"
 ]
 
-# Mypy refuses to work with this.
 [tool.mypy]
 strict = true
 plugins = [

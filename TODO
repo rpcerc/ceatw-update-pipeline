@@ -1,6 +1,0 @@
-  File "/home/g/ceatw-update-pipeline/src/ceatw_update_pipeline/gather_sources.py", line 93, in get_exa_sources
-    raise RuntimeError(f"Failed to retrieve URLs from Exa: {e}")
-RuntimeError: Failed to retrieve URLs from Exa: Request failed with status code 400: {"requestId":"065f3106e6fa94d481bb32c239e99ebd","error":"Domain must include a top-level domain: ke","tag":"INVALID_DOMAIN"}
-# Fix this
-
-Get rid of antarctica
