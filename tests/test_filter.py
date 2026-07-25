@@ -8,9 +8,9 @@ from ceatw_update_pipeline.filter import is_valid_url
 @pytest.mark.parametrize("url, description", [
     ("https://www.google.com", "Standard 200 OK"),
     ("http://github.com", "HTTP redirecting to HTTPS (301 -> 200)"),
-    ("https://httpbin.org/status/200", "Explicit 200 OK response"),
-    ("https://httpbin.org/redirect/1", "Explicit redirect handled successfully"),
-    ("https://httpbin.org/image/jpeg", "Image"),
+    ("https://httpbingo.org/status/200", "Explicit 200 OK response"),
+    ("https://httpbingo.org/absolute-redirect/1", "Explicit redirect handled successfully"),
+    ("https://httpbingo.org/image/jpeg", "Image"),
     ("https://pdfobject.com/pdf/sample.pdf", "PDF"),
 ])
 def test_is_valid_url_success(url, description):
@@ -23,13 +23,13 @@ def test_is_valid_url_success(url, description):
 # 2. TEST INVALID URLs (Expected to return False)
 # ==========================================
 @pytest.mark.parametrize("url, description", [
-    ("https://httpbin.org/status/404", "404 Not Found"),
-    ("https://httpbin.org/status/403", "403 Forbidden"),
-    ("https://httpbin.org/status/500", "500 Internal Server Error"),
+    ("https://httpbingo.org/status/404", "404 Not Found"),
+    ("https://httpbingo.org/status/403", "403 Forbidden"),
+    ("https://httpbingo.org/status/500", "500 Internal Server Error"),
     ("https://this-domain-is-completely-fake-123456.com", "DNS/Connection Failure"),
     ("htpas/:", "Malformed Schema (InvalidSchema)"),
     ("not_a_url_at_all", "Missing Schema (MissingSchema)"),
-    ("https://httpbin.org/delay/6", "Timeout (Takes 6s, limit is 5s)"),
+    ("https://httpbingo.org/delay/6", "Timeout (Takes 6s, limit is 5s)"),
     ("https://example.com/fake.pdf", "PDF"),
 ])
 def test_is_valid_url_failures(url, description):
