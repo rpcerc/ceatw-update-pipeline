@@ -33,7 +33,7 @@ class Settings(BaseSettings):
    EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
    
    NATIVE_LANGUAGE_PROMPTS_FILE: str = "gemini_prompts.json"
-   BATCH_SIZE: int = 5
+   EXA_API_LIMIT: int = 10
    
 @lru_cache
 def get_settings() -> Settings:

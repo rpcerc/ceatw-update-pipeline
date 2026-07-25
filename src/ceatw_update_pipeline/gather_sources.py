@@ -71,21 +71,20 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompt_cache: dict[s
     
     try:
         # Note both queires use the TLD domain restrictions found by the Gemini call.
-        gemini_response, english_response = await asyncio.gather(
-            exa.search(
-                query=payload.query,
-                type=settings.EXA_SEARCH_TYPE,
-                num_results=settings.MAX_URL_COUNT,
-                include_domains=get_relevant_tlds(payload.include_domains),
-                contents={"highlights": True},
-            ),
-            exa.search(
-                query=english_query,
-                type=settings.EXA_SEARCH_TYPE,
-                num_results=settings.MAX_URL_COUNT,
-                include_domains=get_relevant_tlds(payload.include_domains),
-                contents={"highlights": True},
-            )
+        gemini_response = await exa.search(
+            query=payload.query,
+            type=settings.EXA_SEARCH_TYPE,
+            num_results=settings.MAX_URL_COUNT,
+            include_domains=get_relevant_tlds(payload.include_domains),
+            contents={"highlights": True},
+        )
+        
+        english_response = await exa.search(
+            query=english_query,
+            type=settings.EXA_SEARCH_TYPE,
+            num_results=settings.MAX_URL_COUNT,
+            include_domains=get_relevant_tlds(payload.include_domains),
+            contents={"highlights": True},
         )
         
         gemini_sources = [
