@@ -1,5 +1,47 @@
 """Constant configuration values for the CEATW update pipeline."""
 
+from functools import lru_cache
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from pathlib import Path
+
+ENV_PATH = (Path(__file__).resolve()
+            .parent # ceatw_update_pipeline
+            .parent # src
+            .parent # ceatw-update-pipeline (outer)
+            .joinpath(".env"))
+
+class Settings(BaseSettings):
+   """Manage configuration settings via environment variables."""
+      
+   model_config = SettingsConfigDict(
+      env_file=ENV_PATH,
+      env_file_encoding="utf-8",
+      extra="ignore"
+   )
+   
+   # API keys
+   EXA_API_KEY: str
+   GEMINI_API_KEY: str
+   DATABASE_URL: str
+   DATABASE_ECHO: bool = True
+   
+   MAX_URL_COUNT: int = 5
+   EXA_SEARCH_TYPE: str = "deep"
+   EDUCATION_PROFILES_OUTPUT_FOLDER: str = "output"
+   EDUCATION_PROFILES_TECH_URL_FILE: str = "education_profiles_technology_urls.json"
+   EDUCATION_PROFILES_FAILED_TECH_URL_FILE: str = "failed_education_profiles_technology_urls.json"
+   EDUCATION_PROFILES_CONTENT_URL_FILE: str = "education_profiles_technology_content_urls.json"
+   
+   NATIVE_LANGUAGE_PROMPTS_FILE: str = "gemini_prompts.json"
+   EXA_API_LIMIT: int = 10
+   MAX_RETRIES: int = 3
+   
+@lru_cache
+def get_settings() -> Settings:
+   return Settings()
+
+settings = get_settings()
+
 SYSTEM_INSTRUCTION_EXA = """
 You are an expert search engineer tasked with writing optimal queries for the Exa Search API.
 Your goal is to translate user intent into the perfect Exa API JSON payload for gathering official, primary-source educational curricula.
@@ -19,19 +61,13 @@ Your goal is to translate user intent into the perfect Exa API JSON payload for 
    - You MUST translate the final `query` string into the primary native language of the target country.
    - Do NOT just literally translate "Computer Science". You must use the actual local educational terminology for the subject (e.g., "Informatik" in Germany).
 3. **Domain Strategy (BROAD TLDs ONLY)**:
-   - Use `includeDomains` to restrict results to official governmental or educational domains, but you MUST ONLY use broad, top-level base domains (e.g., `["gov.br", "edu.br"]` for Brazil, `["go.jp", "ac.jp"]` for Japan, `["gouv.fr", "education.fr"]` for France).
+   - Use `include_domains` to restrict results to official governmental or educational domains, but you MUST ONLY use broad, top-level base domains (e.g., `["gov.br", "edu.br"]` for Brazil, `["go.jp", "ac.jp"]` for Japan, `["gouv.fr", "education.fr"]` for France).
    - **CRITICAL RESTRICTION:** NEVER use deep, highly specific subdomains (e.g., do not use `basenacionalcomum.mec.gov.br` or `eduscol.education.gouv.fr`). Using deeply nested subdomains causes search failures if the site structure changes, a specific ministry portal is down, or crawlers are blocked. Keep the domains broad and let the neural query do the filtering.
 
 ### Output Format:
 Output exactly one valid JSON object representing the Exa API payload. Start immediately with { and end with }. Do not include any conversational text.
 """
 
-# Can be changed between 1 and 10 without negative effect. Going beyond this is more expensive token-wise.
-# As well as this, it acts as a MAXIMUM count. The API may return less if it cant find any more.
-# Finally, gather_sources may return up to 2 * MAX_URL_COUNT, since it runs both an English and native prompt.
-MAX_URL_COUNT = 5
-SEARCH_TYPE = "deep"
-EDUCATION_PROFILES_OUTPUT_FOLDER = "output"
-EDUCATION_PROFILES_TECH_URL_FILE = "technology_urls.json"
-EDUCATION_PROFILES_FAILED_TECH_URL_FILE = "failed_technology_urls.json"
-EDUCATION_PROFILES_CONTENT_URL_FILE = "technology_content_urls.json"
+GENERIC_TLD_DOMAINS = (
+   ["ibe.unesco.org", "planipolis.iiep.unesco.org", "unesco.org",
+    "worldbank.org", "globalpartnership.org"])

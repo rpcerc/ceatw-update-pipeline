@@ -1,5 +1,10 @@
-from ceatw_update_pipeline.filter import is_valid_url
+"""Custom tests that shouldn't be caught with pytest."""
 
+import json
 
 if __name__ == "__main__":
-    assert is_valid_url("https://www.education.gouv.fr/bo/19/Hebdo37/MENE1915146D.htm") is True
+    with open("gemini_prompts.json", "r") as f:
+        prompts = json.load(f)
+        
+    
+    print(prompts["AZ"])

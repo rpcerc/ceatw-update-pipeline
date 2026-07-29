@@ -1,9 +1,7 @@
+"""Get all technology links from the education profiles website."""
+
 from ceatw_update_pipeline.filter import is_valid_url
-from ceatw_update_pipeline.configuration import (
-EDUCATION_PROFILES_OUTPUT_FOLDER,
-EDUCATION_PROFILES_TECH_URL_FILE,
-EDUCATION_PROFILES_FAILED_TECH_URL_FILE,
-EDUCATION_PROFILES_CONTENT_URL_FILE)
+from ceatw_update_pipeline.configuration import settings
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from typing import Any
@@ -78,11 +76,11 @@ def get_technology_page_urls() -> dict[str, str]:
                 continue
             technology_urls[country] = tech_url
             
-    save_json_to_file(technology_urls, Path(EDUCATION_PROFILES_OUTPUT_FOLDER) / 
-                      Path(EDUCATION_PROFILES_TECH_URL_FILE))
+    save_json_to_file(technology_urls, Path(settings.EDUCATION_PROFILES_OUTPUT_FOLDER) / 
+                      Path(settings.EDUCATION_PROFILES_TECH_URL_FILE))
     
-    save_json_to_file(failed_countries, Path(EDUCATION_PROFILES_OUTPUT_FOLDER) / 
-                       Path(EDUCATION_PROFILES_FAILED_TECH_URL_FILE))
+    save_json_to_file(failed_countries, Path(settings.EDUCATION_PROFILES_OUTPUT_FOLDER) / 
+                       Path(settings.EDUCATION_PROFILES_FAILED_TECH_URL_FILE))
     
     return technology_urls
 
@@ -154,8 +152,8 @@ def get_content_links() -> dict[str, list[str]]:
         dict[str, list[str]]: The list of content links for each country.
     """
     try:
-        with open(Path(EDUCATION_PROFILES_OUTPUT_FOLDER) / 
-                      Path(EDUCATION_PROFILES_TECH_URL_FILE), "r") as f:
+        with open(Path(settings.EDUCATION_PROFILES_OUTPUT_FOLDER) / 
+                      Path(settings.EDUCATION_PROFILES_TECH_URL_FILE), "r") as f:
             tech_page_urls = json.load(f)
     except (json.JSONDecodeError, FileNotFoundError):
        tech_page_urls = get_technology_page_urls()
@@ -165,12 +163,11 @@ def get_content_links() -> dict[str, list[str]]:
     for country, url in tech_page_urls.items():
         content_urls[country] = extract_content_links(url)
     
-    save_json_to_file(content_urls, Path(EDUCATION_PROFILES_OUTPUT_FOLDER) / 
-                      Path(EDUCATION_PROFILES_CONTENT_URL_FILE))
+    save_json_to_file(content_urls, Path(settings.EDUCATION_PROFILES_OUTPUT_FOLDER) / 
+                      Path(settings.EDUCATION_PROFILES_CONTENT_URL_FILE))
 
     return content_urls
         
-    
 
 if __name__ == "__main__":
     get_content_links()

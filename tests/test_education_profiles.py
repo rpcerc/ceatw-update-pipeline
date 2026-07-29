@@ -5,7 +5,7 @@ from unittest.mock import patch, MagicMock, mock_open
 from bs4 import BeautifulSoup
 import requests
 
-from ceatw_update_pipeline.education_profiles.get_education_profiles import (
+from ceatw_update_pipeline.scripts.get_education_profiles import (
     get_technology_page_urls,
     is_relevant_link,
     extract_content_links,
@@ -36,7 +36,7 @@ def test_is_relevant_link(href, expected):
 # ==========================================
 # Tests for extract_content_links
 # ==========================================
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.requests.get")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.requests.get")
 def test_extract_content_links_with_main_content(mock_get):
     """Tests extraction when the #block-mainpagecontent div exists."""
     dummy_html = """
@@ -61,7 +61,7 @@ def test_extract_content_links_with_main_content(mock_get):
     assert links == ["https://valid.com"]
     mock_get.assert_called_once_with("https://fake-url.com", timeout=5)
 
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.requests.get")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.requests.get")
 def test_extract_content_links_fallback_to_body(mock_get):
     """Tests fallback to body when main block is missing."""
     dummy_html = """
@@ -79,7 +79,7 @@ def test_extract_content_links_fallback_to_body(mock_get):
     
     assert links == ["https://fallback.com"]
 
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.requests.get")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.requests.get")
 def test_extract_content_links_request_exception(mock_get):
     """Tests safe failure when the network request fails."""
     mock_get.side_effect = requests.RequestException("Network Error")
@@ -91,12 +91,12 @@ def test_extract_content_links_request_exception(mock_get):
 # ==========================================
 # Tests for get_content_links
 # ==========================================
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.save_json_to_file")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.extract_content_links")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.save_json_to_file")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.extract_content_links")
 @patch("builtins.open", new_callable=mock_open, read_data='{"france": "https://test.com/france"}')
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_OUTPUT_FOLDER", "mock_folder")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_TECH_URL_FILE", "mock_tech.json")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.EDUCATION_PROFILES_CONTENT_URL_FILE", "mock_content.json")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.settings.EDUCATION_PROFILES_OUTPUT_FOLDER", "mock_folder")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.settings.EDUCATION_PROFILES_TECH_URL_FILE", "mock_tech.json")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.settings.EDUCATION_PROFILES_CONTENT_URL_FILE", "mock_content.json")
 def test_get_content_links_loads_existing_file(mock_file, mock_extract, mock_save):
     """Tests the happy path where the URLs JSON file already exists."""
     mock_extract.return_value = ["https://extracted.com"]
@@ -116,9 +116,9 @@ def test_get_content_links_loads_existing_file(mock_file, mock_extract, mock_sav
     mock_save.assert_called_once()
     assert "mock_content.json" in str(mock_save.call_args[0][1])
 
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.save_json_to_file")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.extract_content_links")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.get_technology_page_urls")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.save_json_to_file")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.extract_content_links")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.get_technology_page_urls")
 @patch("builtins.open")
 def test_get_content_links_fetches_if_json_invalid(mock_open_file, mock_get_tech_urls, mock_extract, mock_save):
     """Tests fallback to fetching URLs if the JSON file is missing or invalid."""
@@ -138,9 +138,9 @@ def test_get_content_links_fetches_if_json_invalid(mock_open_file, mock_get_tech
 # ==========================================
 # Tests for get_technology_page_urls
 # ==========================================
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.save_json_to_file")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.is_valid_url")
-@patch("ceatw_update_pipeline.education_profiles.get_education_profiles.get_education_profiles_homepage")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.save_json_to_file")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.is_valid_url")
+@patch("ceatw_update_pipeline.scripts.get_education_profiles.get_education_profiles_homepage")
 def test_get_technology_page_urls(mock_get_homepage, mock_is_valid_url, mock_save):
     """Tests URL generation, validation, and saving mechanics."""
     dummy_html = """

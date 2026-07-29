@@ -2,14 +2,15 @@
 
 import json
 from google import genai
-from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA
+from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA, settings
 from ceatw_update_pipeline.custom_types import ExaPayload
+from pydantic import ValidationError
 
-def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
-    """Uses Gemini to generate a JSON payload for Exa AI, containing a native language prompt.
+async def generate_exa_payload(country: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
+    """Uses Gemini to generate a JSON payload for Exa AI for a country, containing a native language prompt.
 
     Args:
-        user_intent (str): The user's intent/query for Gemini.
+        country (str): The country name for which to generate the payload for.
         custom_system_instruction (str, optional): A system instruction for the payload.
             Defaults to SYSTEM_INSTRUCTION_EXA.
 
@@ -22,36 +23,24 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
         ExaPayload: JSON (a dictionary) representing the Exa API payload,
                         with schema ExaPayload. 
     """
-    
-    # Note, this expects the environment variable GEMINI_API_KEY to be set.
     try:
-        client = genai.Client()
+        client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
-        interaction: genai.interactions.Interaction = client.interactions.create(
+        user_intent = ("Find official primary school, kindergarten, and high school "
+                      f"computing or computer science curricula for {country}. ")
+        
+        interaction = await client.aio.interactions.create(
             system_instruction=custom_system_instruction,
             model="gemini-3.1-flash-lite",
             input=user_intent,
+            generation_config={
+                "thinking_level": "high"
+            },
             response_format={
                 "type": "text",
                 "mime_type": "application/json",
                 # https://json-schema.org/docs
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "query": {
-                            "type": "string"
-                        },
-                        "includeDomains": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "required": [
-                        "query"
-                    ]
-                },
+                "schema": ExaPayload.model_json_schema()
             },
         )
     except genai.errors.APIError as e:
@@ -65,10 +54,9 @@ def generate_exa_payload(user_intent: str, custom_system_instruction: str = SYST
         if response is None:
             raise ValueError("get_prompt - No response received from the model.")
         
-        payload: ExaPayload = json.loads(response)
-        return payload
+        return ExaPayload.model_validate_json(response)
     
-    except json.JSONDecodeError as e:
+    except (json.JSONDecodeError, ValidationError) as e:
         raise ValueError(f"get_prompt - Response is not valid JSON: {response}") from e
     except Exception as e:
         raise RuntimeError(f"get_prompt - An unexpected error occurred: {e}") from e
