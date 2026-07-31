@@ -1,4 +1,4 @@
-name: Gather potential each month
+name: gather-potential-sources
 
 # Controls when the workflow will run
 on:
@@ -29,7 +29,7 @@ jobs:
           pip install .
 
       # https://stackoverflow.com/questions/60176044/how-do-i-use-an-env-file-with-github-actions
-      - name: "Create env file"
+      - name: Create env file
         run: |
           touch .env
           echo GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} >> .env
