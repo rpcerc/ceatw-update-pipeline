@@ -26,7 +26,7 @@ dependencies = [
 "pydantic_settings==2.14.2",
 "pycountry==26.2.16",
 "sqlalchemy==2.0.51",
-"psycopg==3.3.4",
+"psycopg[binary]==3.3.4",
 "uuid-utils==0.17.0"
 ]
 

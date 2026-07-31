@@ -12,8 +12,11 @@ import json
 import logging
 from sqlalchemy.exc import IntegrityError
 import asyncio
+import os
+from datetime import datetime
 
-logging.basicConfig(filename="devlogs.log", level=logging.INFO)
+logger_file_path = os.path.join("logs", f"{datetime.now().strftime('%Y-%m-%d')}-devlogs.log")
+logging.basicConfig(filename=logger_file_path, level=logging.INFO)
 
 logger = logging.getLogger(__name__)
     
@@ -88,6 +91,7 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
 
 async def run_pipeline() -> None:
     # Get rid of antarctica
+    logger.info("Starting pipeline...")
     await init_db()
     valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
