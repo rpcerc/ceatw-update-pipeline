@@ -13,10 +13,16 @@ import logging
 from sqlalchemy.exc import IntegrityError
 import asyncio
 import os
+import sys
 from datetime import datetime
 
+os.makedirs("logs", exist_ok=True)
 logger_file_path = os.path.join("logs", f"{datetime.now().strftime('%Y-%m-%d')}-devlogs.log")
-logging.basicConfig(filename=logger_file_path, level=logging.INFO)
+logging.basicConfig(level=logging.INFO, 
+                    handlers=[
+                        logging.StreamHandler(sys.stdout),
+                        logging.FileHandler(logger_file_path)
+                    ])
 
 logger = logging.getLogger(__name__)
     
