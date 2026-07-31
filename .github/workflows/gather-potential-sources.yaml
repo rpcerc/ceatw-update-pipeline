@@ -5,6 +5,10 @@ on:
   schedule: 
     - cron: "0 0 1 * *"
 
+  push:
+    branches:
+      - george-development
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -28,15 +32,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install .
 
-      # https://stackoverflow.com/questions/60176044/how-do-i-use-an-env-file-with-github-actions
-      - name: Create env file
-        run: |
-          touch .env
-          echo GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} >> .env
-          echo EXA_API_KEY=${{ secrets.EXA_API_KEY }} >> .env
-          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
-          cat .env
-
       # Runs a set of commands using the runners shell
       - name: Run the pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: python src/ceatw_update_pipeline/main.py
