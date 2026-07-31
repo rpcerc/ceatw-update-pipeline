@@ -1,4 +1,4 @@
-name: Run pipeline monthly
+name: Gather potential each month
 
 # Controls when the workflow will run
 on:
@@ -27,6 +27,15 @@ jobs:
       - run: |
           python -m pip install --upgrade pip
           pip install .
+
+      # https://stackoverflow.com/questions/60176044/how-do-i-use-an-env-file-with-github-actions
+      - name: "Create env file"
+        run: |
+          touch .env
+          echo GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} >> .env
+          echo EXA_API_KEY=${{ secrets.EXA_API_KEY }} >> .env
+          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
+          cat .env
 
       # Runs a set of commands using the runners shell
       - name: Run the pipeline
