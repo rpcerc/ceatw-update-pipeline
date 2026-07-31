@@ -23,7 +23,7 @@ class Settings(BaseSettings):
    EXA_API_KEY: str
    GEMINI_API_KEY: str
    DATABASE_URL: str
-   DATABASE_ECHO: bool = True
+   DATABASE_ECHO: bool = False
    
    MAX_URL_COUNT: int = 5
    EXA_SEARCH_TYPE: str = "deep"
