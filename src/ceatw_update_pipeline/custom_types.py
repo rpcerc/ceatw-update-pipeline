@@ -1,9 +1,12 @@
 """Custom data types for the pipeline data. Note this does NOT include database types."""
+from __future__ import annotations
+
+from enum import StrEnum
+from typing import Annotated
 
 import pycountry
-from typing_extensions import Annotated
-from pydantic import BaseModel, AfterValidator, computed_field
-from enum import StrEnum
+from pydantic import AfterValidator, BaseModel, computed_field
+
 
 class ExaPayload(BaseModel):
     query: str

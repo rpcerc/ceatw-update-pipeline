@@ -1,11 +1,13 @@
-from ceatw_update_pipeline.main import load_native_prompts_cache
-from ceatw_update_pipeline.custom_types import CountryCode, ExaPayload
-from ceatw_update_pipeline.configuration import settings
-from ceatw_update_pipeline.get_prompt import generate_exa_payload
-import pycountry
-import logging
 import asyncio
 import json
+import logging
+
+import pycountry
+
+from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.custom_types import CountryCode, ExaPayload
+from ceatw_update_pipeline.get_prompt import generate_exa_payload
+from ceatw_update_pipeline.main import load_native_prompts_cache
 
 logging.basicConfig(filename="devlogs.log", level=logging.INFO)
 
@@ -25,7 +27,7 @@ async def get_gemini_prompts() -> dict[CountryCode, ExaPayload]:
             continue
         
         prompts[country.alpha_2] = await generate_exa_payload(country.name)
-        with open(settings.NATIVE_LANGUAGE_PROMPTS_FILE, "w") as f:
+        with open(settings.NATIVE_LANGUAGE_PROMPTS_FILE, "w") as f:  # noqa: ASYNC230
             # This is to ensure type safety across mypy.
             # It is a lot of overhead, but it is negligible compared to generate_exa_payload.
             # Also, while I could write everything at once, this function has the possibility of breaking mid-execution.

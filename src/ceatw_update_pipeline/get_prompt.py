@@ -1,10 +1,13 @@
 """Generate a prompt for use with the Exa API."""
 
 import json
+
 from google import genai
+from pydantic import ValidationError
+
 from ceatw_update_pipeline.configuration import SYSTEM_INSTRUCTION_EXA, settings
 from ceatw_update_pipeline.custom_types import ExaPayload
-from pydantic import ValidationError
+
 
 async def generate_exa_payload(country: str, custom_system_instruction: str = SYSTEM_INSTRUCTION_EXA) -> ExaPayload:
     """Uses Gemini to generate a JSON payload for Exa AI for a country, containing a native language prompt.

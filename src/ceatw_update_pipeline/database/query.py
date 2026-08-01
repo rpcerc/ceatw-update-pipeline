@@ -1,13 +1,18 @@
+from __future__ import annotations
+
 import uuid
 from collections.abc import Sequence
+
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from ceatw_update_pipeline.database.schemas import SourceCreate
-from ceatw_update_pipeline.database.models import Source
-from ceatw_update_pipeline.custom_types import Decision
 
-async def insert_source(session: AsyncSession, data: SourceCreate) -> Source:
-    """Insert a record into the source table.
+from ceatw_update_pipeline.custom_types import Decision
+from ceatw_update_pipeline.database.models import Highlight, Source
+from ceatw_update_pipeline.database.schemas import SourceCreate
+
+
+async def insert_source_and_highlights(session: AsyncSession, data: SourceCreate) -> Source:
+    """Insert a record into the source table, and highlights in the highlights table.
 
     Args:
         session (AsyncSession): The session relating to the database.
@@ -18,16 +23,20 @@ async def insert_source(session: AsyncSession, data: SourceCreate) -> Source:
     """
     
     source = Source(
+        title = data.title,
         source_url = data.source_url,
         country = data.country,
         country_code = data.country_code,
         content_hash = data.content_hash,
         comments = data.comments,
+        children = [Highlight(text=highlight) for highlight in data.highlights]
     )
     
     session.add(source)
     await session.flush()
-    await session.refresh(source)
+    
+    # because of lazy loading, we only want to get the columns with server defaults, and not wipe out the children
+    await session.refresh(source, attribute_names=['last_checked', 'date_created'])
     return source
 
 async def get_source(session: AsyncSession, source_id: uuid.UUID) -> Source | None:

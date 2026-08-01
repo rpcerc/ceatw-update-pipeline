@@ -1,23 +1,25 @@
 """The main entry point for the pipeline."""
 
-from ceatw_update_pipeline.database.database import init_db, kill_engine, get_session
-from ceatw_update_pipeline.database import query
-from ceatw_update_pipeline.database.schemas import SourceCreate
-from ceatw_update_pipeline.gather_sources import get_exa_sources
-from ceatw_update_pipeline.custom_types import Country, ExaPayload, CountryCode
-from ceatw_update_pipeline.configuration import settings
-from pydantic import ValidationError
-import pycountry
+import asyncio
 import json
 import logging
-from sqlalchemy.exc import IntegrityError
-import asyncio
 import os
 import sys
 from datetime import datetime
 
+import pycountry
+from pydantic import ValidationError
+from sqlalchemy.exc import IntegrityError
+
+from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.custom_types import Country, CountryCode, ExaPayload
+from ceatw_update_pipeline.database import query
+from ceatw_update_pipeline.database.database import get_session, init_db, kill_engine
+from ceatw_update_pipeline.database.schemas import SourceCreate
+from ceatw_update_pipeline.gather_sources import get_exa_sources
+
 os.makedirs("logs", exist_ok=True)
-logger_file_path = os.path.join("logs", f"{datetime.now().strftime('%Y-%m-%d')}-devlogs.log")
+logger_file_path = os.path.join("logs", f"{datetime.now(settings.TIMEZONE).strftime('%Y-%m-%d')}-devlogs.log")
 logging.basicConfig(level=logging.INFO, 
                     handlers=[
                         logging.StreamHandler(sys.stdout),
@@ -41,10 +43,12 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
                 async with session.begin_nested():
                     await query.insert_source(session, 
                         SourceCreate(
+                            title=result.title,
                             source_url=result.url,
                             country=country.name,
                             country_code=country.country_code,
-                            content_hash="fake_hash"
+                            content_hash="fake_hash",
+                            highlights=result.highlights,
                         ))
             except IntegrityError:
                 logger.info("Record skipped, duplicate URL: %s", result.url[:50])

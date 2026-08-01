@@ -6,6 +6,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 from ceatw_update_pipeline.configuration import settings
 
+
 class Base(DeclarativeBase):
     """Declarative Base"""
     
