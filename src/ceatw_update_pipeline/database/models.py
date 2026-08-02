@@ -35,9 +35,14 @@ class Source(Base):
         DateTime(timezone=True),
         server_default=func.now()
     )
-    children: Mapped[list[Highlight]] = relationship(
-        "Highlight", lazy="selectin", cascade="all, delete-orphan"
+    highlights: Mapped[list[Highlight]] = relationship(
+        "Highlight", back_populates="source",
+        lazy="selectin", cascade="all, delete-orphan"
     )
+
+    def __repr__(self) -> str:
+        display_url = self.source_url[:50] + "..." if len(self.source_url) > 50 else self.source_url
+        return f"<Source(source_url='{display_url}', country_code='{self.country_code}', decision={self.decision})>"
 
 class Highlight(Base):
     __tablename__ = "highlight"
@@ -48,8 +53,6 @@ class Highlight(Base):
     )
     text: Mapped[str] = mapped_column(Text)
     source_id: Mapped[UUID] = mapped_column(ForeignKey("source.id"))
-    
-    
-    def __repr__(self) -> str:
-        display_url = self.source_url[:50] + "..." if len(self.source_url) > 50 else self.source_url
-        return f"<Source(source_url='{display_url}', country_code='{self.country_code}', decision={self.decision})>"
+    source: Mapped[Source] = relationship(
+        "Source", back_populates="highlights"
+    )

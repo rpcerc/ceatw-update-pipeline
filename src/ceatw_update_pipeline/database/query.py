@@ -21,15 +21,14 @@ async def insert_source_and_highlights(session: AsyncSession, data: SourceCreate
     Returns:
         Source: The newly inserted row.
     """
-    
     source = Source(
-        title = data.title,
+        title = data.title if data.title != "" else None,
         source_url = data.source_url,
         country = data.country,
         country_code = data.country_code,
         content_hash = data.content_hash,
         comments = data.comments,
-        children = [Highlight(text=highlight) for highlight in data.highlights]
+        highlights = [Highlight(text=highlight) for highlight in data.highlights]
     )
     
     session.add(source)
