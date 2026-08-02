@@ -1,11 +1,11 @@
 """The main entry point for the pipeline."""
 
 import asyncio
+import datetime
 import json
 import logging
 import os
 import sys
-from datetime import datetime
 
 import pycountry
 from pydantic import ValidationError
@@ -19,7 +19,7 @@ from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.gather_sources import get_exa_sources
 
 os.makedirs("logs", exist_ok=True)
-logger_file_path = os.path.join("logs", f"{datetime.now(settings.TIMEZONE).strftime('%Y-%m-%d')}-devlogs.log")
+logger_file_path = os.path.join("logs", f"{datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')}-devlogs.log")
 logging.basicConfig(level=logging.INFO, 
                     handlers=[
                         logging.StreamHandler(sys.stdout),
@@ -37,11 +37,12 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
     """
     country = Country(country_code=country_code)
     results = await get_exa_sources(country.country_code, native_prompts_cache)
+    duplicate_records = 0
     async with get_session() as session:
         for result in results:
             try:
                 async with session.begin_nested():
-                    await query.insert_source(session, 
+                    await query.insert_source_and_highlights(session, 
                         SourceCreate(
                             title=result.title,
                             source_url=result.url,
@@ -51,9 +52,9 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
                             highlights=result.highlights,
                         ))
             except IntegrityError:
-                logger.info("Record skipped, duplicate URL: %s", result.url[:50])
+                duplicate_records += 1
         
-    logger.info("All URLs inserted for %s", country.name)
+    logger.info("Inserted %d records for %s. Duplicate count: %d", len(results), country.name, duplicate_records)
     
 async def insert_countries(country_codes: list[CountryCode], native_prompts_cache: dict[CountryCode, ExaPayload]) -> None:
     """Insert the sources for the given country codes into the database.

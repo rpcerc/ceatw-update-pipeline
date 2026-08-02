@@ -26,7 +26,6 @@ class Settings(BaseSettings):
    DATABASE_URL: str
    DATABASE_ECHO: bool = False
    
-   TIMEZONE: str = "UTC"
    MAX_URL_COUNT: int = 5
    EXA_SEARCH_TYPE: str = "deep"
    EDUCATION_PROFILES_OUTPUT_FOLDER: str = "output"

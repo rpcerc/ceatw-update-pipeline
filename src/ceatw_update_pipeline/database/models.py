@@ -3,8 +3,8 @@ from __future__ import annotations
 from datetime import datetime
 from uuid import UUID
 
-from sqlalchemy import DateTime, String, Text, func
-from sqlalchemy.orm import ForeignKey, Mapped, mapped_column, relationship
+from sqlalchemy import DateTime, ForeignKey, String, Text, func
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from uuid_utils.compat import uuid7
 
 from ceatw_update_pipeline.custom_types import Decision
@@ -36,8 +36,7 @@ class Source(Base):
         server_default=func.now()
     )
     children: Mapped[list[Highlight]] = relationship(
-        "Highlight", back_populates="user",
-        lazy="selectin", cascade="all, delete-orphan"
+        "Highlight", lazy="selectin", cascade="all, delete-orphan"
     )
 
 class Highlight(Base):
