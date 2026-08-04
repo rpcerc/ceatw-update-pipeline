@@ -12,6 +12,14 @@ from ceatw_update_pipeline.database.database import Base
 
 
 # Models
+class Curricula(Base):
+    __tablename__ = "curricula"
+    
+    id: Mapped[UUID] = mapped_column(
+        primary_key=True,
+        default=uuid7
+    )
+
 class Source(Base):
     __tablename__ = "source"
     
@@ -39,6 +47,8 @@ class Source(Base):
         "Highlight", back_populates="source",
         lazy="selectin", cascade="all, delete-orphan"
     )
+    
+    curricula_id: Mapped[UUID | None] = mapped_column()
 
     def __repr__(self) -> str:
         display_url = self.source_url[:50] + "..." if len(self.source_url) > 50 else self.source_url
