@@ -60,7 +60,7 @@ class SourceData(BaseModel):
     published_date: str | None = None
     highlights: list[str] | None = None
     
-class Decision(StrEnum):
-    ACCEPTED = "accepted"
-    REJECTED = "rejected"
-    PENDING = "pending"
+class Status(StrEnum):
+    UNVETTED = "UNVETTED"
+    REJECTED = "REJECTED"
+    ACCEPTED = "ACCEPTED"

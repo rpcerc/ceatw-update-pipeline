@@ -1,12 +1,9 @@
 from __future__ import annotations
 
 import uuid
-from collections.abc import Sequence
 
-from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ceatw_update_pipeline.custom_types import Decision
 from ceatw_update_pipeline.database.models import Highlight, Source
 from ceatw_update_pipeline.database.schemas import SourceCreate
 
@@ -51,23 +48,6 @@ async def get_source(session: AsyncSession, source_id: uuid.UUID) -> Source | No
     """
     
     return await session.get(Source, source_id)
-
-async def get_pending_sources(session: AsyncSession) -> Sequence[Source]:
-    """Get all records from the source table which are still pending reviewal.
-
-    Args:
-        session (AsyncSession): The session relating to the database.
-
-    Returns:
-        Sequence[Source]: _description_
-    """
-    
-    # is_. operator is only for None, True, False.
-    query = (select(Source)
-             .where(Source.decision == Decision.PENDING))
-    result = await session.execute(query)
-    
-    return result.scalars().all()
 
 async def delete_source(session: AsyncSession, source_id: uuid.UUID) -> bool:
     """Remove a record from the source table with primary key source_id.
