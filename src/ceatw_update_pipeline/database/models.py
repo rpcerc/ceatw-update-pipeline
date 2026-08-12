@@ -55,6 +55,10 @@ class Highlight(Base):
         default=uuid7
     )
     text: Mapped[str] = mapped_column(Text)
+    date: Mapped[datetime] = mapped_column(
+            DateTime(timezone=True),
+            server_default=func.now()
+        )
     source_id: Mapped[UUID] = mapped_column(ForeignKey("source.id"))
     source: Mapped[Source] = relationship(
         "Source", back_populates="highlights"
