@@ -12,6 +12,7 @@ from ceatw_update_pipeline.database.database import Base
 
 
 # Models
+# https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html
 class Source(Base):
     __tablename__ = "source"
     

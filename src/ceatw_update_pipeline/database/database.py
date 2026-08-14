@@ -9,7 +9,8 @@ from ceatw_update_pipeline.configuration import settings
 
 class Base(DeclarativeBase):
     """Declarative Base"""
-    
+
+# https://www.youtube.com/watch?v=u0KBmgs6jKY
 async_engine = create_async_engine(
     settings.DATABASE_URL,
     echo=settings.DATABASE_ECHO,

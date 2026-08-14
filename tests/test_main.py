@@ -91,7 +91,7 @@ async def test_insert_urls_integrity_error_recovery(mock_get_sources,
     
     await insert_urls_for_one_country("GB", {})
     
-    # 5. Assertions: ensure insert_source was called twice despite the first failure
+    # 4. Assertions: ensure insert_source was called twice despite the first failure
     assert mock_insert_source.call_count == 2
     
     

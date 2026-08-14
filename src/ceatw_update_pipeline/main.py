@@ -56,7 +56,10 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
         
     logger.info("Inserted %d records for %s. Duplicate count: %d", len(results), country.name, duplicate_records)
     
-async def insert_countries(country_codes: list[CountryCode], native_prompts_cache: dict[CountryCode, ExaPayload]) -> None:
+async def insert_countries(
+    country_codes: list[CountryCode],
+    native_prompts_cache: dict[CountryCode, ExaPayload]
+) -> None:
     """Insert the sources for the given country codes into the database.
 
     Args:
@@ -101,9 +104,9 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
     return prompts_cache
 
 async def run_pipeline() -> None:
-    # Get rid of antarctica
     logger.info("Starting pipeline...")
     await init_db()
+    # Get rid of antarctica
     valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
     await insert_countries(valid_country_codes, native_prompts_cache)

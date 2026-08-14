@@ -6,6 +6,7 @@ from ceatw_update_pipeline.custom_types import CountryCode
 
 
 class SourceCreate(BaseModel):
+    # Essentially a type.
     title: str | None = None
     source_url: str
     country: str

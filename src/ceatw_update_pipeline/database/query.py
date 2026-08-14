@@ -8,6 +8,7 @@ from ceatw_update_pipeline.database.models import Highlight, Source
 from ceatw_update_pipeline.database.schemas import SourceCreate
 
 
+# https://docs.sqlalchemy.org/en/21/orm/session_basics.html
 async def insert_source_and_highlights(session: AsyncSession, data: SourceCreate) -> Source:
     """Insert a record into the source table, and highlights in the highlights table.
 
