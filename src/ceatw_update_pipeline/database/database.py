@@ -51,11 +51,6 @@ async def get_session() -> AsyncGenerator[AsyncSession]:
     finally:
         await session.close()
         
-async def init_db() -> None:
-    """Set up the database and define mappings between models and tables."""
-    async with async_engine.begin() as async_connection:
-        await async_connection.run_sync(Base.metadata.create_all)
-        
 async def kill_engine() -> None:
     """Stops the database and all connections."""
     await async_engine.dispose()

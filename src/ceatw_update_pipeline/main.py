@@ -14,7 +14,7 @@ from sqlalchemy.exc import IntegrityError
 from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.custom_types import Country, CountryCode, ExaPayload
 from ceatw_update_pipeline.database import query
-from ceatw_update_pipeline.database.database import get_session, init_db, kill_engine
+from ceatw_update_pipeline.database.database import get_session, kill_engine
 from ceatw_update_pipeline.database.schemas import SourceCreate
 from ceatw_update_pipeline.gather_sources import get_exa_sources
 
@@ -105,7 +105,6 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
 
 async def run_pipeline() -> None:
     logger.info("Starting pipeline...")
-    await init_db()
     # Get rid of antarctica
     valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
