@@ -40,8 +40,7 @@ class Source(Base):
     )
     
     highlights: Mapped[list[Highlight]] = relationship(
-        "Highlight", back_populates="source",
-        lazy="selectin", cascade="all, delete-orphan"
+        "Highlight", back_populates="source"
     )
     
     def __repr__(self) -> str:
