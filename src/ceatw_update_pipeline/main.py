@@ -49,6 +49,7 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
                             country=country.name,
                             country_code=country.country_code,
                             content_hash="fake_hash",
+                            published_date=datetime.datetime.fromisoformat(result.published_date) if result.published_date else None,
                             highlights=result.highlights,
                         ))
             except IntegrityError:

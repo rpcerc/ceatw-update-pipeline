@@ -41,9 +41,9 @@ def test_load_native_prompts_not_ok(mock_open):
 # 2. Tests for insert_countries
 # ==========================================
 
-@pytest.mark.asyncio
-@patch("ceatw_update_pipeline.main.insert_urls_for_one_country")
-@patch("asyncio.sleep")
+@pytest.mark.anyio
+@patch("ceatw_update_pipeline.main.insert_urls_for_one_country", new_callable=AsyncMock)
+@patch("asyncio.sleep", new_callable=AsyncMock)
 async def test_insert_countries(mock_sleep, mock_insert):
     """
     Test that rate limit chunking works. 
@@ -62,8 +62,8 @@ async def test_insert_countries(mock_sleep, mock_insert):
 # 3. Tests for insert_urls_for_one_country
 # ==========================================
 
-@pytest.mark.asyncio
-@patch("ceatw_update_pipeline.main.query.insert_source")
+@pytest.mark.anyio
+@patch("ceatw_update_pipeline.main.query.insert_source_and_highlights", new_callable=AsyncMock)
 @patch("ceatw_update_pipeline.main.get_session")
 @patch("ceatw_update_pipeline.main.get_exa_sources", new_callable=AsyncMock)
 async def test_insert_urls_integrity_error_recovery(mock_get_sources,
@@ -73,14 +73,21 @@ async def test_insert_urls_integrity_error_recovery(mock_get_sources,
     and subsequent URLs are still processed.
     """
     # 1. Create two fake results from Exa
-    mock_result_1 = MagicMock(url="http://duplicate.com")
-    mock_result_2 = MagicMock(url="http://new-url.com")
+    mock_result_1 = MagicMock(url="http://duplicate.com", title="Title 1", published_date=None, highlights=[])
+    mock_result_2 = MagicMock(url="http://new-url.com", title="Title 2", published_date=None, highlights=[])
     mock_get_sources.return_value = [mock_result_1, mock_result_2]
 
     # 2. Setup the DB session mock to support the 'with' context manager
     mock_session = MagicMock()
-    mock_session.begin_nested.return_value.__aenter__.return_value = AsyncMock()
-    mock_get_session.return_value.__aenter__.return_value = mock_session
+    mock_nested = MagicMock()
+    mock_nested.__aenter__ = AsyncMock(return_value=mock_nested)
+    mock_nested.__aexit__ = AsyncMock(return_value=None)
+    mock_session.begin_nested.return_value = mock_nested
+
+    mock_session_ctx = MagicMock()
+    mock_session_ctx.__aenter__ = AsyncMock(return_value=mock_session)
+    mock_session_ctx.__aexit__ = AsyncMock(return_value=None)
+    mock_get_session.return_value = mock_session_ctx
 
     # 3. Simulate an IntegrityError on the FIRST insert, but success on the SECOND
     # The type returned should technically be Source, but it doesn't matter for this test.

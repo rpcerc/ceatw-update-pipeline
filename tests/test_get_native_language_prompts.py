@@ -4,7 +4,7 @@ from unittest.mock import mock_open, patch
 from ceatw_update_pipeline.custom_types import ExaPayload
 from ceatw_update_pipeline.scripts.get_native_language_prompts import get_gemini_prompts
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @patch("builtins.open", new_callable=mock_open)
 @patch("ceatw_update_pipeline.scripts.get_native_language_prompts.generate_exa_payload")
 @patch("json.dump")

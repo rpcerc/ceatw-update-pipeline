@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ceatw_update_pipeline.database.models import Highlight, Source
@@ -24,6 +26,7 @@ async def insert_source_and_highlights(session: AsyncSession, data: SourceCreate
         country_code = data.country_code,
         content_hash = data.content_hash,
         comments = data.comments,
+        published_date = data.published_date,
         highlights = [Highlight(text=highlight) for highlight in data.highlights]
     )
     

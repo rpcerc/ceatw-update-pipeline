@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 from pydantic import BaseModel, Field
 
 from ceatw_update_pipeline.custom_types import CountryCode
@@ -13,4 +15,5 @@ class SourceCreate(BaseModel):
     country_code: CountryCode = Field(max_length=256)
     content_hash: str
     comments: str | None = None
+    published_date: datetime | None
     highlights: list[str] = []

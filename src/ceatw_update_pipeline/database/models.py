@@ -35,6 +35,9 @@ class Source(Base):
         DateTime(timezone=True),
         server_default=func.now()
     )
+    published_date: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True)
+    )
     current_status: Mapped[Status] = mapped_column(
         default=Status.UNVETTED
     )
