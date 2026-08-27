@@ -94,7 +94,7 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
     """
     prompts_cache: dict[CountryCode, ExaPayload] = {}
     try:
-        with open(settings.NATIVE_LANGUAGE_PROMPTS_FILE, "r") as f:
+        with open(settings.NATIVE_LANGUAGE_PROMPTS_FILE, "r", encoding="utf-8") as f:
             raw_json = json.load(f)
             for country_code, payload_dict in raw_json.items():
                 prompts_cache[country_code] = ExaPayload.model_validate(payload_dict)
@@ -114,4 +114,8 @@ async def run_pipeline() -> None:
     
     
 if __name__ == "__main__":
-    asyncio.run(run_pipeline())
+    if sys.platform == "win32":
+        with asyncio.Runner(loop_factory=asyncio.SelectorEventLoop) as runner:
+            runner.run(run_pipeline())
+    else:
+        asyncio.run(run_pipeline())
