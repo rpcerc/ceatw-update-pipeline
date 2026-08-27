@@ -1,15 +1,19 @@
 """Get all technology links from the education profiles website."""
+from __future__ import annotations
 
-from ceatw_update_pipeline.filter import is_valid_url
-from ceatw_update_pipeline.configuration import settings
+import json
+import logging
+import re
+from pathlib import Path
+from typing import Any
+
+import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
-from typing import Any
-from pathlib import Path
-import logging
-import requests
-import re
-import json
+
+from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.filter import is_valid_url
+
 logger = logging.getLogger(__name__)
 
 def get_education_profiles_homepage() -> BeautifulSoup:
@@ -97,7 +101,7 @@ def is_relevant_link(href: str) -> bool:
         return False
         
     # Ignore anchor jumps and scripts
-    if href.startswith(("#", "javascript:", "mailto:", "tel:")):
+    if href.startswith(("#", "javascript:", "mailto:", "tel:")):  # noqa: SIM103
         return False
         
     return True

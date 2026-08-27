@@ -1,23 +1,25 @@
 """The main entry point for the pipeline."""
 
-from ceatw_update_pipeline.database.database import init_db, kill_engine, get_session
-from ceatw_update_pipeline.database import query
-from ceatw_update_pipeline.database.schemas import SourceCreate
-from ceatw_update_pipeline.gather_sources import get_exa_sources
-from ceatw_update_pipeline.custom_types import Country, ExaPayload, CountryCode
-from ceatw_update_pipeline.configuration import settings
-from pydantic import ValidationError
-import pycountry
+import asyncio
+import datetime
 import json
 import logging
-from sqlalchemy.exc import IntegrityError
-import asyncio
 import os
 import sys
-from datetime import datetime
+
+import pycountry
+from pydantic import ValidationError
+from sqlalchemy.exc import IntegrityError
+
+from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.custom_types import Country, CountryCode, ExaPayload
+from ceatw_update_pipeline.database import query
+from ceatw_update_pipeline.database.database import get_session, kill_engine
+from ceatw_update_pipeline.database.schemas import SourceCreate
+from ceatw_update_pipeline.gather_sources import get_exa_sources
 
 os.makedirs("logs", exist_ok=True)
-logger_file_path = os.path.join("logs", f"{datetime.now().strftime('%Y-%m-%d')}-devlogs.log")
+logger_file_path = os.path.join("logs", f"{datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')}-devlogs.log")
 logging.basicConfig(level=logging.INFO, 
                     handlers=[
                         logging.StreamHandler(sys.stdout),
@@ -35,23 +37,30 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
     """
     country = Country(country_code=country_code)
     results = await get_exa_sources(country.country_code, native_prompts_cache)
+    duplicate_records = 0
     async with get_session() as session:
         for result in results:
             try:
                 async with session.begin_nested():
-                    await query.insert_source(session, 
+                    await query.insert_source_and_highlights(session, 
                         SourceCreate(
+                            title=result.title,
                             source_url=result.url,
                             country=country.name,
                             country_code=country.country_code,
-                            content_hash="fake_hash"
+                            content_hash="fake_hash",
+                            published_date=datetime.datetime.fromisoformat(result.published_date) if result.published_date else None,
+                            highlights=result.highlights,
                         ))
             except IntegrityError:
-                logger.info("Record skipped, duplicate URL: %s", result.url[:50])
+                duplicate_records += 1
         
-    logger.info("All URLs inserted for %s", country.name)
+    logger.info("Inserted %d records for %s. Duplicate count: %d", len(results), country.name, duplicate_records)
     
-async def insert_countries(country_codes: list[CountryCode], native_prompts_cache: dict[CountryCode, ExaPayload]) -> None:
+async def insert_countries(
+    country_codes: list[CountryCode],
+    native_prompts_cache: dict[CountryCode, ExaPayload]
+) -> None:
     """Insert the sources for the given country codes into the database.
 
     Args:
@@ -96,9 +105,8 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
     return prompts_cache
 
 async def run_pipeline() -> None:
-    # Get rid of antarctica
     logger.info("Starting pipeline...")
-    await init_db()
+    # Get rid of antarctica
     valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
     await insert_countries(valid_country_codes, native_prompts_cache)

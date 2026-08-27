@@ -1,8 +1,14 @@
+from unittest.mock import AsyncMock, MagicMock, patch
+
 import pytest
-from unittest.mock import patch, AsyncMock, MagicMock
-from ceatw_update_pipeline.gather_sources import get_exa_sources, get_relevant_tlds, get_prompt_from_cache
-from ceatw_update_pipeline.configuration import settings, GENERIC_TLD_DOMAINS
-from ceatw_update_pipeline.custom_types import ExaPayload, Country
+
+from ceatw_update_pipeline.configuration import GENERIC_TLD_DOMAINS, settings
+from ceatw_update_pipeline.custom_types import Country, ExaPayload
+from ceatw_update_pipeline.gather_sources import (
+    get_exa_sources,
+    get_prompt_from_cache,
+    get_relevant_tlds,
+)
 
 COUNTRIES = [
     "JP",
@@ -14,7 +20,7 @@ def test_get_relevant_tlds():
     assert (set(get_relevant_tlds([".fake", ".fake", ".testtld"])) 
             == set(GENERIC_TLD_DOMAINS + [".fake", ".testtld"]))
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @patch('ceatw_update_pipeline.gather_sources.AsyncExa')
 async def test_retry_logic(mock_exa):
     mock_exa.return_value.search = AsyncMock()
@@ -30,9 +36,11 @@ async def test_retry_logic(mock_exa):
     mock_result_item = MagicMock()
     mock_result_item.title = "Official UK Government Website"
     mock_result_item.url = "https://www.gov.uk/example"
+    mock_result_item.published_date = None 
+    mock_result_item.highlights = None   
     
     mock_success_response = MagicMock()
-    mock_success_response.return_value.results = [mock_result_item]
+    mock_success_response.results = [mock_result_item]
     
     mock_search.reset_mock()
     mock_search.side_effect = ([RuntimeError("API Rate limit") for i in range(settings.MAX_RETRIES-1)] 
@@ -43,7 +51,7 @@ async def test_retry_logic(mock_exa):
     # Four, because two calls are made to Exa.api for the english and natural prompt.
     assert mock_search.call_count == 4, "Should have failed twice and succeeded on the third attempt."
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @patch('ceatw_update_pipeline.gather_sources.generate_exa_payload', new_callable=AsyncMock)
 async def test_cache(mock_generate):
     cached_result = ExaPayload(query="a", include_domains=[])
@@ -65,13 +73,22 @@ async def test_cache(mock_generate):
     mock_generate.assert_called_once()
 
 
-@pytest.mark.asyncio
-async def test_get_prompt_return_structure():
-    # I'm not too sure about this test - it takes an API call to run
+@pytest.mark.anyio
+@patch('ceatw_update_pipeline.gather_sources.AsyncExa')
+async def test_get_prompt_return_structure(mock_exa):
+    mock_result_item = MagicMock()
+    mock_result_item.title = "Sample Title"
+    mock_result_item.url = "https://example.gov.jp"
+    mock_result_item.published_date = None
+    mock_result_item.highlights = ["highlight 1"]
+    
+    mock_response = MagicMock()
+    mock_response.results = [mock_result_item]
+    
+    mock_exa.return_value.search = AsyncMock(return_value=mock_response)
+    
     for cc in COUNTRIES[:1]:
-        print(f"Testing {cc} ---")
-        
-        result = await get_exa_sources(cc, {})
+        result = await get_exa_sources(cc, {cc: ExaPayload(query="test", include_domains=[".jp"])})
         
         # Check the logic for the return length
         assert isinstance(result, list), f"List expected, got {type(result)}."

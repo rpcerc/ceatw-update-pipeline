@@ -1,10 +1,16 @@
 """Custom tests that shouldn't be caught with pytest."""
 
-import json
+import asyncio
 
-if __name__ == "__main__":
-    with open("gemini_prompts.json", "r") as f:
-        prompts = json.load(f)
-        
+from ceatw_update_pipeline.main import load_native_prompts_cache
+from ceatw_update_pipeline.gather_sources import get_exa_sources
+
+def test():
+    sources = asyncio.run(get_exa_sources("DE", load_native_prompts_cache()))
     
-    print(prompts["AZ"])
+    for source in sources:
+        print(source.highlights)
+        print("WAH-------------------------------------\n\n")
+    
+if __name__ == "__main__":
+    test()

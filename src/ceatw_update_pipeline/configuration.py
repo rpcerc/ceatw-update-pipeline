@@ -1,8 +1,9 @@
 """Constant configuration values for the CEATW update pipeline."""
 
 from functools import lru_cache
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ENV_PATH = (Path(__file__).resolve()
             .parent # ceatw_update_pipeline
@@ -24,6 +25,7 @@ class Settings(BaseSettings):
    GEMINI_API_KEY: str
    DATABASE_URL: str
    DATABASE_ECHO: bool = False
+   ADD_PSYCOPG_TO_URL: bool = True
    
    MAX_URL_COUNT: int = 5
    EXA_SEARCH_TYPE: str = "deep"
