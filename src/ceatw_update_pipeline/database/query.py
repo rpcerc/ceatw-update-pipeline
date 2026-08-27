@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from datetime import datetime
-
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ceatw_update_pipeline.database.models import Highlight, Source
