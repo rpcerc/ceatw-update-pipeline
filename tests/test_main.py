@@ -1,7 +1,9 @@
 from unittest.mock import MagicMock, patch, mock_open, AsyncMock
 from ceatw_update_pipeline.main import (load_native_prompts_cache,
     insert_countries, insert_urls_for_one_country)
+from ceatw_update_pipeline.custom_types import Country;
 from sqlalchemy.exc import IntegrityError
+import pycountry
 import pytest
 
 @patch("builtins.open", new_callable=mock_open, read_data="""{
@@ -101,6 +103,12 @@ async def test_insert_urls_integrity_error_recovery(mock_get_sources,
     # 4. Assertions: ensure insert_source was called twice despite the first failure
     assert mock_insert_source.call_count == 2
     
+# TEST for custom pycountry entries
+def test_custom_countries():
+    pycountry.countries.add_entry(alpha_2="GB-SCT", name="Scotland")
+    
+    country = Country(country_code="GB-SCT")
+    assert country.name == "scotland";
     
     
     

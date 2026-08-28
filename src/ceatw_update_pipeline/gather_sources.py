@@ -99,9 +99,9 @@ async def get_exa_sources(country_code_alpha_2: str, native_prompts_cache: dict[
                     contents={"highlights": True},
                 )
                 break
-            except RuntimeError:
-                # This could possibly be due to rate limits. Hence, there is a retry here.
-                logger.exception("There was an error when searching Exa.ai. Attempt number: %d", attempt)
+            except Exception as e:
+                # This could possibly be due to rate limits or network issues. Hence, there is a retry here.
+                logger.warning("There was an error when searching Exa.ai. Attempt number: %d. Error: %s", attempt, str(e))
                 if attempt == settings.MAX_RETRIES:
                     raise
                 else:

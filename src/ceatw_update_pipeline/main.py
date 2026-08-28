@@ -11,7 +11,7 @@ import pycountry
 from pydantic import ValidationError
 from sqlalchemy.exc import IntegrityError
 
-from ceatw_update_pipeline.configuration import settings
+from ceatw_update_pipeline.configuration import CUSTOM_DATAWRAPPER_CODES, DATAWRAPPER_CODES, settings
 from ceatw_update_pipeline.custom_types import Country, CountryCode, ExaPayload
 from ceatw_update_pipeline.database import query
 from ceatw_update_pipeline.database.database import get_session, kill_engine
@@ -20,7 +20,7 @@ from ceatw_update_pipeline.gather_sources import get_exa_sources
 
 os.makedirs("logs", exist_ok=True)
 logger_file_path = os.path.join("logs", f"{datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')}-devlogs.log")
-logging.basicConfig(level=logging.INFO, 
+logging.basicConfig(level=logging.WARNING, 
                     handlers=[
                         logging.StreamHandler(sys.stdout),
                         logging.FileHandler(logger_file_path)
@@ -50,7 +50,7 @@ async def insert_urls_for_one_country(country_code: CountryCode, native_prompts_
                             country_code=country.country_code,
                             content_hash="fake_hash",
                             published_date=datetime.datetime.fromisoformat(result.published_date) if result.published_date else None,
-                            highlights=result.highlights,
+                            highlights=result.highlights or [],
                         ))
             except IntegrityError:
                 duplicate_records += 1
@@ -77,7 +77,11 @@ async def insert_countries(
                  for cc in current_batch]
         
         # This is quite prone to breaking, due to API rate limits seemingly being lower than written.
-        await asyncio.gather(*tasks)
+        batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+        for res in batch_results:
+            if isinstance(res, Exception):
+                logger.error("A country task failed in the batch: %s", res)
+        
         logger.info("Batch finished, sleeping for 1s")
         
         await asyncio.sleep(1)
@@ -104,12 +108,16 @@ def load_native_prompts_cache() -> dict[CountryCode, ExaPayload]:
     
     return prompts_cache
 
+def add_custom_countries() -> None:
+    for code, name in CUSTOM_DATAWRAPPER_CODES.items():
+        pycountry.countries.add_entry(alpha_2=code, name=name)
+
 async def run_pipeline() -> None:
     logger.info("Starting pipeline...")
-    # Get rid of antarctica
-    valid_country_codes = [c.alpha_2 for c in pycountry.countries if c.alpha_2 != "AQ"]
     native_prompts_cache = load_native_prompts_cache()
-    await insert_countries(valid_country_codes, native_prompts_cache)
+    add_custom_countries()
+    await insert_countries(DATAWRAPPER_CODES + list(CUSTOM_DATAWRAPPER_CODES.keys()),
+                           native_prompts_cache)
     await kill_engine()
     
     

@@ -531,15 +531,6 @@
             "gouv.ga"
         ]
     },
-    "GB": {
-        "query": "The national curriculum for computing program of study for early years foundation stage, key stage 1, key stage 2, key stage 3 and key stage 4",
-        "include_domains": [
-            "gov.uk",
-            "education.gov.scot",
-            "hwb.gov.wales",
-            "ccea.org.uk"
-        ]
-    },
     "GE": {
         "query": "ინფორმატიკისა და ტექნოლოგიების ეროვნული სასწავლო გეგმა და სტანდარტები სკოლებისთვის",
         "include_domains": [
@@ -1678,6 +1669,40 @@
         "query": "Official Ministry of Primary and Secondary Education syllabus and curriculum framework for Information and Communication Technology and Computer Science in Zimbabwe",
         "include_domains": [
             "gov.zw"
+        ]
+    },
+    "AQ": {
+        "query": "Here is the official education curriculum and computer science learning guidelines for students in Antarctica:",
+        "include_domains": [
+            "gov",
+            "edu",
+            "aq"
+        ]
+    },
+    "GB-ENG": {
+        "query": "National curriculum in England: computing programmes of study for primary and secondary schools and early years foundation stage",
+        "include_domains": [
+            "gov.uk"
+        ]
+    },
+    "GB-SCT": {
+        "query": "Curriculum for Excellence technologies experiences and outcomes for computing science in early learning, primary, and secondary school",
+        "include_domains": [
+            "gov.scot"
+        ]
+    },
+    "GB-WLS": {
+        "query": "Curriculum for Wales official framework for Science and Technology and computing for Foundation Phase, primary, and secondary education",
+        "include_domains": [
+            "gov.wales",
+            "gov.uk"
+        ]
+    },
+    "GB-NIR": {
+        "query": "Official curriculum requirements and guidelines for Digital Technology, ICT, and Computing for primary and post-primary education in Northern Ireland",
+        "include_domains": [
+            "ccea.org.uk",
+            "gov.uk"
         ]
     }
 }

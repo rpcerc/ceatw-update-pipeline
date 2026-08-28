@@ -23,7 +23,7 @@ class Source(Base):
     title: Mapped[str | None] = mapped_column(Text)
     source_url: Mapped[str] = mapped_column(Text, unique=True)
     country: Mapped[str] = mapped_column(Text)
-    country_code: Mapped[str] = mapped_column(String(2))
+    country_code: Mapped[str] = mapped_column(Text)
     content_hash: Mapped[str] = mapped_column(Text)
     comments: Mapped[str | None] = mapped_column(Text)
     last_checked: Mapped[datetime] = mapped_column(

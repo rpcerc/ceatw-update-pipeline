@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "build-with-exa": {
+      "source": "exa-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/build-with-exa/SKILL.md",
+      "computedHash": "3169913f07def3d49432137673ac023ffdb73f4d112b6cfe7eb53026433fe12c"
+    },
+    "company-research": {
+      "source": "exa-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/company-research/SKILL.md",
+      "computedHash": "d925c9e6d92f6df8f885bba56a6f9a3e46e81b26094e5e0920a437949a2b5c5a"
+    },
+    "exa-contents": {
+      "source": "exa-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/exa-contents/SKILL.md",
+      "computedHash": "bc945cf26d1a7bda1a6528b96f125ef3fd92750f58bdd9a35e2565f0ffc0f482"
+    },
+    "exa-search": {
+      "source": "exa-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/exa-search/SKILL.md",
+      "computedHash": "a17794b791526225e07ff123b51b0b925bd80469cab5c751f1f6454a5472ffbb"
+    },
+    "lead-generation": {
+      "source": "exa-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/lead-generation/SKILL.md",
+      "computedHash": "4ce12327b91ab00f7495d288bf5193b234411d67e6785ae81ac8a13115dd1318"
+    }
+  }
+}

@@ -7,7 +7,7 @@ import pycountry
 from ceatw_update_pipeline.configuration import settings
 from ceatw_update_pipeline.custom_types import CountryCode, ExaPayload
 from ceatw_update_pipeline.get_prompt import generate_exa_payload
-from ceatw_update_pipeline.main import load_native_prompts_cache
+from ceatw_update_pipeline.main import add_custom_countries, load_native_prompts_cache
 
 logging.basicConfig(filename="devlogs.log", level=logging.INFO)
 
@@ -41,4 +41,5 @@ async def get_gemini_prompts() -> dict[CountryCode, ExaPayload]:
     return prompts
 
 if __name__ == "__main__":
+    add_custom_countries()
     asyncio.run(get_gemini_prompts())
