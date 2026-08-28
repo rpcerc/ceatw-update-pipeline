@@ -11,7 +11,11 @@ import pycountry
 from pydantic import ValidationError
 from sqlalchemy.exc import IntegrityError
 
-from ceatw_update_pipeline.configuration import CUSTOM_DATAWRAPPER_CODES, DATAWRAPPER_CODES, settings
+from ceatw_update_pipeline.configuration import (
+    CUSTOM_DATAWRAPPER_CODES,
+    DATAWRAPPER_CODES,
+    settings,
+)
 from ceatw_update_pipeline.custom_types import Country, CountryCode, ExaPayload
 from ceatw_update_pipeline.database import query
 from ceatw_update_pipeline.database.database import get_session, kill_engine
@@ -20,7 +24,7 @@ from ceatw_update_pipeline.gather_sources import get_exa_sources
 
 os.makedirs("logs", exist_ok=True)
 logger_file_path = os.path.join("logs", f"{datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')}-devlogs.log")
-logging.basicConfig(level=logging.WARNING, 
+logging.basicConfig(level=logging.INFO, 
                     handlers=[
                         logging.StreamHandler(sys.stdout),
                         logging.FileHandler(logger_file_path)

@@ -74,13 +74,14 @@ GENERIC_TLD_DOMAINS = (
    ["ibe.unesco.org", "planipolis.iiep.unesco.org", "unesco.org",
     "worldbank.org", "globalpartnership.org"])
 
-# This is for the world map with 200 countries, excluding GB.
-DATAWRAPPER_CODES = ['EH', 'MA', 'SS', 'SY', 'IN', 'UA', 'ZW', 'ZM', 'YE', 'VN', 'VE', 'IT', 'VU', 'UZ', 'UY', 'FM', 'US', 'AE', 'UG', 'TM', 'TR', 'TN', 'TT', 'TO', 'TG', 'TL', 'TH', 'TZ', 'TJ', 'TW', 'CH', 'SE', 'SZ', 'SR', 'SD', 'LK', 'ES', 'KR', 'ZA', 'SO', 'SB', 'SK', 'SI', 'SG', 'SL', 'RS', 'SN', 'SA', 'ST', 'SM', 'WS', 'VC', 'LC', 'KN', 'RW', 'RU', 'RO', 'QA', 'PT', 'PL', 'PH', 'PE', 'PY', 'PG', 'PA', 'PW', 'PK', 'OM', 'NO', 'KP', 'NG', 'NE', 'NI', 'NZ', 'NL', 'NP', 'NR', 'NA', 'MZ', 'ME', 'MN', 'MD', 'MC', 'MX', 'MU', 'MR', 'MT', 'ML', 'MY', 'MW', 'MG', 'MK', 'LU', 'LT', 'LI', 'LY', 'LR', 'LS', 'LB', 'LV', 'LA', 'KG', 'KW', 'XK', 'KI', 'KE', 'KZ', 'JO', 'JP', 'JM', 'IL', 'PS', 'IE', 'IQ', 'IR', 'ID', 'IS', 'HU', 'HN', 'HT', 'GY', 'GW', 'GN', 'GT', 'GD', 'GR', 'GH', 'DE', 'GE', 'GM', 'GA', 'FR', 'FI', 'FJ', 'ET', 'EE', 'ER', 'GQ', 'SV', 'EG', 'EC', 'DO', 'DM', 'DJ', 'GL', 'DK', 'CZ', 'CY', 'CU', 'HR', 'CI', 'CR', 'CD', 'CG', 'KM', 'CO', 'CN', 'MO', 'HK', 'CL', 'TD', 'CF', 'CV', 'CA', 'CM', 'KH', 'MM', 'BI', 'BF', 'BG', 'BN', 'BR', 'BW', 'BA', 'BO', 'BT', 'BJ', 'BZ', 'BE', 'BY', 'BB', 'BD', 'BH', 'BS', 'AZ', 'AT', 'AU', 'AM', 'AR', 'AG', 'AO', 'AD', 'DZ', 'AL', 'AF', 'TV', 'MH', 'SC', 'MV']
+# This is for the world map with 200 countries, excluding GB and XK, since XK doesn't exist yet.
+DATAWRAPPER_CODES = ['EH', 'MA', 'SS', 'SY', 'IN', 'UA', 'ZW', 'ZM', 'YE', 'VN', 'VE', 'IT', 'VU', 'UZ', 'UY', 'FM', 'US', 'AE', 'UG', 'TM', 'TR', 'TN', 'TT', 'TO', 'TG', 'TL', 'TH', 'TZ', 'TJ', 'TW', 'CH', 'SE', 'SZ', 'SR', 'SD', 'LK', 'ES', 'KR', 'ZA', 'SO', 'SB', 'SK', 'SI', 'SG', 'SL', 'RS', 'SN', 'SA', 'ST', 'SM', 'WS', 'VC', 'LC', 'KN', 'RW', 'RU', 'RO', 'QA', 'PT', 'PL', 'PH', 'PE', 'PY', 'PG', 'PA', 'PW', 'PK', 'OM', 'NO', 'KP', 'NG', 'NE', 'NI', 'NZ', 'NL', 'NP', 'NR', 'NA', 'MZ', 'ME', 'MN', 'MD', 'MC', 'MX', 'MU', 'MR', 'MT', 'ML', 'MY', 'MW', 'MG', 'MK', 'LU', 'LT', 'LI', 'LY', 'LR', 'LS', 'LB', 'LV', 'LA', 'KG', 'KW', 'KI', 'KE', 'KZ', 'JO', 'JP', 'JM', 'IL', 'PS', 'IE', 'IQ', 'IR', 'ID', 'IS', 'HU', 'HN', 'HT', 'GY', 'GW', 'GN', 'GT', 'GD', 'GR', 'GH', 'DE', 'GE', 'GM', 'GA', 'FR', 'FI', 'FJ', 'ET', 'EE', 'ER', 'GQ', 'SV', 'EG', 'EC', 'DO', 'DM', 'DJ', 'GL', 'DK', 'CZ', 'CY', 'CU', 'HR', 'CI', 'CR', 'CD', 'CG', 'KM', 'CO', 'CN', 'MO', 'HK', 'CL', 'TD', 'CF', 'CV', 'CA', 'CM', 'KH', 'MM', 'BI', 'BF', 'BG', 'BN', 'BR', 'BW', 'BA', 'BO', 'BT', 'BJ', 'BZ', 'BE', 'BY', 'BB', 'BD', 'BH', 'BS', 'AZ', 'AT', 'AU', 'AM', 'AR', 'AG', 'AO', 'AD', 'DZ', 'AL', 'AF', 'TV', 'MH', 'SC', 'MV']
 
 # Remember to rerun the native prompts cache script if you change these.
 CUSTOM_DATAWRAPPER_CODES = {
    "GB-ENG": "England",
    "GB-SCT": "Scotland",
    "GB-WLS": "Wales",
-   "GB-NIR": "Northern Ireland"
+   "GB-NIR": "Northern Ireland",
+   "XK": "Kosovo"
 }
