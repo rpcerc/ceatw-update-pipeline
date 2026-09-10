@@ -1,3 +1,4 @@
+import logging
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
@@ -6,11 +7,22 @@ from sqlalchemy.orm import DeclarativeBase
 
 from ceatw_update_pipeline.configuration import settings
 
+logger = logging.getLogger(__name__)
+
 class Base(DeclarativeBase):
     """Declarative Base"""
-    
+
+url = settings.DATABASE_URL
+
+if (settings.ADD_PSYCOPG_TO_URL):
+    if (settings.DATABASE_URL[10] != ":"):
+        logger.warning("The database url does not start with postgres://..., skipping adding +psycopg...")
+    else:    
+        url = settings.DATABASE_URL[:10] + "+psycopg" + settings.DATABASE_URL[10:]
+
+# https://www.youtube.com/watch?v=u0KBmgs6jKY
 async_engine = create_async_engine(
-    settings.DATABASE_URL,
+    url,
     echo=settings.DATABASE_ECHO,
     pool_size=5,
     max_overflow=10,
@@ -48,11 +60,6 @@ async def get_session() -> AsyncGenerator[AsyncSession]:
         raise
     finally:
         await session.close()
-        
-async def init_db() -> None:
-    """Set up the database and define mappings between models and tables."""
-    async with async_engine.begin() as async_connection:
-        await async_connection.run_sync(Base.metadata.create_all)
         
 async def kill_engine() -> None:
     """Stops the database and all connections."""

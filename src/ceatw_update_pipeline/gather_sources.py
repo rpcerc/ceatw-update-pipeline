@@ -1,13 +1,19 @@
 """Uses Exa.ai API to generate possible source URLs for computing curricula."""
 
-from ceatw_update_pipeline.configuration import settings, GENERIC_TLD_DOMAINS
-from ceatw_update_pipeline.get_prompt import generate_exa_payload
-from ceatw_update_pipeline.custom_types import (
-        SourceData, ExaPayload, SearchStrategy, Country)
+import asyncio
+import logging
+
 from exa_py import AsyncExa
 from exa_py.api import Result
-import logging
-import asyncio
+
+from ceatw_update_pipeline.configuration import GENERIC_TLD_DOMAINS, settings
+from ceatw_update_pipeline.custom_types import (
+    Country,
+    ExaPayload,
+    SearchStrategy,
+    SourceData,
+)
+from ceatw_update_pipeline.get_prompt import generate_exa_payload
 
 logger = logging.getLogger(__name__)
 
